@@ -1,0 +1,50 @@
+---
+const steps = [
+  {
+    title: 'Acolhimento',
+    description: 'O primeiro contato onde criamos um espaço seguro, empático e totalmente livre de julgamentos para sua fala.',
+  },
+  {
+    title: 'Investigação',
+    description: 'Mergulho profundo nas causas reais dos seus conflitos através de reflexões teóricas baseadas na psicanálise.',
+  },
+  {
+    title: 'Conscientização',
+    description: 'O momento de conquistar "insights" e novos olhares sobre si mesmo e suas relações interpessoais.',
+  },
+  {
+    title: 'Ressignificação',
+    description: 'A transformação das suas feridas, permitindo viver o presente com mais leveza e fortalecimento emocional.',
+  }
+];
+---
+
+<section id="processo" class="section-padding bg-white relative reveal">
+  <div class="container">
+    <div class="text-center mb-20">
+      <span class="inline-block text-xs font-bold tracking-[0.2em] text-slate-400 uppercase mb-4">
+        // O PROCESSO TERAPÊUTICO
+      </span>
+      <h2 class="font-display text-[clamp(2.5rem,5vw,4.5rem)] text-brand-700">
+        Jornada de <span class="italic font-300 text-brand-500">Transformação</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {steps.map((step, index) => (
+        <div class="relative p-12 bg-white border border-slate-50 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 group overflow-hidden">
+          <span class="absolute -top-4 -right-2 text-[12rem] font-display font-black text-slate-50 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity leading-none select-none">
+            {index + 1}
+          </span>
+          
+          <div class="w-14 h-14 bg-brand-50 rounded-full flex items-center justify-center text-brand-500 font-display font-bold text-base mb-10 group-hover:bg-brand-500 group-hover:text-white transition-colors relative z-10">
+            {index + 1}
+          </div>
+          
+          <h3 class="font-display font-bold text-2xl mb-6 text-brand-700 relative z-10">{step.title}</h3>
+          <p class="text-slate-400 text-base leading-[1.8] relative z-10">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,127 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+  
+  // Extrair categorias únicas
+  const categories = [...new Set(allPosts.map(post => post.data.category))];
+  
+  // Preparar todas as categorias para o filtro
+  const allCategories = categories.sort().map(cat => ({
+    name: cat,
+    slug: cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-'),
+    href: `/categoria/${cat.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')}/`
+  }));
+  
+  return categories.map(category => {
+    const slug = category.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
+    return {
+      params: { slug },
+      props: { 
+        category,
+        allCategories,
+        posts: allPosts.filter(post => post.data.category === category)
+      }
+    };
+  });
+}
+
+const { category, allCategories, posts } = Astro.props;
+const { slug } = Astro.params;
+
+const sortedPosts = posts.sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime()).map(post => ({
+  id: post.id,
+  title: post.data.title,
+  excerpt: post.data.description,
+  category: post.data.category,
+  date: post.data.publishedAt.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }),
+  href: `/${post.id}/`,
+  image: post.data.image
+}));
+---
+
+<BaseLayout title={`Categoria: ${category}`} description={`Artigos sobre ${category} no blog da Dra. Cleide Sarkis.`}>
+  <Header slot="header" />
+  
+  <section class="pt-40 pb-20 bg-brand-50">
+    <div class="container text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-500 mb-4 block">Assunto</span>
+      <h1 class="heading-1 mb-8">{category}</h1>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+        Confira todos os artigos publicados sobre <span class="font-bold text-brand-700">{category}</span>.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-8 border-b border-slate-100 bg-white">
+    <div class="container overflow-x-auto">
+      <div class="flex items-center justify-center gap-4 min-w-max pb-2">
+        <span class="text-sm font-bold text-slate-400 mr-2">Filtrar por:</span>
+        <a 
+          href="/blog/" 
+          class="px-5 py-2 rounded-full text-sm font-bold transition-all bg-brand-50 text-brand-600 hover:bg-brand-500 hover:text-white border border-brand-100 hover:border-brand-500"
+        >
+          Tudo
+        </a>
+        {allCategories.map(cat => (
+          <a 
+            href={cat.href}
+            class={`px-5 py-2 rounded-full text-sm font-bold transition-all border ${
+              slug === cat.slug 
+                ? 'bg-brand-500 text-white border-brand-500 shadow-md shadow-brand-500/20' 
+                : 'bg-brand-50 text-brand-600 border-brand-100 hover:bg-brand-500 hover:text-white hover:border-brand-500'
+            }`}
+          >
+            {cat.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 container">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+      {sortedPosts.map(post => (
+        <article class="flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
+          <a href={post.href} class="block aspect-video bg-slate-100 flex items-center justify-center text-slate-300 relative overflow-hidden">
+            {post.image ? (
+              <img 
+                src={post.image} 
+                alt={post.title} 
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            ) : (
+              <span class="i-lucide-image text-5xl"></span>
+            )}
+          </a>
+          <div class="p-8 flex flex-col flex-1">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-500 bg-brand-50 px-3 py-1 rounded-full">
+                {post.category}
+              </span>
+              <span class="text-slate-400 text-xs">{post.date}</span>
+            </div>
+            <h2 class="font-display font-bold text-xl mb-4 text-brand-700 leading-tight group-hover:text-brand-500 transition-colors">
+              <a href={post.href}>{post.title}</a>
+            </h2>
+            <p class="text-slate-500 text-sm mb-6 line-clamp-3">
+              {post.excerpt}
+            </p>
+            <div class="mt-auto">
+              <a href={post.href} class="text-sm font-bold text-slate-800 flex items-center gap-2 hover:gap-3 transition-all">
+                Ler mais
+                <span class="i-lucide-arrow-right text-brand-500"></span>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

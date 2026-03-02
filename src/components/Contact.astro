@@ -1,0 +1,30 @@
+---
+import { getWhatsappUrl } from '../utils/whatsapp';
+const { pathname } = Astro.url;
+const whatsappUrl = getWhatsappUrl(pathname);
+---
+
+<section id="contato" class="py-24 bg-brand-600 text-white overflow-hidden relative reveal">
+  <!-- Decorative background elements -->
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-[-20deg] translate-x-1/2"></div>
+  
+  <div class="container relative z-10 text-center max-w-4xl">
+    <h2 class="font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.1] mb-10">
+      Mude sua narrativa,<br /> mude sua vida agora.
+    </h2>
+    <p class="text-brand-100 text-xl mb-12 max-w-2xl mx-auto leading-relaxed opacity-80">
+      Para agendar sua consulta ou tirar dúvidas sobre os atendimentos presenciais ou online, entre em contato através dos canais abaixo.
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
+      <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white px-12 py-6 rounded-full font-bold flex items-center gap-4 hover:bg-[#128C7E] transition-all uppercase tracking-widest text-sm shadow-xl">
+        <span class="i-mdi-whatsapp text-2xl"></span>
+        Whatsapp (11) 93903-1122
+      </a>
+      <a href="/contato/" class="border-2 border-white/30 text-white px-12 py-6 rounded-full font-bold flex items-center gap-4 hover:bg-white hover:text-brand-600 transition-all uppercase tracking-widest text-sm">
+        <span class="i-lucide-mail text-2xl"></span>
+        Enviar e-mail
+      </a>
+    </div>
+  </div>
+</section>

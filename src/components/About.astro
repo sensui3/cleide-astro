@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets';
+import drAtendimento from '../../public/images/cleide-sarkis-atendimento.webp';
+---
+
+<section id="sobre" class="section-padding bg-brand-50 relative overflow-hidden">
+  <div class="container relative z-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="order-2 lg:order-1" data-aos="fade-right">
+        <div class="relative">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl bg-slate-100">
+             <Image src={drAtendimento} alt="Dra. Cleide Sarkis em atendimento" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="absolute -bottom-8 -right-8 p-8 bg-white rounded-3xl shadow-xl max-w-xs hidden sm:block">
+            <p class="font-display font-bold text-lg text-brand-600 mb-2">Compromisso Ético</p>
+            <p class="text-sm text-slate-500">Atendimento humanizado pautado no sigilo e respeito absoluto ao paciente.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="order-1 lg:order-2" data-aos="fade-left">
+        <h2 class="heading-2 mb-8" id="voce">Vou ajudar você a reencontrar o equilíbrio</h2>
+        <div class="space-y-6 text-body">
+          <p>
+            Sou a <strong>Dra. Cleide Sarkis</strong>, psicanalista dedicada a acompanhar pessoas em seus processos de mudança profunda e cura emocional.
+          </p>
+          <p>
+            Com sólida formação em <strong>Psicanálise Clínica</strong> e especializações em <strong>Hipnose</strong> e <strong>Abordagem Transpessoal</strong>, ofereço um suporte terapêutico que integra mente, emoção e as particularidades de cada história de vida.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-8 py-4">
+            <div>
+              <p class="text-4xl font-display font-bold text-brand-600 mb-1">15+</p>
+              <p class="text-sm text-slate-500 font-medium uppercase tracking-wider leading-tight">Anos de Prática Clínica</p>
+            </div>
+            <div>
+              <p class="text-4xl font-display font-bold text-brand-600 mb-1">5k+</p>
+              <p class="text-sm text-slate-500 font-medium uppercase tracking-wider leading-tight">Sessões Realizadas</p>
+            </div>
+          </div>
+
+          <ul class="space-y-4 pt-4 border-t border-slate-200">
+            {[
+              'Especialista em Ansiedade e Depressão',
+              'Tratamento de Traumas e Fobias',
+              'Desenvolvimento Pessoal e Autoconhecimento',
+              'Suporte em Transições de Vida e Luto'
+            ].map(item => (
+              <li class="flex items-start gap-4">
+                <div class="w-6 h-6 rounded-full bg-brand-50 flex items-center justify-center shrink-0 mt-0.5">
+                  <span class="i-lucide-check text-xs text-brand-500"></span>
+                </div>
+                <span class="text-lg font-medium text-slate-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="pt-8">
+            <a href="/sobre/" class="btn-primary group">
+              Conhecer minha trajetória
+              <span class="i-lucide-arrow-right text-lg group-hover:translate-x-1 transition-transform"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

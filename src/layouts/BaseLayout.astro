@@ -1,0 +1,97 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import SEO from '../components/SEO.astro';
+import FloatingCTA from '../components/FloatingCTA.astro';
+import '../styles/tokens.css';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  structuredData?: object;
+}
+
+const { title, description, image, structuredData } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <SEO {title} {description} {image} {structuredData} />
+    <ClientRouter />
+    
+    <!-- Preload fonts to avoid layout shift -->
+    <link rel="preload" href="/fonts/fraunces-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/fraunces-300-italic.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body class="bg-white text-slate-900 font-body antialiased selection:bg-brand-100 selection:text-brand-900">
+    <slot name="header" />
+    <main id="main-content">
+      <slot />
+    </main>
+    <slot name="footer" />
+    <FloatingCTA />
+    
+    <style is:global>
+      :root {
+        scroll-behavior: smooth;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      [data-aos] {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      [data-aos].aos-animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Accessibility: focus indicator */
+      :focus-visible {
+        outline: 3px solid var(--color-brand-500);
+        outline-offset: 2px;
+      }
+      
+      .skip-link {
+        @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:bg-white focus:p-4 focus:shadow-xl focus:rounded-lg;
+      }
+    </style>
+    <script>
+      function initReveal() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              entry.target.classList.add('aos-animate');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+      }
+
+      // Initialize on first load
+      initReveal();
+
+      // Re-initialize after View Transitions
+      document.addEventListener('astro:after-swap', initReveal);
+    </script>
+  </body>
+</html>

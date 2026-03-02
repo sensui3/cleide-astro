@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Problem from '../components/Problem.astro';
+import About from '../components/About.astro';
+import Process from '../components/Process.astro';
+import Services from '../components/Services.astro';
+import BlogPreview from '../components/BlogPreview.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Dra. Cleide Salem Sarkis - Psicanalista",
+  "image": "https://cleidesarkis.com.br/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Paulista, 509 - Conj. 1513",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "postalCode": "01311-000",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -23.5615,
+    "longitude": -46.6559
+  },
+  "url": "https://cleidesarkis.com.br",
+  "telephone": "+5511939031122",
+  "priceRange": "$$$",
+  "medicalSpecialty": ["Psychiatry", "Psychoanalysis"],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ]
+};
+---
+
+<BaseLayout 
+  title="Dra. Cleide Salem Sarkis | Psicanálise e Saúde Mental em São Paulo" 
+  description="Atendimento psicanalítico humanizado em São Paulo. Especialista em ansiedade, depressão e autoconhecimento. Agende sua consulta na Av. Paulista."
+  {structuredData}
+>
+  <Header slot="header" />
+  
+  <Hero />
+    <Problem />
+    <About />
+    <Services />
+    <Process />
+    <BlogPreview />
+    <Contact />
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+

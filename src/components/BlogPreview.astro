@@ -1,0 +1,69 @@
+---
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => {
+  return data.draft !== true;
+});
+
+const latestPosts = allPosts
+  .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime())
+  .slice(0, 3)
+  .map(post => ({
+    title: post.data.title,
+    category: post.data.category.toUpperCase(),
+    categoryHref: `/categoria/${post.data.category.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')}/`,
+    date: post.data.publishedAt.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' }),
+    href: `/${post.id}/`,
+    image: post.data.image,
+    excerpt: post.data.description
+  }));
+---
+
+<section id="blog" class="section-padding bg-white reveal">
+  <div class="container">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <div>
+        <span class="inline-block text-xs font-bold tracking-[0.2em] text-slate-400 uppercase mb-4">
+          // BLOG & ARTIGOS
+        </span>
+        <h2 class="font-display text-[clamp(2.5rem,5vw,4.5rem)] text-brand-700">
+          Conteúdo para <span class="italic font-300 text-brand-500">refletir</span>
+        </h2>
+      </div>
+      <a href="/blog/" class="text-xs font-bold tracking-[0.2em] text-brand-500 hover:text-brand-600 transition-colors uppercase border-b-2 border-brand-500/20 pb-1 mb-2">
+        Vê todos os artigos
+      </a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-12">
+      {latestPosts.map(post => (
+        <article class="group relative">
+          <a href={post.href} class="block aspect-[4/3] bg-brand-50 rounded-2xl overflow-hidden mb-8 shadow-sm group-hover:shadow-xl transition-all duration-500 relative">
+             {post.image ? (
+               <img 
+                 src={post.image} 
+                 alt={post.title} 
+                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+               />
+             ) : (
+               <div class="w-full h-full flex items-center justify-center text-brand-200">
+                 <span class="i-lucide-image text-5xl"></span>
+               </div>
+             )}
+          </a>
+          <div class="flex items-center gap-4 mb-4 text-xs font-bold tracking-[0.15em] text-brand-500 uppercase">
+             <a href={post.categoryHref} class="hover:text-brand-700 transition-colors">{post.category}</a>
+             <span class="w-1.5 h-1.5 rounded-full bg-brand-200"></span>
+             <span>{post.date}</span>
+          </div>
+          <h3 class="font-display font-medium text-2xl text-brand-700 mb-4 group-hover:text-brand-500 transition-colors leading-snug">
+            <a href={post.href}>{post.title}</a>
+          </h3>
+          <p class="text-slate-500 text-base leading-relaxed line-clamp-2">
+            {post.excerpt}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

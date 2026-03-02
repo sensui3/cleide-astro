@@ -1,0 +1,64 @@
+---
+import { SEO as AstroSEO } from 'astro-seo';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
+  type?: 'website' | 'article';
+  structuredData?: object;
+}
+
+const {
+  title,
+  description,
+  image = '/og-image.jpg',
+  canonical = Astro.url.href,
+  noindex = false,
+  type = 'website',
+  structuredData,
+} = Astro.props;
+
+const siteName = 'Cleide Sarkis - Psicanálise e Saúde Mental';
+const fullTitle = title === 'Home' ? siteName : `${title} | ${siteName}`;
+
+// Simple URL resolver for image
+const absoluteImage = new URL(image, Astro.site || 'https://cleidesarkis.com.br').href;
+---
+
+<AstroSEO
+  title={fullTitle}
+  description={description}
+  canonical={canonical}
+  noindex={noindex}
+  openGraph={{
+    basic: {
+      title: fullTitle,
+      type: type,
+      image: absoluteImage,
+      url: canonical,
+    },
+    optional: {
+      siteName: siteName,
+      description: description,
+    }
+  }}
+  twitter={{
+    card: 'summary_large_image',
+    title: fullTitle,
+    description: description,
+    image: absoluteImage,
+  }}
+  extend={{
+    meta: [
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'generator', content: Astro.generator },
+    ],
+  }}
+/>
+
+{structuredData && (
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+)}

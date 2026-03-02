@@ -1,0 +1,160 @@
+---
+import { getWhatsappUrl } from '../utils/whatsapp';
+const { pathname } = Astro.url;
+
+const menuItems = [
+  { label: 'TRATAMENTOS', href: '#tratamentos' },
+  { label: 'SOBRE', href: '/sobre/' },
+  { label: 'BLOG', href: '/blog/' },
+  { label: 'CONTATO', href: '/contato/' },
+];
+
+const whatsappUrl = getWhatsappUrl(pathname);
+---
+
+<header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b border-slate-50 py-6" id="main-header">
+  <div class="container flex items-center justify-between font-display">
+    <a href="/" class="flex items-center" aria-label="Home">
+      <img src="/images/cleide-sarkis-logo.svg" alt="Dra. Cleide Sarkis" class="h-14 w-auto" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-12">
+      {menuItems.map(item => (
+        <a href={item.href} class="text-sm font-bold tracking-[0.15em] text-slate-500 hover:text-brand-500 transition-colors uppercase">
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Mobile Button -->
+    <button 
+      class="md:hidden flex flex-col gap-1.5 p-2 relative" 
+      aria-label="Abrir menu" 
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      id="mobile-menu-button"
+    >
+      <span class="w-6 h-0.5 bg-brand-700 transition-all duration-300 origin-center block" id="bar-1"></span>
+      <span class="w-6 h-0.5 bg-brand-700 transition-all duration-300 origin-center block" id="bar-2"></span>
+      <span class="w-6 h-0.5 bg-brand-700 transition-all duration-300 origin-center block" id="bar-3"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu — fora do header para evitar problemas de stacking context -->
+<div 
+  id="mobile-menu" 
+  aria-hidden="true"
+  class="fixed inset-0 bg-white z-[9999] flex flex-col items-center justify-center gap-10 p-12 translate-x-full transition-transform duration-[450ms] [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] will-change-transform"
+>
+  <!-- Fecha ao clicar fora dos links -->
+  <button 
+    id="mobile-menu-close" 
+    aria-label="Fechar menu"
+    class="absolute top-6 right-6 bg-transparent border-none cursor-pointer p-2"
+  >
+    <span class="i-lucide-x" style="font-size: 1.5rem; color: #002952; display: block;"></span>
+  </button>
+
+  <nav class="flex flex-col items-center gap-8">
+    {menuItems.map(item => (
+      <a 
+        href={item.href} 
+        class="mobile-menu-link font-display font-medium text-brand-700 hover:text-brand-500 transition-colors uppercase tracking-[0.1em] text-[2rem] no-underline"
+      >
+        {item.label}
+      </a>
+    ))}
+  </nav>
+  
+  <div class="h-px w-20 bg-slate-200"></div>
+
+  <a 
+    href={whatsappUrl} 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="mobile-menu-link btn-whatsapp"
+  >
+    <span class="i-mdi-whatsapp text-2xl"></span>
+    Agendar Consulta
+  </a>
+</div>
+
+<script is:inline>
+  function initHeader() {
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('mobile-menu-close');
+    const links = menu ? menu.querySelectorAll('.mobile-menu-link') : [];
+    const bar1 = document.getElementById('bar-1');
+    const bar2 = document.getElementById('bar-2');
+    const bar3 = document.getElementById('bar-3');
+    const header = document.getElementById('main-header');
+
+    if (!btn || !menu) return;
+
+    let isOpen = false;
+
+    function openMenu() {
+      isOpen = true;
+      menu.classList.remove('translate-x-full');
+      menu.setAttribute('aria-hidden', 'false');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.setAttribute('aria-label', 'Fechar menu');
+      // Animate bars to X
+      if (bar1) bar1.style.transform = 'translateY(8px) rotate(45deg)';
+      if (bar2) { bar2.style.opacity = '0'; bar2.style.transform = 'scaleX(0)'; }
+      if (bar3) bar3.style.transform = 'translateY(-8px) rotate(-45deg)';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      isOpen = false;
+      menu.classList.add('translate-x-full');
+      menu.setAttribute('aria-hidden', 'true');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Abrir menu');
+      // Reset bars
+      if (bar1) bar1.style.transform = 'none';
+      if (bar2) { bar2.style.opacity = '1'; bar2.style.transform = 'none'; }
+      if (bar3) bar3.style.transform = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function toggleMenu() {
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+
+    btn.addEventListener('click', toggleMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        if (isOpen) closeMenu();
+      });
+    });
+
+    // Shadow on scroll
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        header?.classList.add('shadow-md');
+      } else {
+        header?.classList.remove('shadow-md');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial state
+  }
+
+  // Initialize
+  initHeader();
+
+  // Support for View Transitions
+  document.addEventListener('astro:after-swap', initHeader);
+</script>

@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Contact from '../components/Contact.astro';
+import { Image } from 'astro:assets';
+import drImage from '../../public/images/cleide-sarkis.webp';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dra. Cleide Salem Sarkis",
+  "jobTitle": "Psicanalista e Psicóloga Clínica",
+  "description": "Especialista em Psicanálise, Hipnose Clínica e Abordagem Transpessoal com mais de 15 anos de experiência em São Paulo.",
+  "url": "https://cleidesarkis.com.br/sobre/",
+  "telephone": "+5511939031122",
+  "email": "contato@cleidesarkis.com.br",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Paulista, 509 - Conj. 1513",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "postalCode": "01311-000",
+    "addressCountry": "BR"
+  },
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Psicanalista",
+    "occupationLocation": {
+      "@type": "City",
+      "name": "São Paulo"
+    },
+    "skills": "Psicanálise, Hipnose Clínica, Abordagem Transpessoal, Terapia de Regressão"
+  },
+  "knowsAbout": ["Psicanálise", "Saúde Mental", "Hipnose Clínica", "Psicologia Transpessoal", "Ansiedade", "Depressão", "Traumas"]
+};
+---
+
+<BaseLayout 
+  title="Sobre a Dra. Cleide Sarkis" 
+  description="Conheça a trajetória e a formação da Dra. Cleide Sarkis, psicanalista e especialista em hipnose clínica em São Paulo."
+  {structuredData}
+>
+  <Header slot="header" />
+  
+  <section class="pt-40 pb-20 bg-brand-50">
+    <div class="container text-center">
+      <h1 class="heading-1 mb-6">Sobre Mim</h1>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">Uma trajetória dedicada ao cuidado da mente e à transformação de vidas.</p>
+    </div>
+  </section>
+
+  <section class="section-padding container">
+    <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <div class="relative group">
+          <div class="aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl bg-slate-200">
+             <Image src={drImage} alt="Dra. Cleide Sarkis" class="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700 hover:scale-105" />
+          </div>
+          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-100 rounded-full -z-10 animate-pulse"></div>
+        </div>
+      
+      <div class="space-y-8">
+        <h2 class="heading-2">Dra. Cleide Sarkis</h2>
+        <div class="space-y-6 text-body">
+          <p>
+            Minha missão como psicanalista é ajudar as pessoas a descobrirem as raízes inconscientes de seus comportamentos e sofrimentos, permitindo que vivam uma vida mais autêntica e plena.
+          </p>
+          <p>
+            Com anos de experiência clínica em São Paulo, desenvolvi uma abordagem integrada que une a profundidade da <strong>Psicanálise Freudiana e Lacaniana</strong> com a eficácia de técnicas como a <strong>Hipnose Clínica</strong> e a <strong>Regressão Terapêutica</strong>.
+          </p>
+          <p>
+            Trabalho com foco especial em transtornos de ansiedade, depressão e superação de traumas. Acredito que o processo terapêutico é um investimento em si mesmo, um espaço de acolhimento ético onde a palavra tem o poder de curar.
+          </p>
+        </div>
+        
+        <div class="grid sm:grid-cols-2 gap-8 pt-6">
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <h3 class="font-display font-bold text-brand-500 mb-2">Formação</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Pós-graduação em Psicanálise, Especialização em Hipnoterapia e Psicoterapia Transpessoal.</p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <h3 class="font-display font-bold text-brand-500 mb-2">Registro</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Registro profissional ativo e compromisso com a supervisão clínica constante.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Contact />
+  
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Política de Privacidade"
+  description="Política de Privacidade da Dra. Cleide Sarkis. Saiba como coletamos, usamos e protegemos seus dados pessoais conforme a LGPD."
+>
+  <Header slot="header" />
+
+  <section class="pt-40 pb-20 bg-brand-50">
+    <div class="container text-center">
+      <h1 class="heading-1 mb-6">Política de Privacidade</h1>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">Transparência e respeito ao tratamento dos seus dados pessoais.</p>
+    </div>
+  </section>
+
+  <article class="section-padding container">
+    <div class="prose prose-slate prose-lg max-w-3xl mx-auto">
+
+      <p class="text-sm text-slate-400 mb-10">Última atualização: março de 2026</p>
+
+      <h2>1. Quem somos</h2>
+      <p>
+        Este site é mantido pela <strong>Dra. Cleide Salem Sarkis</strong>, psicanalista com consultório localizado na
+        Av. Paulista, 509 – Conj. 1513, Bela Vista, São Paulo – SP. Para questões sobre privacidade, entre em contato
+        página de contato: <a href="/contato/">cleidesarkis.com.br/contato</a>.
+      </p>
+
+      <h2>2. Dados que coletamos</h2>
+      <p>Coletamos apenas os dados estritamente necessários para nosso contato e relacionamento:</p>
+      <ul>
+        <li><strong>Dados de contato:</strong> nome, telefone (WhatsApp) e e-mail, fornecidos voluntariamente por você.</li>
+        <li><strong>Dados de navegação:</strong> apenas dados técnicos anônimos via Google Analytics (endereço IP anonimizado, páginas visitadas, duração da visita).</li>
+      </ul>
+      <p>Não coletamos dados sensíveis de saúde por meio deste site. Informações clínicas são tratadas exclusivamente no contexto terapêutico, sob sigilo profissional.</p>
+
+      <h2>3. Como usamos seus dados</h2>
+      <ul>
+        <li>Responder às suas mensagens e solicitações de agendamento;</li>
+        <li>Melhorar a experiência de navegação no site;</li>
+        <li>Cumprir obrigações legais e éticas da prática clínica.</li>
+      </ul>
+      <p>Seus dados <strong>nunca serão vendidos, alugados ou compartilhados</strong> com terceiros para fins comerciais.</p>
+
+      <h2>4. Base legal (LGPD)</h2>
+      <p>
+        O tratamento de dados é realizado com base no <strong>consentimento</strong> (Art. 7º, I da Lei 13.709/2018 – LGPD)
+        e no <strong>legítimo interesse</strong> para prestação de serviços de saúde.
+      </p>
+
+      <h2>5. Seus direitos</h2>
+      <p>Conforme a LGPD, você tem direito a:</p>
+      <ul>
+        <li>Confirmar a existência de tratamento dos seus dados;</li>
+        <li>Acessar, corrigir ou excluir seus dados;</li>
+        <li>Revogar o consentimento a qualquer momento;</li>
+        <li>Solicitar a portabilidade dos dados.</li>
+      </ul>
+      <p>Para exercer esses direitos, utilize o formulário em nossa <a href="/contato/">página de contato</a>.</p>
+
+      <h2>6. Cookies e rastreamento</h2>
+      <p>
+        Utilizamos cookies analíticos (Google Analytics) de forma anônima para entender como o site é utilizado.
+        Você pode desativar cookies nas configurações do seu navegador a qualquer momento.
+      </p>
+
+      <h2>7. Segurança</h2>
+      <p>
+        Este site utiliza protocolo HTTPS para garantir a segurança dos dados transmitidos.
+        Adotamos medidas técnicas e organizacionais para proteger suas informações.
+      </p>
+
+      <h2>8. Alterações nesta política</h2>
+      <p>
+        Podemos atualizar esta política periodicamente. Em caso de mudanças relevantes, publicaremos um aviso nesta página.
+        Recomendamos que você revise este documento regularmente.
+      </p>
+
+      <h2>9. Contato</h2>
+      <p>
+        Para dúvidas, solicitações ou reclamações sobre privacidade:<br />
+        <strong>Página de Contato:</strong> <a href="/contato/">clique aqui</a><br />
+        <strong>Telefone:</strong> (11) 93903-1122
+      </p>
+    </div>
+  </article>
+
+  <Footer slot="footer" />
+</BaseLayout>

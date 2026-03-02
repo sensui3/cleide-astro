@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Contact from '../components/Contact.astro';
+import { getWhatsappUrl } from '../utils/whatsapp';
+
+const { pathname } = Astro.url;
+const whatsappUrl = getWhatsappUrl(pathname);
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalProcedure",
+  "name": "Psicanálise em São Paulo",
+  "description": "Atendimento psicanalítico especializado na região da Avenida Paulista e Vila Mariana.",
+  "bodyLocation": "Health",
+  "procedureType": "https://schema.org/TherapeuticProcedure"
+};
+---
+
+<BaseLayout 
+  title="Psicanalista em São Paulo" 
+  description="Dra. Cleide Sarkis oferece sessões de psicanálise presenciais na Avenida Paulista e online. Especialista em traumas, ansiedade e depressão."
+  {structuredData}
+>
+  <Header slot="header" />
+  
+  <section class="pt-40 pb-20 bg-brand-50">
+    <div class="container text-center">
+      <h1 class="heading-1 mb-8">Psicanalista em São Paulo</h1>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+        Atendimento especializado para quem busca autoconhecimento e alívio do sofrimento emocional no coração de SP.
+      </p>
+    </div>
+  </section>
+
+  <article class="section-padding container">
+    <div class="grid lg:grid-cols-3 gap-16">
+      <div class="lg:col-span-2 prose prose-slate prose-lg max-w-none">
+        <h2>Por que buscar Psicanálise em São Paulo?</h2>
+        <p>
+          Viver em uma metrópole como São Paulo exige muito da nossa saúde mental. O ritmo acelerado, o estresse do cotidiano e a pressão constante podem gerar quadros de ansiedade e esgotamento. 
+          A <strong>psicanálise</strong> oferece uma pausa necessária, um refúgio para investigar as causas profundas desse mal-estar.
+        </p>
+
+        <h3>Benefícios do Tratamento Psicanalítico</h3>
+        <p>
+          Diferente de abordagens focadas apenas em sintomas imediatos, a psicanálise mergulha no inconsciente para entender como traumas passados e padrões repetitivos influenciam sua vida hoje.
+        </p>
+        <ul>
+          <li>Compreensão da ansiedade e suas raízes;</li>
+          <li>Superação de traumas de infância ou eventos recentes;</li>
+          <li>Melhora nos relacionamentos interpessoais;</li>
+          <li>Aumento da autoestima e segurança emocional.</li>
+        </ul>
+
+        <h3>Atendimento na Avenida Paulista e Vila Mariana</h3>
+        <p>
+          Meu consultório está estrategicamente localizado na <strong>Avenida Paulista</strong>, facilitando o acesso para quem trabalha ou reside no centro e zonas sul/oeste de São Paulo. 
+          Também oferecemos a opção de <strong>terapia online</strong>, mantendo a mesma qualidade e profundidade do atendimento presencial.
+        </p>
+      </div>
+      
+      <aside class="space-y-8">
+        <div class="p-8 bg-brand-500 rounded-3xl text-white shadow-xl">
+          <h3 class="font-display font-bold text-2xl mb-4">Agende sua sessão</h3>
+          <p class="mb-8 text-brand-100 italic">Disponibilidade para atendimento presencial e online.</p>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="w-full bg-white text-brand-500 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-brand-50 transition-colors">
+            Falar no WhatsApp
+            <span class="i-lucide-arrow-right"></span>
+          </a>
+        </div>
+        
+        <div class="p-8 border border-slate-200 rounded-3xl">
+          <h3 class="font-display font-bold text-xl mb-6 text-slate-900">Áreas de Foco</h3>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-slate-600">
+               <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+               Ansiedade Generalizada
+            </li>
+            <li class="flex items-center gap-3 text-slate-600">
+               <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+               Depressão e Desânimo
+            </li>
+            <li class="flex items-center gap-3 text-slate-600">
+               <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+               Conflitos Amorosos
+            </li>
+            <li class="flex items-center gap-3 text-slate-600">
+               <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+               Síndrome de Burnout
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </article>
+
+  <Contact />
+  
+  <Footer slot="footer" />
+</BaseLayout>
