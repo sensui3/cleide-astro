@@ -8,7 +8,7 @@ const whatsappUrl = getWhatsappUrl(pathname);
 <footer class="bg-white text-slate-500 pt-24 pb-12 border-t border-slate-50">
   <div class="container">
     <div class="grid md:grid-cols-12 gap-12 mb-20">
-      <div class="md:col-span-4">
+      <div class="md:col-span-3">
         <a href="/" class="inline-block mb-8">
           <img src="/images/cleide-sarkis-logo.svg" alt="Dra. Cleide Sarkis" class="h-14 w-auto" />
         </a>
@@ -19,7 +19,6 @@ const whatsappUrl = getWhatsappUrl(pathname);
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="text-brand-700 hover:text-[#25D366] transition-colors" aria-label="WhatsApp">
             <span class="i-mdi-whatsapp text-2xl"></span>
           </a>
-          {/* Instagram: adicionar URL real quando disponível */}
         </div>
       </div>
       
@@ -27,28 +26,38 @@ const whatsappUrl = getWhatsappUrl(pathname);
         <h4 class="text-xs font-bold tracking-[0.2em] text-brand-700 uppercase mb-8">Navegação</h4>
         <ul class="space-y-4 text-base font-medium">
           <li><a href="/" class="hover:text-brand-500 transition-colors">Home</a></li>
-          <li><a href="/sobre/" class="hover:text-brand-500 transition-colors">Sobre Mim</a></li>
+          <li><a href="/sobre/" class="hover:text-brand-500 transition-colors">Sobre</a></li>
           <li><a href="/tratamentos/" class="hover:text-brand-500 transition-colors">Tratamentos</a></li>
           <li><a href="/blog/" class="hover:text-brand-500 transition-colors">Blog</a></li>
           <li><a href="/contato/" class="hover:text-brand-500 transition-colors">Contato</a></li>
         </ul>
       </div>
+
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-bold tracking-[0.2em] text-brand-700 uppercase mb-8">Regiões</h4>
+        <ul class="space-y-4 text-base font-medium text-slate-400">
+          <li><a href="/psicanalise-bela-vista/" class="hover:text-brand-500 transition-colors">Bela Vista</a></li>
+          <li><a href="/psicanalise-paraiso/" class="hover:text-brand-500 transition-colors">Paraíso</a></li>
+          <li><a href="/psicanalise-vila-mariana/" class="hover:text-brand-500 transition-colors">Vila Mariana</a></li>
+          <li><a href="/psicanalise-sao-paulo/" class="hover:text-brand-500 transition-colors">São Paulo</a></li>
+        </ul>
+      </div>
       
-      <div class="md:col-span-3">
+      <div class="md:col-span-2">
         <h4 class="text-xs font-bold tracking-[0.2em] text-brand-700 uppercase mb-8">Atendimento</h4>
         <ul class="space-y-6 text-base font-medium">
           <li class="flex items-start gap-4">
             <span class="i-lucide-calendar text-brand-500 mt-1 text-lg"></span>
             <div>
               <p class="text-slate-700 mb-1 uppercase tracking-wider text-xs">Segunda - Sexta</p>
-              <p class="text-slate-400">08:00 AM – 08:00 PM</p>
+              <p class="text-slate-400">08:00 – 20:00</p>
             </div>
           </li>
           <li class="flex items-start gap-4">
             <span class="i-lucide-clock text-brand-500 mt-1 text-lg"></span>
             <div>
               <p class="text-slate-700 mb-1 uppercase tracking-wider text-xs">Sábado</p>
-              <p class="text-slate-400">09:00 AM – 01:00 PM</p>
+              <p class="text-slate-400">09:00 – 13:00</p>
             </div>
           </li>
         </ul>
@@ -59,10 +68,15 @@ const whatsappUrl = getWhatsappUrl(pathname);
         <ul class="space-y-6 text-base font-medium">
           <li class="flex items-start gap-4">
             <span class="i-lucide-map-pin text-brand-500 mt-1 text-lg"></span>
-            <p class="text-slate-400">
-              Av. Paulista, 509 - Conj. 1513<br />
-              Bela Vista, São Paulo - SP
-            </p>
+            <div>
+              <p class="text-slate-400">
+                Av. Paulista, 509 - Conj. 1513<br />
+                Bela Vista, São Paulo - SP
+              </p>
+              <p class="text-[10px] text-slate-500 mt-2 leading-tight">
+                Psicanálise na Bela Vista, Paraíso, Vila Mariana e Jardins.
+              </p>
+            </div>
           </li>
           <li class="flex items-start gap-4">
             <span class="i-lucide-phone text-brand-500 mt-1 text-lg"></span>
