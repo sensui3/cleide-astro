@@ -1,8 +1,9 @@
 ---
 title: "Traumas emocionais: o que são, sintomas e como tratar"
-description: "Tratamento para traumas emocionais com terapia especializada. Recupere seu equilíbrio emocional e qualidade de vida. Marque sua avaliação."
+description: "Descubra o que são traumas emocionais, identifique os sintomas e conheça as melhores abordagens terapêuticas para tratar o sofrimento e recuperar sua saúde mental."
 publishedAt: 2025-10-10T11:22:10.000Z
-image: "/assets/blog/traumas-emocionais.jpg"
+image: "/assets/blog/como-tratar-traumas-emocionais.jpg"
+alt: "Ilustração sobre o tratamento e superação de traumas emocionais"
 category: "Psicóloga"
 draft: false
 ---
@@ -133,5 +134,9 @@ draft: false
 <!-- /wp:table -->
 
 <!-- wp:paragraph -->
+
+
+<p>Muitas vezes, a superação de traumas profundos pode ser auxiliada por técnicas como a [terapia de regressão](/blog/o-que-e-terapia-de-regressao/) ou através de uma [análise psicanalítica profunda](/blog/psicanalise-alem-do-diva-descubra-mitos/) que desvenda mitos e verdades do inconsciente.</p>
+
 <p><em>Fonte: www.psitto.com.br</em></p>
 <!-- /wp:paragraph -->

@@ -1,8 +1,9 @@
 ---
 title: "O que é Terapia de Regressão?"
-description: "Explore o que é  Terapia de Regressão para acessar e curar memórias passadas. Entenda as técnicas e benefícios desta abordagem terapêutica."
+description: "Entenda o que é a terapia de regressão, como ela ajuda a acessar memórias reprimidas e traumas do passado, e quais são os benefícios dessa técnica terapêutica."
 publishedAt: 2025-10-06T20:21:26.000Z
-image: "/assets/blog/o-que-e-terapia-de-regressao.jpg"
+image: "/assets/blog/terapia-de-regressao-e-memorias.jpg"
+alt: "Imagem simbólica sobre o acesso a memórias através da terapia de regressão"
 category: "Psicóloga"
 draft: false
 ---
@@ -112,4 +113,5 @@ draft: false
 
 <!-- wp:paragraph -->
 <p><em>Fonte: www.verywellhealth.com</em></p>
+<p>Ao lidar com memórias profundas, é comum encontrar [traumas emocionais que precisam ser tratados](/blog/traumas-emocionais-como-tratar/). Para quem busca uma compreensão ainda mais ampla, a [psicanálise oferece um caminho profundo de autoconhecimento](/blog/psicanalise-alem-do-diva-descubra-mitos/).</p>
 <!-- /wp:paragraph -->

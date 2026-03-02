@@ -15,7 +15,7 @@ const {
   title,
   description,
   image = '/og-image.jpg',
-  canonical = Astro.url.href,
+  canonical,
   noindex = false,
   type = 'website',
   structuredData,
@@ -24,21 +24,25 @@ const {
 const siteName = 'Cleide Sarkis - Psicanálise e Saúde Mental';
 const fullTitle = title === 'Home' ? siteName : `${title} | ${siteName}`;
 
+// Canonical URL logic
+const siteUrl = Astro.site || 'https://cleidesarkis.com.br';
+const resolvedCanonical = canonical || new URL(Astro.url.pathname, siteUrl).href;
+
 // Simple URL resolver for image
-const absoluteImage = new URL(image, Astro.site || 'https://cleidesarkis.com.br').href;
+const absoluteImage = new URL(image, siteUrl).href;
 ---
 
 <AstroSEO
   title={fullTitle}
   description={description}
-  canonical={canonical}
+  canonical={resolvedCanonical}
   noindex={noindex}
   openGraph={{
     basic: {
       title: fullTitle,
       type: type,
       image: absoluteImage,
-      url: canonical,
+      url: resolvedCanonical,
     },
     optional: {
       siteName: siteName,

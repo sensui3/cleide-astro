@@ -1,8 +1,9 @@
 ---
 title: "Psicanálise Além do Divã: Descubra Mitos e Verdades sobre Autoconhecimento"
-description: "Descubra o que realmente acontece na psicanálise. Desmistificamos o processo terapêutico"
+description: "Desmistificamos o processo psicanalítico: descubra o que é verdade e o que é mito sobre o autoconhecimento profundo e o papel do analista na contemporaneidade."
 publishedAt: 2025-11-06T11:00:35.000Z
-image: "/assets/blog/psicanalise.jpg"
+image: "/assets/blog/mitos-e-verdades-sobre-psicanalise.jpg"
+alt: "Divã clássico de psicanálise simbolizando mitos e verdades do processo"
 category: "Psicanálise"
 draft: false
 ---
@@ -206,3 +207,5 @@ Lembre-se: buscar autoconhecimento não é sinal de fraqueza, mas de força e ma
 Se você sente o chamado para essa jornada, dê o primeiro passo. Busque profissionais qualificados, permita-se experimentar e confie no processo. O autoconhecimento não é um destino, mas um caminho que se revela a cada sessão, a cada insight, a cada momento de coragem para olhar o que antes estava oculto.
 
 A psicanálise oferece não apenas a compreensão de quem fomos, mas a possibilidade de escolher quem queremos ser. E isso, definitivamente, vai muito além do divã.
+
+Se você está pronto para iniciar este processo, descubra como a [psicanálise atua no tratamento da ansiedade](/blog/psicanalista-no-tratamento-da-ansiedade/) ou conheça os principais [sinais de que a terapia pode ser necessária](/blog/sinais-que-voce-precisa-de-terapia/) no seu momento atual.

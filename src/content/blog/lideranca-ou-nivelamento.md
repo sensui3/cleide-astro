@@ -1,8 +1,9 @@
 ---
 title: "Cleide Salem Sarkis Liderança e Nivelamento?"
-description: "Psicologia e psicanálise com Dra. Cleide Salem Sarkis: o papel da mulher, autoestima, relacionamentos e equilíbrio emocional."
+description: "Reflexões da Dra. Cleide Salem Sarkis sobre a liderança feminina, o papel da mulher na sociedade atual e a busca pelo equilíbrio emocional nos relacionamentos."
 publishedAt: 2023-04-05T22:01:05.000Z
-image: "/assets/blog/lideranca-ou-nivelamento.jpg"
+image: "/assets/blog/lideranca-feminina-e-psicologia.jpg"
+alt: "Representação de liderança feminina e equilíbrio emocional no trabalho"
 category: "Psicóloga"
 draft: false
 ---
@@ -36,6 +37,8 @@ Ser conquistada é também conquistar; ser amada é também saber amar; e ser mu
 Quando escrevi sobre <em>liderança</em>, no título da matéria, quis demonstrar uma condição que se atinge (homens e mulheres) no uso de talentos específicos. Isto não significa que a liderança de uma atribuição faça o homem mais homem nem a mulher mais mulher. Disse e repito: <strong>somos seres humanos que vivem e deveriam deixar viver</strong>.
 
 Portanto, o “estojo” da mulher é apenas um apêndice, do qual a maioria não tem consciência da existência e, consequentemente, não faz uso...
+
+Esta busca por equilíbrio e reconhecimento também perpassa o ambiente profissional, onde muitos acabam enfrentando a [síndrome de burnout](/blog/sindrome-de-burnout-10-sinais/). Compreender essas dinâmicas através da [psicanálise contemporânea](/blog/psicanalise-alem-do-diva-descubra-mitos/) é fundamental para uma vida mais plena.
 
 <hr />
 

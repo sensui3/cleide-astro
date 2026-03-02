@@ -1,8 +1,9 @@
 ---
-title: "Medro ou Fobia"
-description: "Medro ou Fobia"
+title: "Medo ou Fobia"
+description: "Entenda a diferença entre o medo natural, essencial para a sobrevivência, e a fobia, um medo irracional que pode causar ansiedade e sofrimento emocional."
 publishedAt: 2023-04-05T20:14:32.000Z
-image: "/assets/blog/medo-ou-fobia.jpg"
+image: "/assets/blog/diferenca-entre-medo-e-fobia.jpg"
+alt: "Diagrama ou imagem ilustrativa sobre a diferença entre medo natural e fobia"
 category: "Psicóloga"
 draft: false
 ---
@@ -34,3 +35,5 @@ quanto a forma de lidar com estas emoções.
 
 Ensiná-los a distinguir os perigos reais dos fantasiosos; ensinar nossos pacientes a lidar de forma
 saudável com estas emoções é uma tarefa desafiadora do psicólogo.
+
+Para saber mais sobre os impactos desses medos no cotidiano, confira nossos artigos sobre [como identificar os sinais da fobia social](/blog/como-identificar-os-sinais-da-fobia-social/) e como reconhecer os [sintomas da síndrome do pânico](/blog/sindrome-do-panico/).

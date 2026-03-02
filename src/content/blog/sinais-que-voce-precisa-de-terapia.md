@@ -1,8 +1,9 @@
 ---
 title: "Os 7 Sinais de Que Você Precisa de Terapia (E Não Sabe) | Guia Completo 2025"
-description: "Os 7 sinais sutis de que você precisa de terapia. Aprenda a identificar quando buscar ajuda psicológica"
+description: "Identifique os 7 sinais sutis de que você precisa de terapia e entenda como a ajuda psicológica pode transformar sua saúde mental e qualidade de vida."
 publishedAt: 2025-11-08T11:00:44.000Z
-image: "/assets/blog/precisa-de-terapia.jpg"
+image: "/assets/blog/quando-buscar-ajuda-psicologica.jpg"
+alt: "Pessoa refletindo sobre a necessidade de buscar ajuda em terapia"
 category: "Psicanálise"
 draft: false
 ---
@@ -11,6 +12,7 @@ draft: false
 <p class="whitespace-normal break-words">A verdade é que muitas pessoas vivem anos com dificuldades emocionais significativas sem perceber que precisam de terapia.</p>
 <p class="whitespace-normal break-words">A saúde mental, assim como a saúde física, requer atenção e cuidado. No entanto, os sinais de que precisamos de ajuda psicológica são frequentemente mais sutis e fáceis de ignorar. Diferente de uma dor física evidente, o sofrimento emocional pode se manifestar de formas que aprendemos a disfarçar ou minimizar.</p>
 <p class="whitespace-normal break-words">Veja os sete sinais mais importantes de que você pode se beneficiar da terapia, mesmo que ainda não tenha considerado essa possibilidade. Reconhecer esses sinais é o primeiro passo para uma transformação significativa na sua qualidade de vida.</p>
+<p class="whitespace-normal break-words">Se você se identifica com essa busca por respostas, entenda melhor [como está sua saúde mental atualmente](/blog/como-esta-a-sua-cuca-voce-sabe/) e veja como o [ato de pedir ajuda pode ser libertador](/blog/um-grito-de-ajuda/).</p>
 
 <h2 class="text-xl font-bold text-text-100 mt-1 -mb-0.5">Por Que Muitas Pessoas Não Reconhecem a Necessidade de Terapia</h2>
 <p class="whitespace-normal break-words">Antes de explorarmos os sinais específicos, é fundamental entender por que tantas pessoas demoram a buscar ajuda profissional para sua saúde mental.</p>

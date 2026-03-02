@@ -1,8 +1,9 @@
 ---
 title: "A Importância do Psicanalista no Tratamento da Ansiedade"
-description: "Tratamento da Ansiedade com psicanálise. Entenda as causas profundas do seu sofrimento e encontre alívio duradouro. Marque sua sessão."
+description: "Entenda como o psicanalista atua no tratamento da ansiedade, explorando as causas profundas e o inconsciente para promover um alívio duradouro e autoconhecimento."
 publishedAt: 2025-10-07T11:23:56.000Z
-image: "/assets/blog/tratamento-da-ansiedade.jpg"
+image: "/assets/blog/psicanalise-no-tratamento-da-ansiedade.jpg"
+alt: "Sessão de terapia para o tratamento especializado da ansiedade"
 category: "Ansiedade"
 draft: false
 ---
@@ -81,6 +82,7 @@ draft: false
 
 <!-- wp:paragraph -->
 <p>Com anos de experiência, a Dra. Cleide Sarkis utiliza os princípios da psicanálise para guiar seus pacientes em direção a uma melhor compreensão de si mesmos, promovendo o bem-estar emocional e mental. Ela oferece consultas tanto presenciais quanto via telemedicina, facilitando o acesso ao tratamento para aqueles que buscam ajuda.</p>
+<p>Em muitos casos, a ansiedade pode escalonar para quadros mais graves. Entenda melhor os [sintomas da síndrome do pânico](/blog/sindrome-do-panico/) ou a [diferença fundamental entre medo e fobia](/blog/medo-ou-fobia/) para saber quando buscar acompanhamento especializado.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:quote -->

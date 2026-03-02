@@ -1,8 +1,9 @@
 ---
 title: "Como está sua cuca, você sabe?"
-description: "Como está sua cuca, você sabe?"
+description: "Descubra como a saúde mental influencia seu dia a dia e aprenda a identificar sinais de desequilíbrio emocional com a Dra. Cleide Salem Sarkis."
 publishedAt: 2023-04-05T20:10:50.000Z
-image: "/assets/blog/como-esta-sua-mente.jpg"
+image: "/assets/blog/saude-mental-e-autoconhecimento.jpg"
+alt: "Ilustração representativa de saúde mental e o processo de autoconhecimento"
 category: "Psicóloga"
 draft: false
 ---
@@ -72,6 +73,8 @@ conhecimento dando-lhe a capacidade de trabalhar consigo próprio. Conhecer suas
 valores e necessidades primordiais.
 
 A partir daí, este terá maiores condições de fazer suas escolhas e ter uma melhor adaptação ao convívio social, perceber novos horizontes e soluções para obstáculos que se lhe interponham no desenrolar de seu processo existencial.
+
+Para entender melhor quando essas dificuldades emocionais exigem um olhar mais atento, veja também nosso artigo sobre os [sinais de que você precisa de terapia](/blog/sinais-que-voce-precisa-de-terapia/) e como a [psicanálise pode ajudar no autoconhecimento](/blog/psicanalise-alem-do-diva-descubra-mitos/).
 
 <strong>Cleide Salem Sarkis</strong>
 Psicóloga

@@ -1,8 +1,9 @@
 ---
 title: "Saúde Mental: Como Identificar os Sinais da Fobia Social"
-description: "Sinais da Fobia Social- Relacionado a interações sociais ou de desempenho, pode ser marcado por sintomas físicos e levar a crises de pânico"
+description: "Saiba como identificar os sinais da fobia social, seus sintomas físicos e emocionais, e a importância de buscar tratamento especializado precocemente."
 publishedAt: 2025-09-15T22:44:31.000Z
-image: "/assets/blog/fobia-social.jpg"
+image: "/assets/blog/sinais-de-fobia-social-e-ansiedade.jpg"
+alt: "Pessoa em situação social representando ansiedade e fobia social"
 category: "Psicóloga"
 draft: false
 ---
@@ -285,6 +286,7 @@ draft: false
 
 <!-- wp:paragraph -->
 <p><strong>A busca precoce por ajuda profissional é fundamental, pois quanto mais tempo se leva para iniciar o tratamento, pior tende a ser o prognóstico.</strong></p>
+<p>Se você deseja aprofundar seu conhecimento sobre o tema, leia também sobre a [diferença entre medo e fobia](/blog/medo-ou-fobia/) e entenda a [importância do psicanalista no tratamento da ansiedade](/blog/psicanalista-no-tratamento-da-ansiedade/).</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->

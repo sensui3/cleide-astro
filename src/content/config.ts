@@ -8,6 +8,7 @@ const blog = defineCollection({
         description: z.string(),
         publishedAt: z.date(),
         image: z.string().optional(),
+        alt: z.string().optional(),
         category: z.string().default('Psicanálise'),
         draft: z.boolean().default(false),
     }),

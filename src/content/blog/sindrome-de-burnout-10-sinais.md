@@ -1,8 +1,9 @@
 ---
 title: "Burnout: 10 sinais de que você pode estar com essa síndrome"
-description: "Compreenda a Síndrome de Burnout: seus sinais, causas e a importância de buscar ajuda. Saiba como identificar e combater o esgotamento."
+description: "Conheça os 10 principais sinais da Síndrome de Burnout, entenda as causas do esgotamento profissional e saiba como buscar ajuda especializada para sua saúde mental."
 publishedAt: 2025-11-05T19:17:25.000Z
-image: "/assets/blog/sindrome-burnout.jpg"
+image: "/assets/blog/sinais-da-sindrome-de-burnout.jpg"
+alt: "Trabalhador exausto representando os sinais da Síndrome de Burnout"
 category: "Psicóloga"
 draft: false
 ---
@@ -30,7 +31,7 @@ draft: false
 
 <!-- wp:paragraph -->
 <p>Profissões que exigem convivência constante com situações estressantes, como as na área da saúde, segurança pública e emergência, também são mais suscetíveis ao burnout. Para esses trabalhadores, adotar estratégias de desestresse é fundamental para manter a saúde mental.</p>
-<p><img class="wp-image-845  aligncenter" src="/assets/blog/sindrome-de-burnout-1024x559.jpg" alt="síndrome de burnout" width="763" height="416" /></p>
+<p><img class="wp-image-845  aligncenter" src="/assets/blog/esgotamento-profissional-no-trabalho.jpg" alt="esgotamento profissional e burnout no trabalho" width="763" height="416" /></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":2} -->
@@ -162,5 +163,6 @@ draft: false
 <p class="ds-markdown-paragraph">Em alguns casos, pode ser recomendado acompanhamento psiquiátrico para manejo de sintomas como ansiedade e insônia.</p>
 <p class="ds-markdown-paragraph">O afastamento temporário das atividades laborais, conforme previsto em lei, é muitas vezes necessário para uma recuperação adequada. A reintegração ao trabalho deve ser gradual e acompanhada, com adaptações no ambiente laboral quando necessário.</p>
 <p class="ds-markdown-paragraph">É importante compreender que a recuperação é possível e que buscar ajuda é o primeiro passo para restabelecer o equilíbrio e a satisfação profissional.</p>
+<p class="ds-markdown-paragraph">A compreensão do papel da [liderança na saúde mental](/blog/lideranca-ou-nivelamento/) é fundamental, assim como o suporte de um [psicanalista qualificado no tratamento da ansiedade](/blog/psicanalista-no-tratamento-da-ansiedade/) que muitas vezes acompanha o burnout.</p>
 <p><em>Fonte: www.psicologoeterapia.com.br</em></p>
 <!-- /wp:paragraph -->
