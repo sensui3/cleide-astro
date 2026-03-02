@@ -15,3 +15,6 @@ yarn-error.log*
 .DS_Store
 # WordPress Export
 *.xml
+# Project Management & Temp files
+GESTAO_SKILLS.md
+home.html
