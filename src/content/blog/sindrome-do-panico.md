@@ -2,7 +2,7 @@
 title: "Síndrome do Pânico"
 description: "Saiba como identificar os sintomas da síndrome do pânico, entenda as causas das crises de ansiedade e descubra como o tratamento psicológico ajuda a recuperar a segurança."
 publishedAt: 2025-09-15T22:38:29.000Z
-image: "/assets/blog/sintomas-da-sindrome-do-panico.jpg"
+image: "/assets/blog/sintomas-da-sindrome-do-panico.webp"
 alt: "Representação visual de uma crise ou sintomas da síndrome do pânico"
 category: "Psicóloga"
 draft: false

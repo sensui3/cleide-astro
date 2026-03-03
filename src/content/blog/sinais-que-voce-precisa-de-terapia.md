@@ -2,7 +2,7 @@
 title: "Os 7 Sinais de Que Você Precisa de Terapia (E Não Sabe) | Guia Completo 2025"
 description: "Identifique os 7 sinais sutis de que você precisa de terapia e entenda como a ajuda psicológica pode transformar sua saúde mental e qualidade de vida."
 publishedAt: 2025-11-08T11:00:44.000Z
-image: "/assets/blog/quando-buscar-ajuda-psicologica.jpg"
+image: "/assets/blog/quando-buscar-ajuda-psicologica.webp"
 alt: "Pessoa refletindo sobre a necessidade de buscar ajuda em terapia"
 category: "Psicanálise"
 draft: false

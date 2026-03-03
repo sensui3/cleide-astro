@@ -2,7 +2,7 @@
 title: "Como está sua cuca, você sabe?"
 description: "Descubra como a saúde mental influencia seu dia a dia e aprenda a identificar sinais de desequilíbrio emocional com a Dra. Cleide Salem Sarkis."
 publishedAt: 2023-04-05T20:10:50.000Z
-image: "/assets/blog/saude-mental-e-autoconhecimento.jpg"
+image: "/assets/blog/saude-mental-e-autoconhecimento.webp"
 alt: "Ilustração representativa de saúde mental e o processo de autoconhecimento"
 category: "Psicóloga"
 draft: false
