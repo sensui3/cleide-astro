@@ -3,6 +3,7 @@ import { getWhatsappUrl } from '../utils/whatsapp';
 const { pathname } = Astro.url;
 
 const menuItems = [
+  { label: 'COMO FUNCIONA', href: '/primeira-sessao/' },
   { label: 'TRATAMENTOS', href: '/tratamentos/' },
   { label: 'SOBRE', href: '/sobre/' },
   { label: 'BLOG', href: '/blog/' },
@@ -68,7 +69,7 @@ const whatsappUrl = getWhatsappUrl(pathname);
     {menuItems.map(item => (
       <a 
         href={item.href} 
-        class="mobile-menu-link font-display font-medium text-brand-700 hover:text-brand-500 transition-colors uppercase tracking-[0.1em] text-[2rem] no-underline"
+        class="mobile-menu-link font-display font-bold text-brand-800 hover:text-brand-500 transition-colors uppercase tracking-[0.15em] text-[1.75rem] no-underline"
       >
         {item.label}
       </a>
