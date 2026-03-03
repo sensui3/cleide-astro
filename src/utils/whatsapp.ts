@@ -8,5 +8,5 @@ export const getWhatsappUrl = (pathname: string) => {
     };
 
     const currentMessage = messages[pathname] || messages['/'];
-    return `https://wa.me/5511939031122?text=${encodeURIComponent(currentMessage)}`;
+    return `https://wa.me/5511998059125?text=${encodeURIComponent(currentMessage)}`;
 };
