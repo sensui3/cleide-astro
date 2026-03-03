@@ -1,0 +1,70 @@
+---
+const testimonials = [
+  {
+    initials: 'M.S.',
+    age: '34 anos',
+    time: 'Paciente há 2 anos',
+    text: 'Adiei a terapia por anos achando que era "frescura". A Dra. Cleide me mostrou que buscar ajuda é a decisão mais corajosa que tomei. Hoje vivo com uma leveza que não conhecia.',
+    stars: 5
+  },
+  {
+    initials: 'R.B.',
+    age: '42 anos',
+    time: 'Paciente há 1 ano',
+    text: 'O atendimento na Av. Paulista é extremamente acolhedor. Em poucas sessões consegui identificar padrões que me travavam há décadas. A abordagem técnica unida à empatia faz toda a diferença.',
+    stars: 5
+  },
+  {
+    initials: 'L.F.',
+    age: '29 anos',
+    time: 'Paciente há 6 meses',
+    text: 'Eu sentia um vazio que não sabia explicar. Através da psicanálise e do olhar atento da Dra. Cleide, estou reconstruindo minha narrativa e descobrindo minha verdadeira potência.',
+    stars: 5
+  }
+];
+---
+
+<section id="depoimentos" class="section-padding bg-brand-50 relative overflow-hidden reveal">
+  <!-- Decorative background -->
+  <div class="absolute top-0 left-0 w-64 h-64 bg-white/50 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+  
+  <div class="container relative z-10">
+    <div class="text-center mb-16">
+      <span class="text-label mb-4 block">
+        // RELATOS DE TRANSFORMAÇÃO
+      </span>
+      <h2 class="heading-2">
+        Histórias de <span class="italic font-300 text-brand-500">cura e evolução</span>
+      </h2>
+      <p class="text-slate-500 mt-6 max-w-2xl mx-auto italic text-sm">
+        "O sigilo e a ética são as bases do meu trabalho. Os relatos abaixo preservam a identidade dos pacientes, focando na jornada de superação."
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {testimonials.map((item) => (
+        <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-500 group">
+          <div class="flex gap-1 text-amber-400 mb-6">
+            {[...Array(item.stars)].map(() => (
+              <span class="i-lucide-star text-sm"></span>
+            ))}
+          </div>
+          
+          <p class="text-slate-600 italic mb-10 leading-relaxed text-main">
+            "{item.text}"
+          </p>
+          
+          <div class="flex items-center gap-4 border-t border-slate-50 pt-8">
+            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 font-display font-bold text-sm">
+              {item.initials}
+            </div>
+            <div>
+              <p class="font-bold text-sm text-slate-700">{item.initials}, {item.age}</p>
+              <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">{item.time}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

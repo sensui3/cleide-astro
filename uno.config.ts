@@ -93,6 +93,8 @@ export default defineConfig({
                 gold: '#b8860b',
                 muted: '#fcfaf7',
                 warm: '#faf6f1',
+                hope: '#7CB4A0',   // Verde-água sereno
+                warmth: '#D4A574', // Dourado acolhedor
             }
         },
     },
@@ -114,7 +116,7 @@ export default defineConfig({
         'heading-1': 'font-display font-700 text-[clamp(2.5rem,8vw,5.5rem)] leading-[0.95] text-brand-700',
         'heading-2': 'font-display font-600 text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] text-brand-700 tracking-tight',
         'heading-3': 'font-display font-medium text-[clamp(1.5rem,3vw,2rem)] text-brand-700 leading-snug',
-        'text-main': 'font-body text-[clamp(1.125rem,2vw,1.25rem)] leading-relaxed text-slate-600 font-400',
+        'text-main': 'font-body text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.75] text-slate-600 font-400',
         'text-base-site': 'font-body text-base leading-relaxed text-slate-500',
         'text-label': 'text-xs font-bold tracking-[0.2em] text-slate-400 uppercase',
     },

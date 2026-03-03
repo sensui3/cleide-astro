@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getWhatsappUrl } from '../utils/whatsapp';
+
+const { pathname } = Astro.url;
+const whatsappUrl = getWhatsappUrl(pathname);
+
+const faq = [
+  {
+    q: "Eu vou ter que deitar no divã?",
+    a: "Não necessariamente. O uso do divã é uma ferramenta que pode ou não ser utilizada ao longo do processo, mas as primeiras sessões são sempre realizadas face a face, em uma conversa confortável."
+  },
+  {
+    q: "Quanto tempo dura cada sessão?",
+    a: "As sessões têm duração média de 50 minutos. É um tempo reservado exclusivamente para você, sem interrupções."
+  },
+  {
+    q: "Vou ter que falar de tudo logo de cara?",
+    a: "Não. Você dita o ritmo. No começo, conversaremos sobre o que te trouxe até aqui e o que você espera do processo. O sigilo é absoluto desde o primeiro minuto."
+  },
+  {
+    q: "Como é o consultório?",
+    a: "O espaço na Avenida Paulista foi planejado para ser um ambiente de acolhimento, silêncio e conforto, garantindo a privacidade necessária para o trabalho analítico."
+  }
+];
+---
+
+<BaseLayout 
+  title="Sua Primeira Sessão | Dra. Cleide Sarkis" 
+  description="Saiba o que esperar do seu primeiro contato e da sua primeira sessão de psicanálise com a Dra. Cleide Sarkis na Av. Paulista."
+>
+  <Header slot="header" />
+
+  <main class="pt-32 pb-20">
+    <div class="container max-w-4xl">
+      <header class="text-center mb-16">
+        <span class="text-label mb-4 block">// PREVISIBILIDADE E ACOLHIMENTO</span>
+        <h1 class="heading-2 mb-6">Sua primeira sessão: <span class="italic font-300 text-brand-500">o que esperar?</span></h1>
+        <p class="text-main max-w-2xl mx-auto">
+          É natural sentir ansiedade ou dúvida antes do primeiro encontro. Aqui você entenderá como funciona o início da nossa jornada.
+        </p>
+      </header>
+
+      <div class="space-y-20">
+        <!-- O Primeiro Contato -->
+        <section class="grid md:grid-cols-2 gap-12 items-center reveal">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold mb-6">1</div>
+            <h2 class="heading-3 mb-4">O primeiro contato</h2>
+            <p class="text-main text-slate-500">
+              Ao clicar no botão de agendamento, você falará diretamente com minha equipe pelo WhatsApp. Eles te auxiliarão com horários disponíveis e informações básicas. Tudo o que você disser ali já é tratado com absoluto sigilo.
+            </p>
+          </div>
+          <div class="bg-brand-50 rounded-3xl p-8 border border-brand-100">
+             <p class="text-brand-700 font-medium italic">"O primeiro passo é apenas uma conversa sem compromisso, para entendermos como posso te ajudar."</p>
+          </div>
+        </section>
+
+        <!-- O Ambiente -->
+        <section class="grid md:grid-cols-2 gap-12 items-center reveal">
+          <div class="order-2 md:order-1">
+             <div class="aspect-square bg-slate-200 rounded-3xl overflow-hidden shadow-xl">
+               <!-- Placeholder para foto do consultório -->
+               <div class="w-full h-full flex items-center justify-center bg-brand-100 italic text-brand-400 p-10 text-center">
+                 [Foto do consultório acolhedor na Av. Paulista]
+               </div>
+             </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <div class="w-12 h-12 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold mb-6">2</div>
+            <h2 class="heading-3 mb-4">O ambiente</h2>
+            <p class="text-main text-slate-500">
+              O atendimento acontece na Avenida Paulista, em um ambiente preparado para o silêncio e a introspecção. Se preferir a modalidade online, o sigilo e a qualidade do acolhimento permanecem os mesmos através de plataformas seguras.
+            </p>
+          </div>
+        </section>
+
+        <!-- A Sessão -->
+        <section class="reveal">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <div class="w-12 h-12 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold mb-6 mx-auto">3</div>
+            <h2 class="heading-3 mb-4">Como é a conversa</h2>
+            <p class="text-main text-slate-500">
+              Não há roteiro rígido. Você terá liberdade total para falar sobre o que quiser. Meu papel é escutar de forma ativa, técnica e sem julgamentos, ajudando você a encontrar os fios condutores da sua própria história.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6 mt-12">
+            {faq.map(item => (
+              <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                <p class="font-bold text-brand-700 mb-2">{item.q}</p>
+                <p class="text-sm text-slate-500 leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="bg-brand-700 rounded-[3rem] p-12 text-center text-white reveal">
+          <h2 class="heading-2 text-white mb-6">Sente que é o momento?</h2>
+          <p class="text-brand-100 mb-10 max-w-xl mx-auto">
+            Não espere pelo "momento perfeito". A coragem está em começar mesmo com as dúvidas. Vamos conversar?
+          </p>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="btn-whatsapp mx-auto">
+            Quero dar o primeiro passo
+          </a>
+          <p class="text-[10px] text-brand-300 mt-6 uppercase tracking-widest font-bold">
+            // Falar com a equipe pelo WhatsApp
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <Footer slot="footer" />
+</BaseLayout>
