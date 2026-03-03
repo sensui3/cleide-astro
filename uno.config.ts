@@ -110,8 +110,8 @@ export default defineConfig({
         'section-padding': 'py-[clamp(4rem,10vw,8rem)]',
         'container': 'max-w-7xl mx-auto px-[clamp(1.5rem,6vw,4rem)]',
         // Headings — updated to match actual usage across the site
-        'heading-1': 'font-display font-700 text-[clamp(4rem,10vw,7rem)] leading-[0.95] text-brand-700',
-        'heading-2': 'font-display font-600 text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.1] text-brand-700 tracking-tight',
+        'heading-1': 'font-display font-700 text-[clamp(2.25rem,8vw,6rem)] leading-[0.95] text-brand-700',
+        'heading-2': 'font-display font-600 text-[clamp(1.75rem,6vw,4rem)] leading-[1.1] text-brand-700 tracking-tight',
         'text-body': 'font-body text-[clamp(1.125rem,2vw,1.25rem)] leading-relaxed text-slate-600 font-400',
     },
 });
