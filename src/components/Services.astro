@@ -27,17 +27,20 @@ const services = [
   <div class="container">
     <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
       <div class="lg:col-span-4 lg:sticky lg:top-40">
-        <span class="inline-block text-xs font-bold tracking-[0.2em] text-slate-400 uppercase mb-8">
+        <span class="text-label mb-8 block">
           // ESPECIALIDADES
         </span>
-        <h2 class="font-display text-[clamp(2.5rem,4vw,4rem)] text-brand-700 leading-tight mb-8">
-          Tratamentos & Abordagens
+        <h2 class="heading-2 mb-8">
+          Metodologia Integrada & <span class="italic font-300 text-brand-500">Abordagens</span>
         </h2>
-        <p class="text-slate-400 text-lg mb-10 leading-relaxed">
-          Utilizamos uma combinação cuidadosa de técnicas para oferecer um suporte completo ao ser humano em sua integralidade. Cada abordagem é selecionada conforme a necessidade do paciente.
+        <p class="text-slate-500 text-main mb-10 leading-relaxed">
+          Através de uma **metodologia exclusiva** que une a profundidade da investigação psicanalítica com a precisão da hipnose clínica e a visão da psicologia transpessoal, oferecemos um caminho de cura estruturado e individualizado.
+        </p>
+        <p class="text-slate-400 text-sm mb-10 italic">
+          Cada plano terapêutico é desenhado sob medida, utilizando as ferramentas mais adequadas à complexidade da sua demanda.
         </p>
         <a href="/tratamentos/" class="text-xs font-bold tracking-[0.2em] text-brand-500 hover:text-brand-600 transition-colors uppercase border-b-2 border-brand-500/20 pb-1">
-          Ver todos os tratamentos
+          Explorar especialidades
         </a>
       </div>
 
@@ -47,8 +50,8 @@ const services = [
             <div class="w-14 h-14 bg-brand-50 text-brand-500 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-500 group-hover:text-white transition-all">
               <span class={service.icon + " text-2xl"}></span>
             </div>
-            <h3 class="font-display font-medium text-2xl mb-6 text-brand-700">{service.title}</h3>
-            <p class="text-slate-400 text-base leading-relaxed">{service.description}</p>
+            <h3 class="heading-3 mb-6">{service.title}</h3>
+            <p class="text-base-site text-slate-400">{service.description}</p>
           </div>
         ))}
       </div>

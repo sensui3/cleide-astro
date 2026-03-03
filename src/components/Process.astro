@@ -1,20 +1,20 @@
 ---
 const steps = [
   {
-    title: 'Acolhimento',
-    description: 'O primeiro contato onde criamos um espaço seguro, empático e totalmente livre de julgamentos para sua fala.',
+    title: 'Acolhimento & Ética',
+    description: 'O início de uma aliança terapêutica sólida, em um ambiente de absoluto sigilo e suspensão de julgamentos.',
   },
   {
-    title: 'Investigação',
-    description: 'Mergulho profundo nas causas reais dos seus conflitos através de reflexões teóricas baseadas na psicanálise.',
+    title: 'Investigação Analítica',
+    description: 'Mergulho técnico nas causas raízes dos conflitos, decodificando o que está latente no seu psiquismo.',
   },
   {
-    title: 'Conscientização',
-    description: 'O momento de conquistar "insights" e novos olhares sobre si mesmo e suas relações interpessoais.',
+    title: 'Expansão da Consciência',
+    description: 'A conquista de clareza estratégica sobre seus padrões, gerando insights que permitem novas escolhas de vida.',
   },
   {
-    title: 'Ressignificação',
-    description: 'A transformação das suas feridas, permitindo viver o presente com mais leveza e fortalecimento emocional.',
+    title: 'Maestria & Ressignificação',
+    description: 'A transformação definitiva de traumas em força consciente, permitindo o domínio pleno da sua história.',
   }
 ];
 ---
@@ -22,10 +22,10 @@ const steps = [
 <section id="processo" class="section-padding bg-white relative reveal">
   <div class="container">
     <div class="text-center mb-20">
-      <span class="inline-block text-xs font-bold tracking-[0.2em] text-slate-400 uppercase mb-4">
+      <span class="text-label mb-4 block">
         // O PROCESSO TERAPÊUTICO
       </span>
-      <h2 class="font-display text-[clamp(2.5rem,5vw,4.5rem)] text-brand-700">
+      <h2 class="heading-2">
         Jornada de <span class="italic font-300 text-brand-500">Transformação</span>
       </h2>
     </div>
@@ -41,8 +41,8 @@ const steps = [
             {index + 1}
           </div>
           
-          <h3 class="font-display font-bold text-2xl mb-6 text-brand-700 relative z-10">{step.title}</h3>
-          <p class="text-slate-400 text-base leading-[1.8] relative z-10">{step.description}</p>
+          <h3 class="text-lg font-display font-bold text-brand-700 mb-6 relative z-10 leading-tight">{step.title}</h3>
+          <p class="text-slate-500 text-sm relative z-10 leading-relaxed">{step.description}</p>
         </div>
       ))}
     </div>

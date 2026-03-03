@@ -26,11 +26,11 @@ const structuredData = {
   <main class="pt-40 pb-20">
     <section class="container max-w-6xl">
       <div class="text-center mb-16">
-        <span class="inline-block text-xs font-bold tracking-[0.2em] text-slate-400 uppercase mb-4">
+        <span class="text-label mb-4 block">
           // CANAIS DE ATENDIMENTO
         </span>
         <h1 class="heading-1 mb-8">Vamos Conversar?</h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-main text-slate-500 max-w-2xl mx-auto">
           Escolha o canal de sua preferência para tirar dúvidas ou agendar sua primeira sessão. Estou à disposição para ouvir sua história.
         </p>
       </div>
@@ -42,8 +42,8 @@ const structuredData = {
             <div class="w-14 h-14 bg-brand-500 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-brand-500/20">
               <span class="i-mdi-whatsapp text-3xl"></span>
             </div>
-            <h2 class="font-display text-2xl text-brand-700 mb-4">WhatsApp</h2>
-            <p class="text-slate-600 mb-6 leading-relaxed text-lg">
+            <h2 class="heading-3 mb-4">WhatsApp</h2>
+            <p class="text-base-site text-slate-600 mb-6">
               Agendamento rápido e direto para consultas presenciais ou teleterapia.
             </p>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="font-bold text-brand-600 text-lg hover:text-brand-700 flex items-center gap-2 group">
@@ -56,8 +56,8 @@ const structuredData = {
             <div class="w-14 h-14 bg-slate-100 text-brand-600 rounded-2xl flex items-center justify-center mb-6">
               <span class="i-lucide-map-pin text-3xl"></span>
             </div>
-            <h2 class="font-display text-2xl text-brand-700 mb-4">Localização</h2>
-            <p class="text-slate-600 mb-6 leading-relaxed text-lg">
+            <h2 class="heading-3 mb-4">Localização</h2>
+            <p class="text-base-site text-slate-600 mb-6">
               Av. Paulista, 509 - Conj. 1513<br />Bela Vista, São Paulo - SP
             </p>
             <a href="https://maps.app.goo.gl/3f8H2k2z1J3jL8z6A" target="_blank" rel="noopener noreferrer" class="font-bold text-brand-600 text-lg hover:text-brand-700 flex items-center gap-2 group">
@@ -70,7 +70,7 @@ const structuredData = {
             <div class="w-14 h-14 bg-slate-100 text-brand-600 rounded-2xl flex items-center justify-center mb-6">
               <span class="i-lucide-clock text-3xl"></span>
             </div>
-            <h2 class="font-display text-2xl text-brand-700 mb-4">Horários</h2>
+            <h2 class="heading-3 mb-4">Horários</h2>
             <div class="space-y-3 text-slate-600">
               <div class="flex justify-between border-b border-slate-50 pb-2">
                 <span class="font-bold">Seg - Sex</span>
@@ -88,11 +88,11 @@ const structuredData = {
         <div class="bg-white p-10 lg:p-14 rounded-[2.5rem] border border-slate-100 shadow-2xl relative overflow-hidden group">
           <div class="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-bl-full opacity-50 transition-transform group-hover:scale-110"></div>
           
-          <h2 class="font-display text-3xl text-brand-700 mb-8">Envie uma mensagem</h2>
+          <h2 class="heading-3 mb-8">Envie uma mensagem</h2>
           
           <form class="space-y-6">
             <div>
-              <label for="name" class="block text-xs font-bold text-slate-400 mb-2 uppercase tracking-widest">Nome Completo</label>
+              <label for="name" class="block text-label mb-2 opacity-70">Nome Completo</label>
               <input 
                 type="text" 
                 id="name" 
@@ -104,7 +104,7 @@ const structuredData = {
             </div>
             
             <div>
-              <label for="email" class="block text-xs font-bold text-slate-400 mb-2 uppercase tracking-widest">Seu melhor E-mail</label>
+              <label for="email" class="block text-label mb-2 opacity-70">Seu melhor E-mail</label>
               <input 
                 type="email" 
                 id="email" 
@@ -116,7 +116,7 @@ const structuredData = {
             </div>
 
             <div>
-              <label for="phone" class="block text-xs font-bold text-slate-400 mb-2 uppercase tracking-widest">Telefone / WhatsApp</label>
+              <label for="phone" class="block text-label mb-2 opacity-70">Telefone / WhatsApp</label>
               <input 
                 type="tel" 
                 id="phone" 
@@ -127,7 +127,7 @@ const structuredData = {
             </div>
 
             <div>
-              <label for="message" class="block text-xs font-bold text-slate-400 mb-2 uppercase tracking-widest">Como posso te ajudar?</label>
+              <label for="message" class="block text-label mb-2 opacity-70">Como posso te ajudar?</label>
               <textarea 
                 id="message" 
                 name="message" 

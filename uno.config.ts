@@ -110,8 +110,12 @@ export default defineConfig({
         'section-padding': 'py-[clamp(4rem,10vw,8rem)]',
         'container': 'max-w-7xl mx-auto px-[clamp(1.5rem,6vw,4rem)]',
         // Headings — updated to match actual usage across the site
-        'heading-1': 'font-display font-700 text-[clamp(2.25rem,8vw,6rem)] leading-[0.95] text-brand-700',
-        'heading-2': 'font-display font-600 text-[clamp(1.75rem,6vw,4rem)] leading-[1.1] text-brand-700 tracking-tight',
-        'text-body': 'font-body text-[clamp(1.125rem,2vw,1.25rem)] leading-relaxed text-slate-600 font-400',
+        // Headings & Text Standardized
+        'heading-1': 'font-display font-700 text-[clamp(2.5rem,8vw,5.5rem)] leading-[0.95] text-brand-700',
+        'heading-2': 'font-display font-600 text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] text-brand-700 tracking-tight',
+        'heading-3': 'font-display font-medium text-[clamp(1.5rem,3vw,2rem)] text-brand-700 leading-snug',
+        'text-main': 'font-body text-[clamp(1.125rem,2vw,1.25rem)] leading-relaxed text-slate-600 font-400',
+        'text-base-site': 'font-body text-base leading-relaxed text-slate-500',
+        'text-label': 'text-xs font-bold tracking-[0.2em] text-slate-400 uppercase',
     },
 });

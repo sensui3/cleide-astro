@@ -28,7 +28,7 @@ const whatsappUrl = getWhatsappUrl(pathname);
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center gap-12">
       {menuItems.map(item => (
-        <a href={item.href} class="text-sm font-bold tracking-[0.15em] text-slate-500 hover:text-brand-500 transition-colors uppercase">
+        <a href={item.href} class="text-label hover:text-brand-500 transition-colors">
           {item.label}
         </a>
       ))}
