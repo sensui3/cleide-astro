@@ -34,6 +34,7 @@
   "devDependencies": {
     "@unocss/preset-attributify": "^66.0.0",
     "@unocss/preset-typography": "^66.0.0",
-    "rollup-plugin-visualizer": "^7.0.0"
+    "rollup-plugin-visualizer": "^7.0.0",
+    "typescript": "^5.9.3"
   }
 }
