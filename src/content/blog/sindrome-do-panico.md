@@ -16,7 +16,9 @@ A síndrome do pânico é o Sinal que Desperta. Se todo sintoma for encarado com
 
 Sintoma é sinal de Alarme. Sintoma pânico é igual a estar sufocado, desprotegido. Sugere que há um abafamento, um peito apertado, uma pressão e não há proteção. O sintoma vem avisar: Você precisa respirar, parar, aliviar, descansar e ser protegido.
 
-<h2>Na Síndrome do Pânico a pessoa sofre de uma desordem de ansiedade que se tornou persistente.</h2>
+
+## Na Síndrome do Pânico a pessoa sofre de uma desordem de ansiedade que se tornou persistente.
+
 
 A manifestação de ansiedade vai tornando-se cada vez mais forte e por isso provoca a crise de pânico. A pessoa que sofre de ansiedade está sempre se pré/ocupando além da conta. Pessoas que apresentam estas queixas são controladoras, perfeccionistas, em geral por terem tido uma educação rígida.
 
@@ -37,13 +39,13 @@ De acordo com o livro de psiquiatria DSM-IV “o ataque de pânico é caracteriz
 . Parestesias (sensações de formigamento);
 . Resfriamento ou rubores.
 
-<strong>Considera-se uma Desordem de pânico quando:</strong>
+**Considera-se uma Desordem de pânico quando:**
 . Há recorrentes ataques de Pânico;
 . Pelo menos um dos ataques é seguido do outro dentro de um período de um mês; com uma das
 . Preocupação persistente sobre ter um outro ataque;
 . Preocupação com as consequências de um ataque: medo de perder o controle, ter um ataque do coração, ficar louco;
 . Mudança significativa no comportamento relacionados com os ataques.
 
-<strong>A Dra. Cleide Salem Sarkis é psicóloga com anos de experiência no tratamento de transtornos de ansiedade e síndrome do pânico, oferecendo suporte especializado para quem busca superar esses desafios.</strong>
+**A Dra. Cleide Salem Sarkis é psicóloga com anos de experiência no tratamento de transtornos de ansiedade e síndrome do pânico, oferecendo suporte especializado para quem busca superar esses desafios.**
 
 Se você sofre com excesso de preocupação, veja também nosso guia sobre o [tratamento da ansiedade com psicanálise](/blog/psicanalista-no-tratamento-da-ansiedade/) e entenda as diferenças fundamentais entre o [medo natural e a fobia](/blog/medo-ou-fobia/).

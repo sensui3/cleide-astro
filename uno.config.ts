@@ -17,9 +17,61 @@ export default defineConfig({
         }),
         presetTypography({
             cssExtend: {
-                'a': { color: '#00509d' },
-                'a:hover': { color: '#003f88' },
-                'strong': { color: '#002952' },
+                'a': {
+                    'color': '#3d7bbf', // Slightly lighter blue for links
+                    'text-decoration': 'none',
+                    'border-bottom': '1px solid rgba(61, 123, 191, 0.3)',
+                    'transition': 'all 0.3s ease',
+                    'font-weight': '500',
+                },
+                'a:hover': {
+                    'color': '#00509d',
+                    'border-bottom-color': '#00509d',
+                    'background-color': 'rgba(212, 232, 255, 0.2)',
+                },
+                'strong': { 'color': '#002952', 'font-weight': '700' },
+                'h2': {
+                    'margin-top': '3rem',
+                    'margin-bottom': '1.5rem',
+                    'line-height': '1.2',
+                    'font-family': '"Fraunces", serif',
+                    'font-weight': '600',
+                    'color': '#002952',
+                },
+                'h3': {
+                    'margin-top': '2.5rem',
+                    'margin-bottom': '1.25rem',
+                    'line-height': '1.3',
+                    'font-family': '"Fraunces", serif',
+                    'font-weight': '500',
+                    'color': '#002952',
+                },
+                'h4': {
+                    'margin-top': '2rem',
+                    'margin-bottom': '1rem',
+                    'font-family': '"Fraunces", serif',
+                    'font-weight': '500',
+                    'color': '#002952',
+                },
+                'p': {
+                    'margin-bottom': '1.75rem',
+                    'line-height': '1.8',
+                    'color': '#334155', // slate-700
+                },
+                'ul, ol': {
+                    'margin-bottom': '2rem',
+                    'padding-left': '1.25rem',
+                },
+                'li': {
+                    'margin-bottom': '0.75rem',
+                    'line-height': '1.7',
+                },
+                'img': {
+                    'margin-top': '3rem',
+                    'margin-bottom': '3rem',
+                    'border-radius': '1.5rem',
+                    'box-shadow': '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
+                },
             },
         }),
     ],

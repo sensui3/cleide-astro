@@ -8,7 +8,6 @@ category: "Psicóloga"
 draft: false
 ---
 
-
 INFORME INSTITUCIONAL
 
 &nbsp;
@@ -36,5 +35,5 @@ Quando John Lennon cantou em 1965 estes que são os primeiros versos de "Help!",
 
 Admitir a necessidade de suporte é o primeiro passo. Se você sente que este é o seu momento, conheça os [sinais de que você precisa de terapia](/blog/sinais-que-voce-precisa-de-terapia/) e como a [psicanálise pode atuar no tratamento da ansiedade](/blog/psicanalista-no-tratamento-da-ansiedade/) e outros conflitos da alma.
 
-<strong>Cleide Salem Sarkis</strong>
+**Cleide Salem Sarkis**
 Psicóloga e Psicanalista
