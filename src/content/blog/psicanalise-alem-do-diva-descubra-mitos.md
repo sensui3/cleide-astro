@@ -2,7 +2,7 @@
 title: "Psicanálise Além do Divã: Descubra Mitos e Verdades sobre Autoconhecimento"
 description: "Desmistificamos o processo psicanalítico: descubra o que é verdade e o que é mito sobre o autoconhecimento profundo e o papel do analista na contemporaneidade."
 publishedAt: 2025-11-06T11:00:35.000Z
-image: "/assets/blog/mitos-e-verdades-sobre-psicanalise.webp"
+image: "../../assets/blog/mitos-e-verdades-sobre-psicanalise.webp"
 alt: "Divã clássico de psicanálise simbolizando mitos e verdades do processo"
 category: "Psicanálise"
 draft: false

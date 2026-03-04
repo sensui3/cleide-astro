@@ -2,7 +2,7 @@
 title: "O que é Terapia de Regressão?"
 description: "Entenda o que é a terapia de regressão, como ela ajuda a acessar memórias reprimidas e traumas do passado, e quais são os benefícios dessa técnica terapêutica."
 publishedAt: 2025-10-06T20:21:26.000Z
-image: "/assets/blog/terapia-de-regressao-e-memorias.webp"
+image: "../../assets/blog/terapia-de-regressao-e-memorias.webp"
 alt: "Imagem simbólica sobre o acesso a memórias através da terapia de regressão"
 category: "Psicóloga"
 draft: false

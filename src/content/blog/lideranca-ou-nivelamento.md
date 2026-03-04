@@ -2,7 +2,7 @@
 title: "Cleide Salem Sarkis Liderança e Nivelamento?"
 description: "Reflexões da Dra. Cleide Salem Sarkis sobre a liderança feminina, o papel da mulher na sociedade atual e a busca pelo equilíbrio emocional nos relacionamentos."
 publishedAt: 2023-04-05T22:01:05.000Z
-image: "/assets/blog/lideranca-feminina-e-psicologia.webp"
+image: "../../assets/blog/lideranca-feminina-e-psicologia.webp"
 alt: "Representação de liderança feminina e equilíbrio emocional no trabalho"
 category: "Psicóloga"
 draft: false

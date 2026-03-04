@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
 
 const allPosts = await getCollection('blog', ({ data }) => {
   return data.draft !== true;
@@ -67,9 +68,11 @@ const categories = [...new Set(allPosts.map(post => post.data.category))]
         <article class="flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
           <a href={post.href} class="block aspect-video bg-slate-100 flex items-center justify-center text-slate-300 relative overflow-hidden">
             {post.image ? (
-              <img 
+              <Image 
                 src={post.image} 
                 alt={post.title} 
+                width={800}
+                height={450}
                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             ) : (

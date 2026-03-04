@@ -2,7 +2,7 @@
 title: "Traumas emocionais: o que são, sintomas e como tratar"
 description: "Descubra o que são traumas emocionais, identifique os sintomas e conheça as melhores abordagens terapêuticas para tratar o sofrimento e recuperar sua saúde mental."
 publishedAt: 2025-10-10T11:22:10.000Z
-image: "/assets/blog/como-tratar-traumas-emocionais.webp"
+image: "../../assets/blog/como-tratar-traumas-emocionais.webp"
 alt: "Ilustração sobre o tratamento e superação de traumas emocionais"
 category: "Psicóloga"
 draft: false

@@ -2,7 +2,7 @@
 title: "Um grito de ajuda"
 description: "Reflexão sobre a necessidade de admitir que precisamos de ajuda psicológica na sociedade moderna e como o processo terapêutico abre novas portas para o bem-estar."
 publishedAt: 2023-04-05T21:56:46.000Z
-image: "/assets/blog/pedido-de-ajuda-psicologica.webp"
+image: "../../assets/blog/pedido-de-ajuda-psicologica.webp"
 alt: "Imagem artística representando a busca e o pedido por ajuda psicológica"
 category: "Psicóloga"
 draft: false

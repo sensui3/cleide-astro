@@ -21,6 +21,7 @@ const { Content } = await render(post);
 <BaseLayout 
   title={post.data.title} 
   description={post.data.description}
+  image={post.data.image?.src}
   type="article"
 >
   <ArticleSchema 

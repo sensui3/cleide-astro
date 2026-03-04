@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -32,6 +33,7 @@ const structuredData = {
 <BaseLayout 
   title={post.data.title} 
   description={post.data.description}
+  image={post.data.image?.src}
   {structuredData}
   type="article"
 >
@@ -48,10 +50,14 @@ const structuredData = {
       <h1 class="text-4xl md:text-5xl font-display font-medium text-brand-700 mb-8">{post.data.title}</h1>
       
       {post.data.image && (
-        <div class="mb-12 rounded-2xl overflow-hidden shadow-2xl aspect-video">
-          <img 
+        <div class="mb-12 rounded-2xl overflow-hidden shadow-2xl aspect-video bg-slate-100">
+          <Image 
             src={post.data.image} 
-            alt={post.data.title}
+            alt={post.data.alt || post.data.title}
+            width={1200}
+            height={675}
+            loading="eager"
+            fetchpriority="high"
             class="w-full h-full object-cover"
           />
         </div>

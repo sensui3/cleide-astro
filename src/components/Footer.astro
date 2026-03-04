@@ -1,5 +1,7 @@
 ---
 import { getWhatsappUrl } from '../utils/whatsapp';
+import { Image } from 'astro:assets';
+import logo from '../assets/cleide-sarkis-logo.svg';
 const { pathname } = Astro.url;
 const currentYear = new Date().getFullYear();
 const whatsappUrl = getWhatsappUrl(pathname);
@@ -10,12 +12,12 @@ const whatsappUrl = getWhatsappUrl(pathname);
     <div class="grid md:grid-cols-12 gap-12 mb-20">
       <div class="md:col-span-3">
         <a href="/" class="inline-block mb-8">
-          <img 
-            src="/images/cleide-sarkis-logo.svg" 
+          <Image 
+            src={logo} 
             alt="Dra. Cleide Sarkis" 
             class="h-14 w-auto" 
-            width="170" 
-            height="27" 
+            width={170} 
+            height={27} 
             loading="lazy"
           />
         </a>

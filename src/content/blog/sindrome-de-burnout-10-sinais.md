@@ -2,7 +2,7 @@
 title: "Burnout: 10 sinais de que você pode estar com essa síndrome"
 description: "Conheça os 10 principais sinais da Síndrome de Burnout, entenda as causas do esgotamento profissional e saiba como buscar ajuda especializada para sua saúde mental."
 publishedAt: 2025-11-05T19:17:25.000Z
-image: "/assets/blog/sinais-da-sindrome-de-burnout.webp"
+image: "../../assets/blog/sinais-da-sindrome-de-burnout.webp"
 alt: "Trabalhador exausto representando os sinais da Síndrome de Burnout"
 category: "Psicóloga"
 draft: false

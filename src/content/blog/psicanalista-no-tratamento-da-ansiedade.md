@@ -2,7 +2,7 @@
 title: "A Importância do Psicanalista no Tratamento da Ansiedade"
 description: "Entenda como o psicanalista atua no tratamento da ansiedade, explorando as causas profundas e o inconsciente para promover um alívio duradouro e autoconhecimento."
 publishedAt: 2025-10-07T11:23:56.000Z
-image: "/assets/blog/psicanalise-no-tratamento-da-ansiedade.webp"
+image: "../../assets/blog/psicanalise-no-tratamento-da-ansiedade.webp"
 alt: "Sessão de terapia para o tratamento especializado da ansiedade"
 category: "Ansiedade"
 draft: false

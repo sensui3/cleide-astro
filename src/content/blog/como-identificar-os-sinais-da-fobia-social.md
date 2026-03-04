@@ -2,7 +2,7 @@
 title: "Saúde Mental: Como Identificar os Sinais da Fobia Social"
 description: "Saiba como identificar os sinais da fobia social, seus sintomas físicos e emocionais, e a importância de buscar tratamento especializado precocemente."
 publishedAt: 2025-09-15T22:44:31.000Z
-image: "/assets/blog/sinais-de-fobia-social-e-ansiedade.webp"
+image: "../../assets/blog/sinais-de-fobia-social-e-ansiedade.webp"
 alt: "Pessoa em situação social representando ansiedade e fobia social"
 category: "Psicóloga"
 draft: false

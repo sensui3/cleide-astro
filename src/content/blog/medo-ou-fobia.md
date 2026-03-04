@@ -2,7 +2,7 @@
 title: "Medo ou Fobia"
 description: "Entenda a diferença entre o medo natural, essencial para a sobrevivência, e a fobia, um medo irracional que pode causar ansiedade e sofrimento emocional."
 publishedAt: 2023-04-05T20:14:32.000Z
-image: "/assets/blog/diferenca-entre-medo-e-fobia.webp"
+image: "../../assets/blog/diferenca-entre-medo-e-fobia.webp"
 alt: "Diagrama ou imagem ilustrativa sobre a diferença entre medo natural e fobia"
 category: "Psicóloga"
 draft: false

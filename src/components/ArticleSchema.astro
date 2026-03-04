@@ -3,7 +3,7 @@ interface Props {
   title: string;
   description: string;
   publishedAt: Date;
-  image?: string;
+  image?: string | any;
   authorName?: string;
 }
 
@@ -16,7 +16,9 @@ const {
 } = Astro.props;
 
 const siteUrl = Astro.site || 'https://cleidesarkis.com.br';
-const imageUrl = image ? new URL(image, siteUrl).href : '';
+const imageUrl = image 
+  ? (typeof image === 'string' ? new URL(image, siteUrl).href : new URL(image.src, siteUrl).href)
+  : '';
 
 const schema = {
   "@context": "https://schema.org",
