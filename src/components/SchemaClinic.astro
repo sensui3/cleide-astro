@@ -1,0 +1,47 @@
+---
+const { 
+  name = "Dra. Cleide Salem Sarkis - Psicanalista",
+  url = "https://cleidesarkis.com.br",
+  telephone = "+5511998059125"
+} = Astro.props;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": name,
+  "image": "https://cleidesarkis.com.br/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Paulista, 509 - Conj. 1513",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "postalCode": "01311-000",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -23.5615,
+    "longitude": -46.6559
+  },
+  "url": url,
+  "telephone": telephone,
+  "medicalSpecialty": ["Psychiatry", "Psychoanalysis"],
+  "areaServed": [
+    { "@type": "City", "name": "São Paulo" },
+    { "@type": "AdministrativeArea", "name": "Bela Vista" },
+    { "@type": "AdministrativeArea", "name": "Paraíso" },
+    { "@type": "AdministrativeArea", "name": "Vila Mariana" },
+    { "@type": "AdministrativeArea", "name": "Jardins" },
+    { "@type": "AdministrativeArea", "name": "Zona Sul" }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ]
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

@@ -1,10 +1,12 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
 import { Image } from 'astro:assets';
 import ArticleSchema from '../../components/ArticleSchema.astro';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -29,9 +31,7 @@ const { Content } = await render(post);
     description={post.data.description}
     publishedAt={post.data.publishedAt}
     image={post.data.image}
-    slot="header"
   />
-  <Header slot="header" />
   
   <article class="pt-40 pb-20 container max-w-4xl">
     <header class="mb-12 text-center">
@@ -76,5 +76,4 @@ const { Content } = await render(post);
     </div>
   </article>
 
-  <Footer slot="footer" />
 </BaseLayout>

@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { getWhatsappUrl } from '../utils/whatsapp';
 
 const { pathname } = Astro.url;
@@ -31,7 +29,6 @@ const faq = [
   title="Sua Primeira Sessão | Dra. Cleide Sarkis" 
   description="Saiba o que esperar do seu primeiro contato e da sua primeira sessão de psicanálise com a Dra. Cleide Sarkis na Av. Paulista."
 >
-  <Header slot="header" />
 
   <main class="pt-32 pb-20">
     <div class="container max-w-4xl">
@@ -114,5 +111,4 @@ const faq = [
     </div>
   </main>
 
-  <Footer slot="footer" />
 </BaseLayout>

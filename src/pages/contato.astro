@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { getWhatsappUrl } from '../utils/whatsapp';
 
 const { pathname } = Astro.url;
@@ -21,8 +19,6 @@ const structuredData = {
   description="Entre em contato para agendar sua consulta de psicanálise. Atendimento presencial na Av. Paulista e online para todo o Brasil."
   {structuredData}
 >
-  <Header slot="header" />
-  
   <main class="pt-40 pb-20">
     <section class="container max-w-6xl">
       <div class="text-center mb-16">
@@ -171,6 +167,4 @@ const structuredData = {
       </div>
     </section>
   </main>
-
-  <Footer slot="footer" />
 </BaseLayout>

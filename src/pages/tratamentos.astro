@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Services from '../components/Services.astro';
 import Contact from '../components/Contact.astro';
 ---
@@ -10,7 +8,6 @@ import Contact from '../components/Contact.astro';
   title="Tratamentos e Abordagens" 
   description="Conheça todos os tratamentos realizados pela Dra. Cleide Sarkis: Psicanálise, Regressão, Hipnose Clínica e Psicoterapia Transpessoal."
 >
-  <Header slot="header" />
   
   <section class="pt-40 pb-20 bg-brand-50">
     <div class="container text-center">
@@ -78,6 +75,4 @@ import Contact from '../components/Contact.astro';
   </section>
 
   <Contact />
-  
-  <Footer slot="footer" />
 </BaseLayout>

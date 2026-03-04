@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Contact from '../components/Contact.astro';
 import { getWhatsappUrl } from '../utils/whatsapp';
 
@@ -23,7 +21,6 @@ const structuredData = {
   description="Dra. Cleide Sarkis oferece sessões de psicanálise presenciais na Avenida Paulista e online. Especialista em traumas, ansiedade e depressão."
   {structuredData}
 >
-  <Header slot="header" />
   
   <section class="pt-40 pb-20 bg-brand-50">
     <div class="container text-center">
@@ -105,6 +102,4 @@ const structuredData = {
   </article>
 
   <Contact />
-  
-  <Footer slot="footer" />
 </BaseLayout>

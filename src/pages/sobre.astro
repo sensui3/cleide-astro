@@ -1,47 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Contact from '../components/Contact.astro';
 import { Image } from 'astro:assets';
 import drImage from '../assets/cleide-sarkis.webp';
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dra. Cleide Salem Sarkis",
-  "jobTitle": "Psicanalista e Psicóloga Clínica",
-  "description": "Especialista em Psicanálise, Hipnose Clínica e Abordagem Transpessoal com mais de 15 anos de experiência em São Paulo.",
-  "url": "https://cleidesarkis.com.br/sobre/",
-  "telephone": "+5511998059125",
-  "email": "contato@cleidesarkis.com.br",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Av. Paulista, 509 - Conj. 1513",
-    "addressLocality": "São Paulo",
-    "addressRegion": "SP",
-    "postalCode": "01311-000",
-    "addressCountry": "BR"
-  },
-  "hasOccupation": {
-    "@type": "Occupation",
-    "name": "Psicanalista",
-    "occupationLocation": {
-      "@type": "City",
-      "name": "São Paulo"
-    },
-    "skills": "Psicanálise, Hipnose Clínica, Abordagem Transpessoal, Terapia de Regressão"
-  },
-  "knowsAbout": ["Psicanálise", "Saúde Mental", "Hipnose Clínica", "Psicologia Transpessoal", "Ansiedade", "Depressão", "Traumas"]
-};
+import SchemaPerson from '../components/SchemaPerson.astro';
 ---
 
 <BaseLayout 
   title="Sobre a Dra. Cleide Sarkis" 
   description="Conheça a trajetória e a formação da Dra. Cleide Sarkis, psicanalista e especialista em hipnose clínica em São Paulo."
-  {structuredData}
 >
-  <Header slot="header" />
+  <SchemaPerson 
+    name="Dra. Cleide Salem Sarkis"
+    jobTitle="Psicanalista e Psicóloga Clínica"
+    description="Especialista em Psicanálise, Hipnose Clínica e Abordagem Transpessoal com mais de 15 anos de experiência em São Paulo."
+    url="https://cleidesarkis.com.br/sobre/"
+  />
   
   <section class="pt-40 pb-20 bg-brand-50 reveal">
     <div class="container text-center">
@@ -88,6 +62,4 @@ const structuredData = {
   </section>
 
   <Contact />
-  
-  <Footer slot="footer" />
 </BaseLayout>

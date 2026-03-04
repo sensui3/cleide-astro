@@ -2,6 +2,8 @@
 import { ClientRouter } from 'astro:transitions';
 import SEO from '../components/SEO.astro';
 import FloatingCTA from '../components/FloatingCTA.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/tokens.css';
 
 import logo from '../assets/cleide-sarkis-logo.svg';
@@ -11,9 +13,18 @@ interface Props {
   description: string;
   image?: string;
   structuredData?: object;
+  showHeader?: boolean;
+  showFooter?: boolean;
 }
 
-const { title, description, image, structuredData } = Astro.props;
+const { 
+  title, 
+  description, 
+  image, 
+  structuredData,
+  showHeader = true,
+  showFooter = true 
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -33,11 +44,22 @@ const { title, description, image, structuredData } = Astro.props;
     <link rel="preload" href="/fonts/dm-sans-400.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body class="bg-white text-slate-900 font-body antialiased selection:bg-brand-100 selection:text-brand-900">
-    <slot name="header" />
+    {showHeader && (
+      <slot name="header">
+        <Header />
+      </slot>
+    )}
+    
     <main id="main-content">
       <slot />
     </main>
-    <slot name="footer" />
+    
+    {showFooter && (
+      <slot name="footer">
+        <Footer />
+      </slot>
+    )}
+    
     <FloatingCTA />
     
     <style is:global>

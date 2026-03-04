@@ -1,7 +1,5 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Contact from '../components/Contact.astro';
 
 interface Props {
@@ -15,8 +13,6 @@ const { title, description, heroTitle, heroText } = Astro.props;
 ---
 
 <BaseLayout {title} {description}>
-  <Header slot="header" />
-  
   <section class="pt-40 pb-20 bg-brand-50 border-b border-brand-100">
     <div class="container text-center">
       <h1 class="heading-1 mb-6">{heroTitle}</h1>
@@ -53,6 +49,4 @@ const { title, description, heroTitle, heroText } = Astro.props;
   </section>
 
   <Contact />
-  
-  <Footer slot="footer" />
 </BaseLayout>

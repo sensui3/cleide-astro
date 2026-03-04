@@ -1,0 +1,40 @@
+---
+interface Props {
+  name: string;
+  jobTitle: string;
+  description: string;
+  url: string;
+  image?: string;
+}
+
+const { name, jobTitle, description, url, image } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": name,
+  "jobTitle": jobTitle,
+  "description": description,
+  "url": url,
+  ...(image && { "image": image }),
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Paulista, 509 - Conj. 1513",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "postalCode": "01311-000",
+    "addressCountry": "BR"
+  },
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Psicanalista",
+    "occupationLocation": {
+      "@type": "City",
+      "name": "São Paulo"
+    },
+    "skills": "Psicanálise, Hipnose Clínica, Abordagem Transpessoal, Terapia de Regressão"
+  },
+  "knowsAbout": ["Psicanálise", "Saúde Mental", "Hipnose Clínica", "Psicologia Transpessoal", "Ansiedade", "Depressão", "Traumas"]
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

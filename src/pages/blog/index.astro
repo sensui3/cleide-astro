@@ -1,8 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
 import { Image } from 'astro:assets';
 
 const allPosts = await getCollection('blog', ({ data }) => {
@@ -29,7 +27,6 @@ const categories = [...new Set(allPosts.map(post => post.data.category))]
 ---
 
 <BaseLayout title="Blog" description="Artigos e reflexões sobre psicanálise, saúde mental e bem-estar.">
-  <Header slot="header" />
   
   <section class="pt-40 pb-20 bg-brand-50">
     <div class="container text-center">
@@ -104,5 +101,4 @@ const categories = [...new Set(allPosts.map(post => post.data.category))]
     </div>
   </section>
 
-  <Footer slot="footer" />
 </BaseLayout>

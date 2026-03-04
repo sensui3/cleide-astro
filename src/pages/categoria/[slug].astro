@@ -1,8 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
 import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
@@ -46,7 +44,6 @@ const sortedPosts = posts.sort((a, b) => b.data.publishedAt.getTime() - a.data.p
 ---
 
 <BaseLayout title={`Categoria: ${category}`} description={`Artigos sobre ${category} no blog da Dra. Cleide Sarkis.`}>
-  <Header slot="header" />
   
   <section class="pt-40 pb-20 bg-brand-50">
     <div class="container text-center">
@@ -126,5 +123,4 @@ const sortedPosts = posts.sort((a, b) => b.data.publishedAt.getTime() - a.data.p
     </div>
   </section>
 
-  <Footer slot="footer" />
 </BaseLayout>
