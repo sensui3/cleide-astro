@@ -14,7 +14,7 @@ const posts = allPosts.sort((a, b) => b.data.publishedAt.getTime() - a.data.publ
   category: post.data.category,
   categoryHref: `/categoria/${post.data.category.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')}/`,
   date: post.data.publishedAt.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }),
-  href: `/${post.id}/`,
+  href: `/blog/${post.id}/`,
   image: post.data.image
 }));
 

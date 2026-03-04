@@ -14,7 +14,7 @@ const latestPosts = allPosts
     category: post.data.category.toUpperCase(),
     categoryHref: `/categoria/${post.data.category.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')}/`,
     date: post.data.publishedAt.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' }),
-    href: `/${post.id}/`,
+    href: `/blog/${post.id}/`,
     image: post.data.image,
     excerpt: post.data.description
   }));

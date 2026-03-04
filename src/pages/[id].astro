@@ -1,8 +1,5 @@
 ---
-import { getCollection, render, type CollectionEntry } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
-import ArticleSchema from '../components/ArticleSchema.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -17,62 +14,24 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const categorySlug = post.data.category.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
-const { Content } = await render(post);
+const redirectUrl = `/blog/${post.id}/`;
 ---
 
-<BaseLayout 
-  title={post.data.title} 
-  description={post.data.description}
-  image={post.data.image?.src}
->
-  <ArticleSchema 
-    title={post.data.title}
-    description={post.data.description}
-    publishedAt={post.data.publishedAt}
-    image={post.data.image}
-  />
-  
-  <article class="pt-40 pb-20 container max-w-4xl">
-    <header class="mb-16 text-center max-w-3xl mx-auto">
-      <div class="flex items-center justify-center gap-4 mb-8">
-        <a href={`/categoria/${categorySlug}/`} class="text-xs font-bold uppercase tracking-widest text-brand-500 bg-brand-50 px-4 py-1.5 rounded-full hover:bg-brand-500 hover:text-white transition-all shadow-sm">
-          {post.data.category}
-        </a>
-        <span class="w-1 h-1 rounded-full bg-slate-200"></span>
-        <span class="text-slate-400 text-sm font-medium">{post.data.publishedAt.toLocaleDateString('pt-BR')}</span>
-      </div>
-      <h1 class="heading-2 md:text-5xl mb-12">{post.data.title}</h1>
-      
-      {post.data.image && (
-        <div class="mb-16 rounded-3xl overflow-hidden shadow-2xl aspect-video bg-slate-100 group">
-          <Image 
-            src={post.data.image} 
-            alt={post.data.alt || post.data.title}
-            width={1200}
-            height={675}
-            loading="eager"
-            fetchpriority="high"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-          />
-        </div>
-      )}
-    </header>
-
-    <div class="prose prose-slate prose-lg max-w-2xl mx-auto prose-headings:font-display prose-headings:text-brand-700 prose-a:text-brand-500 hover:prose-a:text-brand-600 transition-colors selection:bg-brand-100 selection:text-brand-900">
-      <Content />
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecionando...</title>
+    <link rel="canonical" href={redirectUrl} />
+    <meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />
+    <script define:vars={{ redirectUrl }}>
+      window.location.href = redirectUrl;
+    </script>
+  </head>
+  <body class="bg-white flex items-center justify-center min-h-screen font-sans">
+    <div class="text-center">
+      <p class="text-slate-400 mb-4 animate-pulse">Redirecionando para o artigo oficial...</p>
+      <a href={redirectUrl} class="text-brand-500 font-bold hover:underline">Clique aqui se não for redirecionado automaticamente</a>
     </div>
-    <div class="mt-20 pt-10 border-t border-slate-100 flex justify-between items-center">
-      <a href="/blog/" class="btn-ghost !px-6 !py-2 text-sm">
-        <span class="i-lucide-arrow-left"></span>
-        Voltar para o blog
-      </a>
-      <div class="flex gap-4">
-        <span class="text-sm font-bold text-slate-400">Compartilhar:</span>
-        <div class="flex gap-2">
-           <button class="w-8 h-8 rounded-full bg-brand-50 text-brand-500 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-all"><span class="i-lucide-share-2 text-sm"></span></button>
-        </div>
-      </div>
-    </div>
-  </article>
-</BaseLayout>
+  </body>
+</html>

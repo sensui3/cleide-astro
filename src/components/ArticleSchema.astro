@@ -16,6 +16,7 @@ const {
 } = Astro.props;
 
 const siteUrl = Astro.site || 'https://cleidesarkis.com.br';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).href;
 const imageUrl = image 
   ? (typeof image === 'string' ? new URL(image, siteUrl).href : new URL(image.src, siteUrl).href)
   : '';
@@ -25,6 +26,7 @@ const schema = {
   "@type": "BlogPosting",
   "headline": title,
   "description": description,
+  "url": currentUrl,
   "datePublished": publishedAt.toISOString(),
   "author": {
     "@type": "Person",
