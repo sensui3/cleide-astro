@@ -7,12 +7,13 @@ interface Props {
   description: string;
   heroTitle: string;
   heroText: string;
+  structuredData?: object;
 }
 
-const { title, description, heroTitle, heroText } = Astro.props;
+const { title, description, heroTitle, heroText, structuredData } = Astro.props;
 ---
 
-<BaseLayout {title} {description}>
+<BaseLayout {title} {description} {structuredData}>
   <section class="pt-40 pb-20 bg-brand-50 border-b border-brand-100">
     <div class="container text-center">
       <h1 class="heading-1 mb-6">{heroTitle}</h1>

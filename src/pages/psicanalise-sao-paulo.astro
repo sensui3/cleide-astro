@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Contact from '../components/Contact.astro';
+import FAQ from '../components/FAQ.astro';
 import { getWhatsappUrl } from '../utils/whatsapp';
 
 const { pathname } = Astro.url;
@@ -8,12 +9,40 @@ const whatsappUrl = getWhatsappUrl(pathname);
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "MedicalProcedure",
-  "name": "Psicanálise em São Paulo",
-  "description": "Atendimento psicanalítico especializado na região da Avenida Paulista e Vila Mariana.",
-  "bodyLocation": "Health",
-  "procedureType": "https://schema.org/TherapeuticProcedure"
+  "@graph": [
+    {
+      "@type": "Psychologist",
+      "name": "Dra. Cleide Sarkis - Psicanalista em São Paulo",
+      "image": "https://cleidesarkis.com.br/logo.png",
+      "description": "Atendimento psicanalítico especializado na região da Avenida Paulista e Vila Mariana. Especialista em traumas, ansiedade e depressão.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Paulista, 509 - Conj. 1513",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01311-000",
+        "addressCountry": "BR"
+      },
+      "url": "https://cleidesarkis.com.br/psicanalise-sao-paulo/",
+      "telephone": "+5511998059125"
+    }
+  ]
 };
+
+const localizedFaqs = [
+  {
+    question: "Onde realizar psicanálise em São Paulo?",
+    answer: "A Dra. Cleide Sarkis atende presencialmente na Avenida Paulista, 509 (próximo ao Metrô Brigadeiro), abrangendo pacientes de toda a capital paulista."
+  },
+  {
+    question: "Como funciona o atendimento presencial em SP?",
+    answer: "As sessões ocorrem em consultório privativo, com total sigilo e conforto. O agendamento é feito previamente via WhatsApp para garantir a melhor organização na agenda."
+  },
+  {
+    question: "Atende convênios em São Paulo?",
+    answer: "Sim, atendemos Cabesp, Vivest, OAB e SulAmérica. Para outras operadoras, fornecemos o recibo para reembolso."
+  }
+];
 ---
 
 <BaseLayout 
@@ -101,5 +130,6 @@ const structuredData = {
     </div>
   </article>
 
+  <FAQ faqs={localizedFaqs} />
   <Contact />
 </BaseLayout>

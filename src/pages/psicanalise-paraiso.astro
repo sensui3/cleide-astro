@@ -1,26 +1,136 @@
 ---
 import TratamentoLayout from '../layouts/TratamentoLayout.astro';
+import FAQ from '../components/FAQ.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Psychologist",
+      "@id": "https://cleidesarkis.com.br/psicanalise-paraiso/#psychologist",
+      "name": "Dra. Cleide Sarkis - Psicanalista",
+      "image": "https://cleidesarkis.com.br/logo.png",
+      "description": "Psicanalista no Paraíso, São Paulo. Atendimento especializado próximo ao Metrô Paraíso e Avenida Paulista.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Paulista, 509 - Conj. 1513",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01311-000",
+        "addressCountry": "BR"
+      },
+      "url": "https://cleidesarkis.com.br/psicanalise-paraiso/",
+      "telephone": "+5511998059125",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Paraíso"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Onde encontrar psicanalista no Paraíso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Dra. Cleide Sarkis atende na Avenida Paulista, 509, a poucos minutos do bairro do Paraíso e das estações de metrô da região."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O consultório é acessível para quem vem do Paraíso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, o acesso via Rua Vergueiro ou Avenida Paulista é direto e rápido, facilitando o atendimento para moradores e profissionais do Paraíso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Atende convênios no Paraíso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, aceitamos Cabesp, Vivest, OAB e SulAmérica. Para outros convênios, fornecemos recibo para reembolso."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const localizedFaqs = [
+  {
+    question: "O consultório fica perto do Metrô Paraíso?",
+    answer: "Sim, o consultório está localizado na Avenida Paulista, 509, que é facilmente acessível a partir do Metrô Paraíso (Linha Azul/Verde) ou Metrô Brigadeiro."
+  },
+  {
+    question: "Atende pacientes que buscam terapia no Paraíso?",
+    answer: "Sim, muitos de nossos pacientes residem no bairro do Paraíso ou trabalham em hospitais e empresas da região (como HCor e BP)."
+  },
+  {
+    question: "Atende convênio próximo ao Paraíso?",
+    answer: "Sim, aceitamos Cabesp, Vivest, OAB e SulAmérica. Para outros planos, fornecemos o recibo para reembolso."
+  }
+];
 ---
 
 <TratamentoLayout 
-  title="Psicanalista no Paraíso, SP"
-  description="Atendimento psicanalítico no bairro do Paraíso, próximo ao Metrô e Avenida Paulista. Dra. Cleide Sarkis oferece acolhimento especializado."
-  heroTitle="Psicanálise no Paraíso"
-  heroText="Um espaço de escuta e transformação clínica estrategicamente localizado para moradores e profissionais da região do Paraíso."
+  title="Psicanalista no Paraíso | Atendimento Presencial na Av. Paulista, SP"
+  description="Consultório de psicanálise próximo ao bairro do Paraíso, SP. Dra. Cleide Sarkis oferece acolhimento especializado na Av. Paulista. Agende sua sessão."
+  heroTitle="Psicanalista no Paraíso – Atendimento Especializado"
+  heroText="Um espaço de escuta e transformação clínica estrategicamente localizado para moradores e profissionais da região do Paraíso e Vergueiro."
+  {structuredData}
 >
-  <h2>Atendimento Psicanalítico no Paraíso</h2>
-  <p>
-    O bairro do <strong>Paraíso</strong>, na divisa entre o Centro e a Zona Sul, é um dos pontos mais acessíveis de São Paulo. Se você circula pela <strong>Rua Vergueiro</strong> ou reside próximo ao <strong>Metrô Paraíso</strong>, o consultório oferece a conveniência de um atendimento de alto nível a poucos minutos de distância.
-  </p>
-  
-  <p>
-    Sabemos que a rotina agitada dessa região pode gerar estresse e ansiedade. A psicanálise surge como um ponto de equilíbrio, permitindo que você desacelere e olhe para suas questões internas com a profundidade necessária.
-  </p>
+  <div class="prose prose-slate prose-lg max-w-none">
+    <p>
+      O bairro do <strong>Paraíso</strong> é um dos eixos mais nobres e dinâmicos de São Paulo, abrigando centros hospitalares de referência, instituições de ensino e uma vida residencial vibrante. Buscar um <strong>psicanalista no Paraíso</strong> ou em suas imediações é buscar um tempo de qualidade para sua saúde mental.
+    </p>
+    
+    <p>
+      O consultório da <strong>Dra. Cleide Sarkis</strong> está localizado na <strong>Avenida Paulista, 509</strong>, proporcionando acesso direto via <strong>Rua Vergueiro</strong> ou pelas estações de metrô <strong>Paraíso</strong> e <strong>Brigadeiro</strong>.
+    </p>
 
-  <h3>Facilidades para quem vem do Paraíso:</h3>
-  <ul>
-    <li>Proximidade imediata com a Avenida Paulista;</li>
-    <li>Fácil acesso via transporte público e principais vias da Zona Sul;</li>
-    <li>Consultório preparado para atendimentos presenciais e sessões de terapia online.</li>
-  </ul>
+    <h2>Tratamento para Ansiedade e Burnout no Paraíso</h2>
+    <p>
+      Sabemos que a rotina agitada dessa região — repleta de profissionais da saúde e executivos — pode gerar altos níveis de estresse. A psicanálise oferece um refúgio para tratar:
+    </p>
+    <ul>
+      <li><strong>Estresse Ocupacional:</strong> Muito comum em profissionais que atuam na área da saúde e corporativa no Paraíso.</li>
+      <li><strong>Ansiedade Generalizada:</strong> Quando o ritmo de SP começa a afetar seu equilíbrio emocional e sono.</li>
+      <li><strong>Conflitos Existenciais:</strong> A busca por propósito em uma das regiões mais produtivas da cidade.</li>
+      <li><strong>Traumas e Fobias:</strong> Abordagem profunda para superar barreiras que limitam sua liberdade.</li>
+    </ul>
+
+    <div class="my-12 p-8 bg-brand-50 rounded-3xl border border-brand-100">
+      <h3 class="mt-0 text-brand-700">Autoridade e Experiência Clínica</h3>
+      <p>
+        A <strong>Dra. Cleide Sarkis</strong> possui mais de 15 anos de trajetória, com foco em psicanálise freudiana e lacaniana. Seu consultório é projetado para oferecer o máximo de sigilo e conforto, permitindo que o paciente se sinta seguro para explorar suas questões mais profundas.
+      </p>
+    </div>
+
+    <h2>Por que escolher o consultório na região do Paraíso/Paulista?</h2>
+    <p>
+      A proximidade com o <strong>Shopping Paulista</strong>, hospitais como o <strong>HCor</strong> e o <strong>Santa Catarina</strong>, além de colégios tradicionais, faz desta localização o ponto ideal para quem deseja integrar o tratamento terapêutico à sua logística diária.
+    </p>
+    <p>
+      Além do atendimento presencial, oferecemos suporte para <strong>terapia online</strong>, garantindo continuidade ao processo mesmo em viagens ou imprevistos.
+    </p>
+    
+    <div class="not-prose mt-16 text-center">
+      <a href="https://wa.me/5511998059125" class="inline-flex items-center gap-3 bg-brand-600 text-white px-8 py-4 rounded-full font-bold text-xl hover:bg-brand-700 transition-all shadow-xl hover:shadow-brand-600/20">
+        <span class="i-lucide-message-circle"></span>
+        Agendar terapia no Paraíso
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-24 -mx-4 sm:-mx-8 lg:-mx-16">
+    <FAQ faqs={localizedFaqs} />
+  </div>
+
+  <div class="mt-16 prose prose-slate max-w-none text-center italic text-slate-500">
+    <p>
+      Também atendo pacientes da <a href="/psicanalise-bela-vista/" class="text-brand-500 hover:underline">Bela Vista</a> e <a href="/psicanalise-vila-mariana/" class="text-brand-500 hover:underline">Vila Mariana</a>.
+    </p>
+  </div>
 </TratamentoLayout>

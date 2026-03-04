@@ -1,26 +1,136 @@
 ---
 import TratamentoLayout from '../layouts/TratamentoLayout.astro';
+import FAQ from '../components/FAQ.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Psychologist",
+      "@id": "https://cleidesarkis.com.br/psicanalise-vila-mariana/#psychologist",
+      "name": "Dra. Cleide Sarkis - Psicanalista",
+      "image": "https://cleidesarkis.com.br/logo.png",
+      "description": "Psicanalista na Vila Mariana, São Paulo. Atendimento especializado próximo ao Metrô e Parque Ibirapuera.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Paulista, 509 - Conj. 1513",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01311-000",
+        "addressCountry": "BR"
+      },
+      "url": "https://cleidesarkis.com.br/psicanalise-vila-mariana/",
+      "telephone": "+5511998059125",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Vila Mariana"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Onde fica o consultório de psicanálise para quem está na Vila Mariana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O consultório está localizado na Avenida Paulista, 509, com fácil acesso para moradores da Vila Mariana via Metrô ou transporte particular."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A Dra. Cleide Sarkis atende moradores da Vila Mariana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, atendemos um grande número de pacientes da Vila Mariana que buscam um atendimento diferenciado e profundo na região central."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Atende convênio na Vila Mariana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trabalhamos com Cabesp, Vivest, OAB e SulAmérica. Para outros planos, fornecemos o recibo para reembolso."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const localizedFaqs = [
+  {
+    question: "Como chegar ao consultório vindo da Vila Mariana?",
+    answer: "O acesso é muito rápido via Linha Azul do Metrô (transferência na Paraíso para a Linha Verde) ou Linha Verde direta se estiver próximo à Ana Rosa. De carro, o trajeto pela Domingos de Morais é o mais comum."
+  },
+  {
+    question: "Há horários para quem trabalha na Vila Mariana?",
+    answer: "Sim, oferecemos horários flexíveis para que você possa realizar sua sessão de psicanálise sem comprometer sua rotina profissional na região."
+  },
+  {
+    question: "Atende convênio para quem mora na Vila Mariana?",
+    answer: "Trabalhamos com Cabesp, Vivest, OAB e SulAmérica. Fornecemos recibos para outros convênios via reembolso."
+  }
+];
 ---
 
 <TratamentoLayout 
-  title="Psicanálise na Vila Mariana"
-  description="Atendimento psicanalítico especializado na Vila Mariana e região. Conheça o consultório da Dra. Cleide Sarkis."
-  heroTitle="Psicanálise na Vila Mariana"
-  heroText="Um consultório preparado para oferecer acolhimento e escuta qualificada em uma das regiões mais tradicionais de São Paulo."
+  title="Psicanalista na Vila Mariana | Atendimento Especializado em SP"
+  description="Consultório de psicanálise na Vila Mariana e região. A Dra. Cleide Sarkis oferece acolhimento especializado para ansiedade e depressão. Agende sua sessão."
+  heroTitle="Psicanalista na Vila Mariana – Acolhimento e Escuta"
+  heroText="Um consultório preparado para oferecer escuta qualificada em uma das regiões mais tradicionais e intelectuais de São Paulo."
+  {structuredData}
 >
-  <h2>Atendimento próximo à Vila Mariana</h2>
-  <p>
-    Se você mora ou trabalha na <strong>Vila Mariana</strong>, o consultório está localizado em uma área de fácil acesso, permitindo que você encaixe suas sessões de análise no seu ritmo de vida urbano.
-  </p>
-  
-  <p>
-    A região da Vila Mariana é conhecida por seu ambiente residencial e cultural, proporcionando a calma necessária antes ou depois da sua sessão de terapia.
-  </p>
+  <div class="prose prose-slate prose-lg max-w-none">
+    <p>
+      A <strong>Vila Mariana</strong> é conhecida por ser um bairro que equilibra a tradição residencial com uma forte efervescência cultural e acadêmica. Para quem busca um <strong>psicanalista na Vila Mariana</strong>, o consultório da <strong>Dra. Cleide Sarkis</strong> oferece um espaço de reflexão profunda e transformação.
+    </p>
+    
+    <p>
+      Localizado estrategicamente na <strong>Avenida Paulista, 509</strong>, o consultório atende com facilidade pacientes que circulam pela <strong>Rua Domingos de Morais</strong>, <strong>Parque Ibirapuera</strong> e imediações do <strong>SESC Vila Mariana</strong>.
+    </p>
 
-  <h3>O que ofereço na região:</h3>
-  <ul>
-    <li>Sessões de Psicanálise presenciais;</li>
-    <li>Hipnose Clínica e Regressão;</li>
-    <li>Horários flexíveis para moradores e profissionais da área.</li>
-  </ul>
+    <h2>Tratando a Mente em uma Região Intelectualizada</h2>
+    <p>
+      O perfil dos moradores da Vila Mariana costuma ser reflexivo e exigente. A psicanálise, com sua base na ética e na palavra, conecta-se perfeitamente com quem busca compreender as causas reais de seus sintomas, como:
+    </p>
+    <ul>
+      <li><strong>Ansiedade e Angústia:</strong> Lidar com as pressões de uma vida urbana intensa mantendo a integridade emocional.</li>
+      <li><strong>Depressão e Processos de Luto:</strong> Acompanhamento especializado em momentos de perda e reconstrução.</li>
+      <li><strong>Desenvolvimento Pessoal:</strong> Para quem deseja expandir sua autopercepção e romper padrões repetitivos.</li>
+      <li><strong>Questões de Relacionamento:</strong> Compreender os vínculos e dinamismos afetivos sob a ótica psicanalítica.</li>
+    </ul>
+
+    <div class="my-12 p-8 bg-brand-50 rounded-3xl border border-brand-100">
+      <h3 class="mt-0 text-brand-700">Abordagem Clínica e Ética</h3>
+      <p>
+        Com mais de <strong>15 anos de experiência</strong>, a Dra. Cleide Sarkis prioriza o sigilo profissional absoluto e o acolhimento humanizado. Sua formação abrange a psicanálise freudiana e lacaniana, além de especializações que permitem tratar traumas complexos.
+      </p>
+    </div>
+
+    <h2>Acesso Facilitado para a Vila Mariana</h2>
+    <p>
+      A proximidade com as estações do <strong>Metrô Ana Rosa</strong> e <strong>Paraíso</strong> torna o deslocamento até a unidade Paulista simples e rápido. Estar próximo ao eixo cultural-SP permite que a terapia seja um momento de pausa sagrada em sua semana.
+    </p>
+    <p>
+      Se você busca um atendimento que vá além do superficial, entre em contato para agendar sua primeira sessão. Oferecemos também a modalidade de <strong>atendimento online</strong> para maior flexibilidade.
+    </p>
+    
+    <div class="not-prose mt-16 text-center">
+      <a href="https://wa.me/5511998059125" class="inline-flex items-center gap-3 bg-brand-600 text-white px-8 py-4 rounded-full font-bold text-xl hover:bg-brand-700 transition-all shadow-xl hover:shadow-brand-600/20">
+        <span class="i-lucide-arrow-right"></span>
+        Agendar terapia na Vila Mariana
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-24 -mx-4 sm:-mx-8 lg:-mx-16">
+    <FAQ faqs={localizedFaqs} />
+  </div>
+
+  <div class="mt-16 prose prose-slate max-w-none text-center italic text-slate-500">
+    <p>
+      Também atendo pacientes da <a href="/psicanalise-bela-vista/" class="text-brand-500 hover:underline">Bela Vista</a> e <a href="/psicanalise-paraiso/" class="text-brand-500 hover:underline">Paraíso</a>.
+    </p>
+  </div>
 </TratamentoLayout>

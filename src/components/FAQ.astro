@@ -1,12 +1,14 @@
 ---
-const faqs = [
+const { faqs: propFaqs } = Astro.props;
+
+const defaultFaqs = [
   {
     question: "Como funciona o primeiro contato?",
     answer: "Ao clicar no botão de agendamento, você falará com minha equipe via WhatsApp para alinhar horários. A primeira conversa no consultório (ou online) serve para entendermos sua queixa principal e como os atendimentos serão conduzidos."
   },
   {
-    question: "As sessões são presenciais ou online?",
-    answer: "Ambas as modalidades estão disponíveis. O atendimento presencial ocorre na Avenida Paulista (São Paulo), e o atendimento online é realizado por plataformas seguras, garantindo a mesma qualidade e sigilo da sala de atendimento."
+    question: "Atende convênios?",
+    answer: "Aceitamos diretamente os convênios Cabesp, Vivest, OAB e SulAmérica. Para outros planos de saúde, emitimos o recibo necessário para que você possa solicitar o reembolso junto à sua operadora (sistema de livre escolha)."
   },
   {
     question: "Quanto tempo dura cada sessão?",
@@ -21,6 +23,8 @@ const faqs = [
     answer: "Sim, o sigilo profissional é a base absoluta do trabalho do psicólogo e psicanalista, protegido pelo código de ética profissional. Tudo o que é discutido em sessão permanece em total privacidade."
   }
 ];
+
+const faqs = propFaqs || defaultFaqs;
 ---
 
 <section id="faq" class="section-padding bg-brand-50 reveal">

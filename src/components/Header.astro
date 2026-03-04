@@ -92,7 +92,7 @@ const whatsappUrl = getWhatsappUrl(pathname);
   </a>
 </div>
 
-<script is:inline>
+<script>
   function initHeader() {
     const btn = document.getElementById('mobile-menu-button');
     const menu = document.getElementById('mobile-menu');
@@ -101,7 +101,6 @@ const whatsappUrl = getWhatsappUrl(pathname);
     const bar1 = document.getElementById('bar-1');
     const bar2 = document.getElementById('bar-2');
     const bar3 = document.getElementById('bar-3');
-    const header = document.getElementById('main-header');
 
     if (!btn || !menu) return;
 
@@ -151,23 +150,8 @@ const whatsappUrl = getWhatsappUrl(pathname);
         if (isOpen) closeMenu();
       });
     });
-
-    // Shadow on scroll
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        header?.classList.add('shadow-md');
-      } else {
-        header?.classList.remove('shadow-md');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial state
   }
 
   // Initialize
   initHeader();
-
-  // Support for View Transitions
-  document.addEventListener('astro:after-swap', initHeader);
 </script>

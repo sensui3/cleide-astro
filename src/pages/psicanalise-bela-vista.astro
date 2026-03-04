@@ -1,26 +1,170 @@
 ---
 import TratamentoLayout from '../layouts/TratamentoLayout.astro';
+import FAQ from '../components/FAQ.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Psychologist",
+      "@id": "https://cleidesarkis.com.br/psicanalise-bela-vista/#psychologist",
+      "name": "Dra. Cleide Sarkis - Psicanalista",
+      "image": "https://cleidesarkis.com.br/logo.png",
+      "description": "Psicanalista na Bela Vista, Avenida Paulista. Atendimento especializado para ansiedade, depressão e burnout corporativo.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Paulista, 509 - Conj. 1513",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01311-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.5615,
+        "longitude": -46.6559
+      },
+      "url": "https://cleidesarkis.com.br/psicanalise-bela-vista/",
+      "telephone": "+5511998059125",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Bela Vista"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Onde fica o consultório de psicanálise na Bela Vista?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O consultório está localizado na Avenida Paulista, 509, conjunto 1513, no coração do bairro Bela Vista, São Paulo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O consultório é próximo ao metrô?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, estamos a poucos metros da estação Brigadeiro (Linha 2-Verde) do Metrô, facilitando o acesso de quem circula pela região central."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A Dra. Cleide Sarkis atende convênios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, aceitamos Cabesp, Vivest, OAB e SulAmérica. Para outros convênios, fornecemos recibo para que você possa solicitar o reembolso junto ao seu plano de saúde (sistema de livre escolha)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É possível realizar sessões online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, além do atendimento presencial na Bela Vista, oferecemos a modalidade de terapia online com total segurança e sigilo."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const localizedFaqs = [
+  {
+    question: "Onde fica o consultório na Bela Vista?",
+    answer: "O consultório está estrategicamente localizado na Av. Paulista, 509 - Conj. 1513. É um ponto central de fácil acesso para quem está na Bela Vista, Jardins ou Centro de São Paulo."
+  },
+  {
+    question: "É próximo ao metrô?",
+    answer: "Sim, o consultório fica a apenas alguns passos da estação Brigadeiro do metrô (Linha Verde), o que torna o deslocamento muito simples para pacientes de diversas regiões."
+  },
+  {
+    question: "Atende convênio na unidade Paulista?",
+    answer: "Aceitamos Cabesp, Vivest, OAB e SulAmérica diretamente. Para outros planos, fornecemos o recibo para reembolso."
+  },
+  {
+    question: "Como agendar uma consulta presencial?",
+    answer: "O agendamento é feito diretamente via WhatsApp. Basta clicar nos botões de contato desta página para falar com minha equipe e verificar os horários disponíveis na agenda da Bela Vista."
+  }
+];
 ---
 
 <TratamentoLayout 
-  title="Psicanalista na Bela Vista - Avenida Paulista"
-  description="Consultório de psicanálise na Bela Vista, SP. Dra. Cleide Sarkis atende no coração da Avenida Paulista, próximo ao Metrô Brigadeiro."
-  heroTitle="Psicanálise na Bela Vista"
-  heroText="Atendimento especializado no coração pulsante de São Paulo, oferecendo um refúgio de silêncio e escuta em meio à dinâmica urbana."
+  title="Psicanalista na Bela Vista (Av. Paulista) | Atendimento Presencial em SP"
+  description="Consultório de psicanálise na Bela Vista, SP. Dra. Cleide Sarkis atende no coração da Avenida Paulista, próximo ao Metrô Brigadeiro e MASP. Agende sua sessão."
+  heroTitle="Psicanalista na Bela Vista – Avenida Paulista"
+  heroText="Atendimento especializado no coração pulsante de São Paulo, oferecendo um refúgio de silêncio e escuta em meio à dinâmica urbana da Paulista."
+  {structuredData}
 >
-  <h2>Psicologia e Psicanálise na Bela Vista</h2>
-  <p>
-    Localizado no icônico bairro da <strong>Bela Vista</strong>, o consultório está situado no centro das atenções de São Paulo: a <strong>Avenida Paulista</strong>. Estar na Bela Vista significa estar próximo a centros culturais, hospitais de referência e grandes eixos de mobilidade.
-  </p>
-  
-  <p>
-    Para quem busca uma analista próximo ao <strong>Metrô Brigadeiro</strong> ou deseja realizar suas sessões antes ou após o expediente no centro financeiro, oferecemos um ambiente discreto e acolhedor para tratar quadros de depressão, conflitos de relacionamento e autoconhecimento.
-  </p>
+  <div class="prose prose-slate prose-lg max-w-none">
+    <p>
+      Buscar um <strong>psicanalista na Bela Vista</strong> é o primeiro passo para quem deseja transformar seu sofrimento em autoconhecimento. O consultório da <strong>Dra. Cleide Sarkis</strong> está situado em um dos pontos mais emblemáticos de São Paulo: a <strong>Avenida Paulista</strong>. 
+    </p>
+    
+    <p>
+      Estar na região central, próximo a instituições como o <strong>MASP</strong>, a <strong>FGV</strong> e o <strong>Hospital Sírio-Libanês</strong>, permite que moradores e profissionais de bairros vizinhos como <strong>Jardins</strong>, <strong>Paraíso</strong> e <strong>Consolação</strong> encontrem um espaço de acolhimento ético e técnico.
+    </p>
 
-  <h3>Diferenciais do atendimento na região:</h3>
-  <ul>
-    <li>Localização central na Av. Paulista, 509;</li>
-    <li>Acesso facilitado para quem circula pelo Centro e Jardins;</li>
-    <li>Horários flexíveis que respeitam o ritmo dinâmico da Bela Vista.</li>
-  </ul>
+    <h2>Quando procurar um psicanalista na Bela Vista?</h2>
+    <p>
+      A rotina na região da Paulista é intensa. O estresse urbano e as pressões do cotidiano corporativo podem levar a quadros que exigem atenção profissional. Se você se identifica com algum dos pontos abaixo, a psicanálise pode ser o caminho:
+    </p>
+    <ul>
+      <li><strong>Ansiedade e Estresse:</strong> Sensação constante de urgência e dificuldade em relaxar em meio ao ambiente urbano.</li>
+      <li><strong>Burnout Corporativo:</strong> Esgotamento mental comum em profissionais que atuam no centro financeiro de SP.</li>
+      <li><strong>Depressão e Desânimo:</strong> Perda de sentido nas atividades cotidianas e sentimentos de vazio.</li>
+      <li><strong>Conflitos Profissionais:</strong> Dificuldades de relacionamento no ambiente de trabalho e transições de carreira.</li>
+      <li><strong>Estresse Urbano:</strong> O impacto do ritmo de São Paulo na sua qualidade de vida e sono.</li>
+    </ul>
+
+    <div class="my-12 p-8 bg-brand-50 rounded-3xl border border-brand-100">
+      <h3 class="mt-0 text-brand-700">Sobre a Dra. Cleide Sarkis</h3>
+      <p>
+        Com mais de <strong>15 anos de prática clínica</strong> e <strong>5.000 sessões realizadas</strong>, a Dra. Cleide Sarkis (CRP ativo) combina a profundidade da psicanálise com uma escuta atenta aos dilemas contemporâneos. Seu trabalho foca não apenas no alívio dos sintomas, mas no domínio profundo da própria narrativa do paciente.
+      </p>
+      <div class="flex gap-4 items-center">
+        <a href="/sobre/" class="font-bold text-brand-600 hover:text-brand-800 underline">Conhecer trajetória completa →</a>
+      </div>
+    </div>
+
+    <h2>Relevância Geográfica e Acessibilidade</h2>
+    <p>
+      O consultório na <strong>Bela Vista</strong> foi escolhido estrategicamente por sua facilidade de acesso. Localizado próximo ao <strong>Metrô Brigadeiro</strong>, permite que você realize sua sessão antes ou após o expediente sem grandes transtornos de deslocamento.
+    </p>
+    <p>
+      Atendemos também pacientes que residem ou trabalham em regiões próximas, como o <strong>Paraíso</strong> e a <strong>Vila Mariana</strong>, criando uma rede de suporte geográfico no eixo central-sul de São Paulo.
+    </p>
+    
+    <div class="not-prose my-12">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.106591782298!2d-46.65089202466986!3d-23.564611878795556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c629f63617%3A0xc3f1400d72023ede!2sAv.%20Paulista%2C%20509%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001311-000!5e0!3m2!1spt-BR!2sbr!4v1709560000000!5m2!1spt-BR!2sbr" 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        class="rounded-3xl shadow-lg"
+      ></iframe>
+    </div>
+
+    <div class="not-prose mt-16 text-center">
+      <a href="https://wa.me/5511998059125" class="inline-flex items-center gap-3 bg-brand-600 text-white px-8 py-4 rounded-full font-bold text-xl hover:bg-brand-700 transition-all shadow-xl hover:shadow-brand-600/20">
+        <span class="i-lucide-calendar-check"></span>
+        Agendar terapia na Bela Vista
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-24 -mx-4 sm:-mx-8 lg:-mx-16">
+    <FAQ faqs={localizedFaqs} />
+  </div>
+  
+  <div class="mt-16 prose prose-slate max-w-none text-center italic text-slate-500">
+    <p>
+      Também atendo pacientes do <a href="/psicanalise-paraiso/" class="text-brand-500 hover:underline">Paraíso</a> e <a href="/psicanalise-vila-mariana/" class="text-brand-500 hover:underline">Vila Mariana</a>.
+    </p>
+  </div>
 </TratamentoLayout>

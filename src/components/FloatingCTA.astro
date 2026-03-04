@@ -32,7 +32,7 @@ const whatsappUrl = getWhatsappUrl(pathname);
   <!-- Back to top (Visible only on scroll) -->
   <button 
     id="back-to-top"
-    class="w-12 h-12 bg-white text-brand-600 rounded-full flex items-center justify-center shadow-xl border border-slate-100 opacity-0 translate-y-4 pointer-events-auto transition-all hover:bg-brand-50"
+    class="w-12 h-12 bg-white text-brand-600 rounded-full flex items-center justify-center shadow-xl border border-slate-100 pointer-events-none transition-all hover:bg-brand-50"
     aria-label="Voltar para o topo"
   >
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -45,27 +45,11 @@ const whatsappUrl = getWhatsappUrl(pathname);
   function setupCTA() {
     const backToTop = document.getElementById('back-to-top');
     
-    const toggleBackToTop = () => {
-      if (window.scrollY > 500) {
-        backToTop?.classList.remove('opacity-0', 'translate-y-4');
-        backToTop?.classList.add('opacity-100', 'translate-y-0');
-      } else {
-        backToTop?.classList.add('opacity-0', 'translate-y-4');
-        backToTop?.classList.remove('opacity-100', 'translate-y-0');
-      }
-    };
-
-    window.addEventListener('scroll', toggleBackToTop);
     backToTop?.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-
-    // Initial check
-    toggleBackToTop();
   }
 
   // Initialize
   setupCTA();
-  // Support for View Transitions
-  document.addEventListener('astro:after-swap', setupCTA);
 </script>
