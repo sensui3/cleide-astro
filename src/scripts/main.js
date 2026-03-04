@@ -1,3 +1,9 @@
+// Desativa a memória de scroll do navegador e força o topo em todos os carregamentos
+if (typeof window !== 'undefined' && 'scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+}
+
 // Global initialization for Cleide Sarkis website
 export const setupRevealObserver = () => {
     const observer = new IntersectionObserver((entries) => {
