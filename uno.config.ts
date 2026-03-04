@@ -18,53 +18,64 @@ export default defineConfig({
         presetTypography({
             cssExtend: {
                 'a': {
-                    'color': '#3d7bbf', // Slightly lighter blue for links
+                    'color': '#00509d',
                     'text-decoration': 'none',
-                    'border-bottom': '1px solid rgba(61, 123, 191, 0.3)',
+                    'border-bottom': '2px solid rgba(0, 80, 157, 0.1)',
                     'transition': 'all 0.3s ease',
                     'font-weight': '500',
                 },
                 'a:hover': {
-                    'color': '#00509d',
                     'border-bottom-color': '#00509d',
-                    'background-color': 'rgba(212, 232, 255, 0.2)',
+                    'background-color': 'rgba(238, 244, 255, 0.5)',
                 },
-                'strong': { 'color': '#002952', 'font-weight': '700' },
+                'strong': { 'color': '#0f172a', 'font-weight': '700' },
                 'h2': {
-                    'margin-top': '3rem',
-                    'margin-bottom': '1.5rem',
-                    'line-height': '1.2',
+                    'margin-top': '3.5rem',
+                    'margin-bottom': '1.25rem',
+                    'line-height': '1.15',
                     'font-family': '"Fraunces", serif',
                     'font-weight': '600',
                     'color': '#002952',
+                    'text-wrap': 'balance',
                 },
                 'h3': {
                     'margin-top': '2.5rem',
-                    'margin-bottom': '1.25rem',
-                    'line-height': '1.3',
+                    'margin-bottom': '1rem',
+                    'line-height': '1.2',
                     'font-family': '"Fraunces", serif',
                     'font-weight': '500',
                     'color': '#002952',
+                    'text-wrap': 'balance',
                 },
                 'h4': {
                     'margin-top': '2rem',
-                    'margin-bottom': '1rem',
+                    'margin-bottom': '0.75rem',
                     'font-family': '"Fraunces", serif',
                     'font-weight': '500',
                     'color': '#002952',
                 },
                 'p': {
-                    'margin-bottom': '1.75rem',
-                    'line-height': '1.8',
+                    'margin-bottom': '1.5rem',
+                    'line-height': '1.75',
                     'color': '#334155', // slate-700
                 },
                 'ul, ol': {
                     'margin-bottom': '2rem',
-                    'padding-left': '1.25rem',
+                    'padding-left': '1.5rem',
                 },
                 'li': {
                     'margin-bottom': '0.75rem',
                     'line-height': '1.7',
+                    'padding-left': '0.5rem',
+                },
+                'blockquote': {
+                    'font-style': 'italic',
+                    'border-left': '4px solid #00509d',
+                    'padding-left': '1.5rem',
+                    'margin-left': '0',
+                    'margin-top': '2.5rem',
+                    'margin-bottom': '2.5rem',
+                    'color': '#475569',
                 },
                 'img': {
                     'margin-top': '3rem',
@@ -114,10 +125,10 @@ export default defineConfig({
         // Headings — updated to match actual usage across the site
         // Headings & Text Standardized
         'heading-1': 'font-display font-700 text-[clamp(2.5rem,8vw,5.5rem)] leading-[0.95] text-brand-700',
-        'heading-2': 'font-display font-600 text-[clamp(2rem,5vw,3.5rem)] leading-[1.1] text-brand-700 tracking-tight',
-        'heading-3': 'font-display font-medium text-[clamp(1.5rem,3vw,2rem)] text-brand-700 leading-snug',
-        'text-main': 'font-body text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.75] text-slate-600 font-400',
-        'text-base-site': 'font-body text-base leading-relaxed text-slate-500',
+        'heading-2': 'font-display font-600 text-[clamp(2rem,5vw,3.5rem)] leading-[1.15] text-brand-700 tracking-tight text-wrap-balance',
+        'heading-3': 'font-display font-medium text-[clamp(1.5rem,3vw,2rem)] text-brand-700 leading-snug text-wrap-balance',
+        'text-main': 'font-body text-[clamp(1.0625rem,2vw,1.1875rem)] leading-[1.7] text-slate-700 font-400',
+        'text-base-site': 'font-body text-base leading-relaxed text-slate-600',
         'text-label': 'text-xs font-bold tracking-[0.2em] text-slate-400 uppercase',
     },
 });

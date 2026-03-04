@@ -17,6 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+const categorySlug = post.data.category.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
 const { Content } = await render(post);
 ---
 
@@ -34,17 +35,18 @@ const { Content } = await render(post);
   />
   
   <article class="pt-40 pb-20 container max-w-4xl">
-    <header class="mb-12 text-center">
-      <div class="flex items-center justify-center gap-4 mb-6">
-        <span class="text-xs font-bold uppercase tracking-widest text-brand-500 bg-brand-50 px-3 py-1 rounded-full">
+    <header class="mb-16 text-center max-w-3xl mx-auto">
+      <div class="flex items-center justify-center gap-4 mb-8">
+        <a href={`/categoria/${categorySlug}/`} class="text-xs font-bold uppercase tracking-widest text-brand-500 bg-brand-50 px-4 py-1.5 rounded-full hover:bg-brand-500 hover:text-white transition-all shadow-sm">
           {post.data.category}
-        </span>
-        <span class="text-slate-400 text-sm">{post.data.publishedAt.toLocaleDateString('pt-BR')}</span>
+        </a>
+        <span class="w-1 h-1 rounded-full bg-slate-200"></span>
+        <span class="text-slate-400 text-sm font-medium">{post.data.publishedAt.toLocaleDateString('pt-BR')}</span>
       </div>
-      <h1 class="heading-1 mb-8">{post.data.title}</h1>
-
+      <h1 class="heading-2 md:text-5xl mb-12">{post.data.title}</h1>
+      
       {post.data.image && (
-        <div class="rounded-2xl overflow-hidden shadow-2xl mb-12 aspect-video bg-slate-100">
+        <div class="mb-16 rounded-3xl overflow-hidden shadow-2xl aspect-video bg-slate-100 group">
           <Image 
             src={post.data.image} 
             alt={post.data.alt || post.data.title}
@@ -52,13 +54,13 @@ const { Content } = await render(post);
             height={675}
             loading="eager"
             fetchpriority="high"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
         </div>
       )}
     </header>
 
-    <div class="prose prose-slate prose-lg max-w-none prose-headings:font-display prose-headings:text-brand-700 prose-a:text-brand-500 hover:prose-a:text-brand-600 transition-colors">
+    <div class="prose prose-slate prose-lg max-w-2xl mx-auto prose-headings:font-display prose-headings:text-brand-700 prose-a:text-brand-500 hover:prose-a:text-brand-600 transition-colors selection:bg-brand-100 selection:text-brand-900">
       <Content />
     </div>
     
