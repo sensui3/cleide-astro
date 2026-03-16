@@ -1,0 +1,21 @@
+---
+// Google Analytics 4 com Partytown para máxima performance
+// Só carrega em produção (modo build)
+const isProduction = import.meta.env.PROD;
+---
+
+{isProduction && (
+  <!-- Google Analytics 4 via Partytown -->
+  <script
+    type="text/partytown"
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6WQZQ611NX"
+  ></script>
+  
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6WQZQ611NX');
+  </script>
+)}

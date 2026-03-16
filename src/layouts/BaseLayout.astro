@@ -4,6 +4,7 @@ import SEO from '../components/SEO.astro';
 import FloatingCTA from '../components/FloatingCTA.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
 import '../styles/tokens.css';
 
 import logo from '../assets/cleide-sarkis-logo.svg';
@@ -59,9 +60,11 @@ const {
       </slot>
     )}
     
-    <FloatingCTA />
-    
-    <style is:global>
+     <FloatingCTA />
+     
+     <Analytics />
+     
+     <style is:global>
       :root {
         scroll-behavior: smooth;
       }
