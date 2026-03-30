@@ -10,11 +10,7 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
 
-  redirects: {
-    '/psicologa/page/2/': '/categoria/psicologa/',
-    '/blog/page/1/': '/categoria/psicologa/',
-    '/psicologa/': '/categoria/psicologa/',
-  },
+
 
   build: {
     inlineStylesheets: 'auto',
