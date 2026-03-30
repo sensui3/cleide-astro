@@ -2,7 +2,12 @@
 # https://developers.cloudflare.com/pages/platform/redirects/
 
 # Redirect category pagination to new category structure
-/category/:category/page/:num /categoria/:category/ 301
+/category/psicologa/page/* /categoria/psicologa/ 301
+/category/psicologa /categoria/psicologa/ 301
+/category/ansiedade/page/* /categoria/ansiedade/ 301
+/category/ansiedade /categoria/ansiedade/ 301
+/category/psicanalise/page/* /categoria/psicanalise/ 301
+/category/psicanalise /categoria/psicanalise/ 301
 
 /psicologa/page/2/ /categoria/psicologa/ 301
 /blog/page/1/ /categoria/psicologa/ 301
