@@ -1,6 +1,9 @@
 # 301 Redirects - Cloudflare Pages
 # https://developers.cloudflare.com/pages/platform/redirects/
 
+# Redirecionar www para o domínio principal
+www.cleidesarkis.com.br/* https://cleidesarkis.com.br/:splat 301
+
 /psicologa/page/2/ /categoria/psicologa/ 301
 /blog/page/1/ /categoria/psicologa/ 301
 /psicologa/ /categoria/psicologa/ 301
