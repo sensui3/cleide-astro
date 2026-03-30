@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getWhatsappUrl } from '../utils/whatsapp';
+
+const whatsappUrl = getWhatsappUrl('/404');
+---
+
+<BaseLayout
+  title="Página Não Encontrada | Dra. Cleide Sarkis"
+  description="A página que você procura não existe. Volte para a página inicial ou entre em contato."
+>
+  <section class="min-h-[80vh] flex items-center justify-center py-20">
+    <div class="container text-center px-4">
+      <h1 class="font-display text-8xl md:text-9xl font-bold text-brand-700 mb-6">
+        404
+      </h1>
+      
+      <h2 class="font-display text-2xl md:text-3xl text-brand-800 mb-4">
+        Página Não Encontrada
+      </h2>
+      
+      <p class="text-lg text-slate-600 max-w-xl mx-auto mb-10">
+        A página que você procura não existe ou foi movida. 
+        Que tal voltar para a página inicial ou conhecer nossos serviços?
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="/" 
+          class="inline-flex items-center justify-center px-8 py-4 bg-brand-700 text-white font-display font-bold uppercase tracking-wider rounded-lg hover:bg-brand-800 transition-colors"
+        >
+          Voltar para Home
+        </a>
+        
+        <a 
+          href="/tratamentos/" 
+          class="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-700 text-brand-700 font-display font-bold uppercase tracking-wider rounded-lg hover:bg-brand-50 transition-colors"
+        >
+          Ver Tratamentos
+        </a>
+        
+        <a 
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-600 text-white font-display font-bold uppercase tracking-wider rounded-lg hover:bg-green-700 transition-colors"
+        >
+          <span class="i-mdi-whatsapp text-xl"></span>
+          Fale no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -10,6 +10,10 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
 
+  pages: {
+    errorPage: '404',
+  },
+
 
 
   build: {
