@@ -5,3 +5,7 @@
 /blog/page/1/ /categoria/psicologa/ 301
 /psicologa/ /categoria/psicologa/ 301
 /author/equipe/* /contato/ 301
+/comments/feed/ /blog/ 301
+/author/equipe/(11) 99805-9125 /contato/ 301
+/author/cleidesarkis/ / 301
+/author/equipe/page/2/ / 301
