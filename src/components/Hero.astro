@@ -43,7 +43,7 @@ const whatsappUrl = getWhatsappUrl(pathname);
       
       <div class="lg:col-span-6 relative">
         <div class="relative w-full aspect-square rounded-[3rem] overflow-hidden bg-slate-100 border-b-[20px] border-brand-500 shadow-2xl">
-           <Image src={drImage} alt="Dra. Cleide Sarkis" class="w-full h-full object-cover" loading="eager" fetchpriority="high" />
+           <Image src={drImage} alt="Dra. Cleide Sarkis" class="w-full h-full object-cover" widths={[400, 600, 800, drImage.width]} sizes={`(max-width: 1024px) 100vw, 50vw`} loading="eager" fetchpriority="high" />
         </div>
         
         <!-- Badge -->

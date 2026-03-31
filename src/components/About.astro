@@ -9,7 +9,7 @@ import drAtendimento from '../assets/cleide-sarkis-atendimento.webp';
       <div class="order-2 lg:order-1" data-aos="fade-right">
         <div class="relative">
           <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl bg-slate-100">
-             <Image src={drAtendimento} alt="Dra. Cleide Sarkis em atendimento" class="w-full h-full object-cover object-top" />
+             <Image src={drAtendimento} alt="Dra. Cleide Sarkis em atendimento" class="w-full h-full object-cover object-top" widths={[320, 480, 640, drAtendimento.width]} sizes={`(max-width: 1024px) 100vw, 50vw`} />
           </div>
           <div class="absolute -bottom-8 -right-8 p-8 bg-white rounded-3xl shadow-xl max-w-xs hidden sm:block">
             <p class="font-display font-bold text-lg text-brand-600 mb-2">Compromisso Ético</p>

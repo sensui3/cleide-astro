@@ -1,0 +1,9 @@
+Motivo,Fonte,Validação,Páginas
+Página com redirecionamento,Site,Não foi iniciado,6
+Erro no servidor (5xx),Site,Não foi iniciado,2
+"Excluída pela tag ""noindex""",Site,Não foi iniciado,2
+Não encontrado (404),Site,Não foi iniciado,1
+Bloqueada devido a acesso proibido (403),Site,Não foi iniciado,1
+"Rastreada, mas não indexada no momento",Sistemas do Google,Não foi iniciado,23
+"Detectada, mas não indexada no momento",Sistemas do Google,Não foi iniciado,7
+Página alternativa com tag canônica adequada,Site,Iniciado,3
