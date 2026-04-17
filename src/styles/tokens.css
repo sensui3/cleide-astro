@@ -13,6 +13,13 @@
 
   /* Transitions */
   --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Blog Post Readability Tokens */
+  --blog-max-width: 720px;
+  --blog-body-size: 1.125rem; /* 18px */
+  --blog-line-height: 1.8;
+  --blog-text-color: #1a1a1a;
+  --blog-heading-color: #002952;
 }
 
 @font-face {
@@ -54,3 +61,40 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* Readable Content Styles (Blog Posts & Text Pages) */
+.readable-content {
+  max-width: var(--blog-max-width) !important;
+  color: var(--blog-text-color) !important;
+  font-size: var(--blog-body-size) !important;
+  line-height: var(--blog-line-height) !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.readable-content p {
+  margin-bottom: 1.5rem !important; /* ~1.33em */
+}
+
+.readable-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.15rem) !important;
+  margin-top: 3.5rem !important;
+  margin-bottom: 1.25rem !important;
+  color: var(--blog-heading-color) !important;
+  font-weight: 600 !important;
+}
+
+.readable-content h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 1.85rem) !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+  color: var(--blog-heading-color) !important;
+  font-weight: 500 !important;
+}
+
+.readable-content strong {
+  color: #000 !important;
+  font-weight: 700 !important;
+}

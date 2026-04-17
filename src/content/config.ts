@@ -6,7 +6,7 @@ const blog = defineCollection({
     schema: ({ image }: { image: any }) => z.object({
         title: z.string(),
         description: z.string(),
-        publishedAt: z.union([z.string(), z.date()]).transform((val) => new Date(val)),
+        publishedAt: z.union([z.string(), z.date()]).transform((val: string | Date) => new Date(val)),
         image: image().optional(),
         alt: z.string().optional(),
         category: z.string().default('Psicanálise'),

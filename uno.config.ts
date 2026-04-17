@@ -56,8 +56,8 @@ export default defineConfig({
                 },
                 'p': {
                     'margin-bottom': '1.5rem',
-                    'line-height': '1.75',
-                    'color': '#334155', // slate-700
+                    'line-height': '1.8',
+                    'color': '#1a1a1a',
                 },
                 'ul, ol': {
                     'margin-bottom': '2rem',
@@ -127,8 +127,8 @@ export default defineConfig({
         'heading-1': 'font-display font-700 text-[clamp(2.5rem,8vw,5.5rem)] leading-[0.95] text-brand-700 text-wrap-balance',
         'heading-2': 'font-display font-600 text-[clamp(2rem,5vw,3.25rem)] leading-[1.2] text-brand-700 tracking-tight text-wrap-balance',
         'heading-3': 'font-display font-medium text-[clamp(1.5rem,3vw,1.875rem)] text-brand-700 leading-[1.3] text-wrap-balance',
-        'text-main': 'font-body text-[clamp(1rem,2vw,1.125rem)] leading-[1.8] text-slate-700 font-400 max-w-[70ch]',
-        'text-base-site': 'font-body text-base leading-relaxed text-slate-600 max-w-[70ch]',
+        'text-main': 'font-body text-[clamp(1.0625rem,2vw,1.125rem)] leading-[1.8] text-[#1a1a1a] font-400 max-w-[70ch]',
+        'text-base-site': 'font-body text-base leading-relaxed text-slate-700 max-w-[70ch]',
         'text-label': 'text-xs font-bold tracking-[0.2em] text-slate-400 uppercase',
     },
 });
