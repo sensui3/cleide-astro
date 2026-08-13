@@ -118,7 +118,7 @@ export default defineConfig({
         'btn-primary': 'bg-brand-600 text-white px-8 py-5 rounded-full font-bold hover:bg-brand-700 transition-all duration-500 shadow-xl shadow-brand-500/20 inline-flex items-center gap-4 transform hover:-translate-y-1 uppercase tracking-widest text-xs',
         'btn-ghost': 'border-2 border-brand-500 text-brand-500 px-8 py-5 rounded-full font-bold hover:bg-brand-50 transition-all inline-flex items-center gap-4 uppercase tracking-widest text-xs',
         // Button — WhatsApp green (standard variant)
-        'btn-whatsapp': 'bg-[#25D366] text-white px-10 py-5 rounded-full font-bold inline-flex items-center gap-4 hover:bg-[#128C7E] transition-all shadow-xl uppercase tracking-widest text-xs no-underline',
+        'btn-whatsapp': 'bg-[#25D366] text-white px-10 py-5 rounded-full font-bold inline-flex items-center gap-4 hover:bg-[#128C7E] transition-all shadow-xl text-sm no-underline',
         // Layout
         'section-padding': 'py-[clamp(4rem,10vw,8rem)]',
         'container': 'max-w-7xl mx-auto px-[clamp(1.5rem,6vw,4rem)]',
