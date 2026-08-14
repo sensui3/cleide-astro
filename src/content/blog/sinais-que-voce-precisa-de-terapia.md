@@ -8,7 +8,7 @@ category: "Psicanálise"
 draft: false
 ---
 
-Muitas pessoas vivem anos com dificuldades emocionais significativas sem perceber que precisam de terapia. Os sinais são raros que uma dor física: o sofrimento emocional se disfarça, se minimiza, se confunde com personalidade. Sete deles valem atenção, mesmo quando a pessoa ainda não considerou essa possibilidade.
+Muitas pessoas vivem anos com dificuldades emocionais significativas sem perceber que precisam de terapia. Os sinais diferem de uma dor física evidente: o sofrimento emocional se disfarça, se minimiza, se confunde com personalidade. Sete deles valem atenção, mesmo quando a pessoa ainda não considerou essa possibilidade.
 
 Se você se identifica com essa busca por respostas, entenda melhor [como está sua saúde mental atualmente](/blog/como-esta-a-sua-cuca-voce-sabe/) e veja como o [ato de pedir ajuda pode ser libertador](/blog/um-grito-de-ajuda/).
 
