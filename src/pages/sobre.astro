@@ -3,19 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Contact from '../components/Contact.astro';
 import { Image } from 'astro:assets';
 import drImage from '../assets/cleide-sarkis.webp';
-import SchemaPerson from '../components/SchemaPerson.astro';
+import { personSchema } from '../utils/schemas';
 ---
 
 <BaseLayout 
-  title="Sobre a Dra. Cleide Sarkis" 
+  title="Dra. Cleide Sarkis | Psicanálise e Hipnose Clínica"
   description="Conheça a trajetória e a formação da Dra. Cleide Sarkis, psicanalista e especialista em hipnose clínica em São Paulo."
+  structuredData={personSchema}
 >
-  <SchemaPerson 
-    name="Dra. Cleide Salem Sarkis"
-    jobTitle="Psicanalista e Psicóloga Clínica"
-    description="Especialista em Psicanálise, Hipnose Clínica e Abordagem Transpessoal com mais de 35 anos de experiência em São Paulo."
-    url="https://cleidesarkis.com.br/sobre/"
-  />
   
   <section class="pt-40 pb-20 bg-brand-50 reveal">
     <div class="container text-center">

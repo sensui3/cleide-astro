@@ -9,14 +9,13 @@ import Process from '../components/Process.astro';
 import Services from '../components/Services.astro';
 import BlogPreview from '../components/BlogPreview.astro';
 import Contact from '../components/Contact.astro';
-import SchemaClinic from '../components/SchemaClinic.astro';
+import { clinicSchema } from '../utils/schemas';
 ---
 <BaseLayout 
-  title="Dra. Cleide Salem Sarkis | Psicanálise e Saúde Mental em São Paulo" 
-  description="Atendimento psicanalítico humanizado em São Paulo. Especialista em ansiedade, depressão e autoconhecimento. Agende sua consulta na Av. Paulista."
+  title="Psicanalista em São Paulo | Ansiedade e Depressão" 
+  description="Especialista em psicanálise em São Paulo. Dra. Cleide Sarkis atende na Av. Paulista. Tratamento humanizado para ansiedade, depressão e autoconhecimento. Agende sua consulta."
+  structuredData={clinicSchema}
 >
-  <SchemaClinic />
-  
   <Hero />
   <Problem />
   <About />

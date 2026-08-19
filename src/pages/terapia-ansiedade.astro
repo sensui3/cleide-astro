@@ -1,12 +1,19 @@
 ---
 import TratamentoLayout from '../layouts/TratamentoLayout.astro';
+import { createTherapySchema } from '../utils/schemas';
+
+const structuredData = createTherapySchema(
+  'Terapia para Ansiedade com Psicanálise e Hipnose Clínica',
+  'https://cleidesarkis.com.br/terapia-ansiedade/'
+);
 ---
 
 <TratamentoLayout 
-  title="Terapia para Ansiedade | Tratamento com Psicanálise e Hipnose Clínica"
+  title="Terapia para Ansiedade | Psicanálise e Hipnose em SP"
   description="Tratamento especializado para ansiedade com psicanálise e hipnose clínica. Recupere o controle da sua vida com acompanhamento profissional em São Paulo."
   heroTitle="Terapia para Ansiedade"
   heroText="Tratamento que atua na raiz do nervosismo, com psicanálise e hipnose clínica."
+  {structuredData}
 >
   <h2>Entendendo a Ansiedade: Quando o Alerta se Torna Crônico</h2>
   <p>

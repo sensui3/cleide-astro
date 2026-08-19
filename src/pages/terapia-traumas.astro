@@ -1,12 +1,19 @@
 ---
 import TratamentoLayout from '../layouts/TratamentoLayout.astro';
+import { createTherapySchema } from '../utils/schemas';
+
+const structuredData = createTherapySchema(
+  'Terapia para Traumas com Psicanálise e Regressão Terapêutica',
+  'https://cleidesarkis.com.br/terapia-traumas/'
+);
 ---
 
 <TratamentoLayout 
-  title="Terapia para Traumas | Tratamento com Psicanálise e Regressão Terapêutica"
+  title="Terapia para Traumas | Regressão e Psicanálise"
   description="Supere traumas e eventos difíceis do passado com auxílio da psicanálise e regressão terapêutica. Tratamento especializado em São Paulo."
   heroTitle="Terapia para Traumas"
   heroText="Entenda como o passado ainda atua no presente e como a psicanálise pode trabalhar isso com você."
+  {structuredData}
 >
   <h2>O Que São Traumas e Como Eles Afetam o Presente</h2>
   <p>

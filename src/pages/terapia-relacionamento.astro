@@ -1,12 +1,19 @@
 ---
 import TratamentoLayout from '../layouts/TratamentoLayout.astro';
+import { createTherapySchema } from '../utils/schemas';
+
+const structuredData = createTherapySchema(
+  'Terapia para Relacionamentos e Casais com Psicanálise',
+  'https://cleidesarkis.com.br/terapia-relacionamento/'
+);
 ---
 
 <TratamentoLayout 
-  title="Terapia para Relacionamentos | Psicanálise para Casais e Relacionamentos Amorosos"
+  title="Terapia de Casal e Relacionamentos | Psicanálise"
   description="Terapia para relacionamentos amorosos, familiares e profissionais. Entenda seus padrões afetivos e construa conexões mais saudáveis com psicanálise."
   heroTitle="Terapia para Relacionamentos"
   heroText="Entenda seus padrões de escolha e construa conexões mais saudáveis, equilibradas e autênticas."
+  {structuredData}
 >
   <h2>Por Que Repetimos os Mesmos Padrões nos Relacionamentos?</h2>
   <p>

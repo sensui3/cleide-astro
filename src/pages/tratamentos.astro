@@ -2,11 +2,51 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Services from '../components/Services.astro';
 import Contact from '../components/Contact.astro';
+import { createItemListSchema } from '../utils/schemas';
+
+const structuredData = createItemListSchema([
+  {
+    name: "Psicanálise",
+    url: "https://cleidesarkis.com.br/psicanálise/",
+    description: "Investigação profunda do inconsciente para compreender padrões repetitivos e conflitos internos."
+  },
+  {
+    name: "Hipnose Clínica",
+    url: "https://cleidesarkis.com.br/hipnose/",
+    description: "Técnica validada cientificamente para tratamento de ansiedade, fobias e comportamentos indesejados."
+  },
+  {
+    name: "Regressão Terapêutica",
+    url: "https://cleidesarkis.com.br/regressão/",
+    description: "Acesso a memórias reprimidas e traumáticas de forma segura e integrada."
+  },
+  {
+    name: "Psicoterapia Transpessoal",
+    url: "https://cleidesarkis.com.br/transpessoal/",
+    description: "Abordagem que integra aspectos existenciais e espirituais no processo terapêutico."
+  }
+]);
+
+const faqs = [
+  {
+    question: "Como funciona a psicanálise em São Paulo?",
+    answer: "A psicanálise investiga o inconsciente para compreender e tratar conflitos internos, ansiedade, depressão e padrões repetitivos através da escuta qualificada."
+  },
+  {
+    question: "Qual a diferença entre psicanálise e psicoterapia?",
+    answer: "A psicanálise é uma abordagem mais profunda que busca as raízes dos conflitos no inconsciente, enquanto a psicoterapia foca em estratégias e comportamentos."
+  },
+  {
+    question: "Preciso tomar remédio para ansiedade?",
+    answer: "Não necessariamente. A psicanálise e a hipnose clínica oferecem tratamento não medicamentoso eficaz para ansiedade e outras condições."
+  }
+];
 ---
 
 <BaseLayout 
-  title="Tratamentos e Abordagens" 
+  title="Tratamentos | Psicanálise, Hipnose e Regressão"
   description="Conheça todos os tratamentos realizados pela Dra. Cleide Sarkis: Psicanálise, Regressão, Hipnose Clínica e Psicoterapia Transpessoal."
+  structuredData={structuredData}
 >
   
   <section class="pt-40 pb-20 bg-brand-50">

@@ -1,12 +1,19 @@
 ---
 import TratamentoLayout from '../layouts/TratamentoLayout.astro';
+import { createTherapySchema } from '../utils/schemas';
+
+const structuredData = createTherapySchema(
+  'Terapia para Depressão com Psicanálise e Psicoterapia Transpessoal',
+  'https://cleidesarkis.com.br/terapia-depressao/'
+);
 ---
 
 <TratamentoLayout 
-  title="Terapia para Depressão | Tratamento com Psicanálise e Psicoterapia Transpessoal"
+  title="Terapia para Depressão | Psicanálise em SP"
   description="Tratamento especializado para depressão com psicanálise e psicoterapia transpessoal. Apoio profissional em São Paulo para resgatar o sentido da vida."
   heroTitle="Terapia para Depressão"
   heroText="Resgate o sentido, a cor e a motivação da sua vida em um espaço de escuta acolhedor e profissional."
+  {structuredData}
 >
   <h2>Entendendo a Depressão: Muito Além da Tristeza</h2>
   <p>
