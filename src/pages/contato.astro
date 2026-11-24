@@ -175,6 +175,26 @@ const structuredData = {
           const whatsappText = `Olá Dra. Cleide,\n\nMeu nome é *${name}*.\nE-mail: ${email || 'Não informado'}\nTelefone: ${phone || 'Não informado'}\n\n*Mensagem:*\n${message}`;
           const encodedUrl = `https://wa.me/5511998059125?text=${encodeURIComponent(whatsappText)}`;
 
+          // Rastreamento GA4 de conversão de lead
+          try {
+            if (typeof (window as any).gtag === 'function') {
+              (window as any).gtag('event', 'generate_lead', {
+                event_category: 'Conversion',
+                event_label: 'Formulário de Contato WhatsApp',
+                method: 'Contact Form',
+                page_location: window.location.href,
+                value: 1
+              });
+            }
+            if ((window as any).dataLayer && Array.isArray((window as any).dataLayer)) {
+              (window as any).dataLayer.push({
+                event: 'contact_form_lead',
+                conversion_type: 'generate_lead',
+                method: 'WhatsApp Form'
+              });
+            }
+          } catch (_) {}
+
           feedbackDiv.className = 'p-4 rounded-2xl text-sm font-medium bg-green-50 text-green-800 border border-green-200 block';
           feedbackDiv.innerHTML = `
             <p class="font-bold mb-1">✓ Mensagem pronta para envio!</p>
