@@ -1,0 +1,180 @@
+---
+import TratamentoLayout from '../layouts/TratamentoLayout.astro';
+import FAQ from '../components/FAQ.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalBusiness",
+      "@id": "https://cleidesarkis.com.br/reembolso-convenios/#clinic",
+      "name": "Dra. Cleide Sarkis - Convênios e Reembolso de Psicanálise",
+      "image": "https://cleidesarkis.com.br/cleide-sarkis-atendimento.webp",
+      "description": "Atendimento psicanalítico por convênio e sistema de reembolso. Aceitamos Cabesp, Vivest, OAB e SulAmérica direto, além de emissão de recibo para Bradesco, Amil, Care Plus, Omint e outros.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Paulista, 509 - Conj. 1513",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01311-000",
+        "addressCountry": "BR"
+      },
+      "telephone": "+5511998059125",
+      "url": "https://cleidesarkis.com.br/reembolso-convenios/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A Dra. Cleide Sarkis atende por convênio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, atendemos diretamente os convênios Cabesp, Vivest, OAB e SulAmérica. Para os demais planos de saúde (Bradesco, Amil, Care Plus, Omint, Porto Seguro, entre outros), atendemos pelo sistema de livre escolha com emissão de recibo para reembolso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o reembolso de psicanálise e psicoterapia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você realiza a consulta particular, nós emitimos o recibo com o registro profissional (CRP 06/05750) e descrição técnica, e você envia pelo aplicativo do seu convênio. O plano de saúde deposita o valor reembolsado diretamente na sua conta bancária em até 30 dias."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso de encaminhamento médico para pedir reembolso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A maioria dos planos exige um pedido médico simples (de clínico geral, psiquiatra, ginecologista ou neurologista) com indicação para psicoterapia. Esse pedido costuma ter validade de 6 a 12 meses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é o valor que o convênio devolve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A porcentagem de reembolso varia conforme a categoria e a tabela de cada contrato (por exemplo: planos corporativos costumam cobrir entre 70% e 100% da sessão). Você pode checar a prévia de reembolso diretamente no app do seu convênio."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const localizedFaqs = [
+  {
+    question: "Quais convênios são aceitos diretamente?",
+    answer: "Temos credenciamento direto com Cabesp, Vivest, OAB e SulAmérica. Nesses planos, você não precisa desembolsar o valor da sessão para posterior reembolso."
+  },
+  {
+    question: "Como solicitar o reembolso no meu convênio?",
+    answer: "O processo é muito simples: 1) Realize sua sessão presencial ou online; 2) Fornecemos o recibo formal assinado com CRP 06/05750; 3) Você anexa o recibo e o pedido médico no aplicativo do seu convênio. O reembolso é pago em até 30 dias na sua conta bancária."
+  },
+  {
+    question: "Planos como Bradesco, Amil e Care Plus reembolsam psicanálise?",
+    answer: "Sim. De acordo com as diretrizes da ANS (Agência Nacional de Saúde Suplementar), planos com cláusula de livre escolha garantem o direito ao reembolso de sessões de psicoterapia e acompanhamento em saúde mental."
+  },
+  {
+    question: "Vocês ajudam com a documentação para o convênio?",
+    answer: "Sim! Nossa equipe auxilia no fornecimento de todos os dados necessários (recibo detalhado, relatório ou laudo clínico quando exigido pelo auditor do convênio)."
+  },
+  {
+    question: "Posso fazer sessões online e solicitar reembolso?",
+    answer: "Sim. Os convênios aceitam recibos de teleconsulta psicológica e psicanálise online da mesma forma que os atendimentos presenciais."
+  }
+];
+---
+
+<TratamentoLayout 
+  title="Convênios e Reembolso de Psicanálise | Dra. Cleide Sarkis"
+  description="Saiba como usar seu plano de saúde para psicanálise. Atendimento direto Cabesp, Vivest, OAB e SulAmérica, e recibos para reembolso em Bradesco, Amil, Care Plus e Omint."
+  heroTitle="Psicanálise por Convênio e Reembolso"
+  heroText="Entenda como viabilizar suas sessões de psicanálise utilizando seu plano de saúde de forma simples e rápida."
+  {structuredData}
+>
+  <div class="readable-content prose prose-slate max-w-none">
+    <p>
+      Muitos pacientes adiam o início do tratamento por acreditarem que a psicanálise é inacessível ou que planos de saúde não cobrem o atendimento. No consultório da <strong>Dra. Cleide Sarkis</strong>, facilitamos o acesso à terapia por meio de convênios diretos e do <strong>sistema de livre escolha com reembolso</strong>.
+    </p>
+
+    <div class="my-10 p-8 bg-brand-50 rounded-3xl border border-brand-100">
+      <h3 class="mt-0 text-brand-700 font-bold">1. Convênios com Atendimento Direto</h3>
+      <p class="mb-4">
+        Se você possui algum dos planos abaixo, o atendimento pode ser realizado diretamente com a nossa clínica:
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4 not-prose">
+        <div class="bg-white p-4 rounded-xl border border-brand-200 shadow-sm font-semibold text-slate-800 flex items-center gap-3">
+          <span class="i-lucide-check-circle text-brand-600"></span> SulAmérica Saúde
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-brand-200 shadow-sm font-semibold text-slate-800 flex items-center gap-3">
+          <span class="i-lucide-check-circle text-brand-600"></span> Cabesp
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-brand-200 shadow-sm font-semibold text-slate-800 flex items-center gap-3">
+          <span class="i-lucide-check-circle text-brand-600"></span> Vivest
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-brand-200 shadow-sm font-semibold text-slate-800 flex items-center gap-3">
+          <span class="i-lucide-check-circle text-brand-600"></span> OAB (CAASP)
+        </div>
+      </div>
+    </div>
+
+    <h2>2. Outros Planos: Como Funciona o Sistema de Reembolso (Livre Escolha)</h2>
+    <p>
+      Se o seu plano de saúde é <strong>Bradesco Saúde, Amil, Care Plus, Omint, Porto Seguro, NotreDame Intermédica, Allianz</strong> ou similar, você tem o direito garantido por lei (Resoluções da ANS) de escolher o profissional de sua confiança e solicitar o reembolso total ou parcial do valor pago.
+    </p>
+
+    <h3>Passo a Passo Para Obter o Reembolso de Forma Rápida:</h3>
+    <ol>
+      <li>
+        <strong>Pegue um encaminhamento médico:</strong> Um médico de qualquer especialidade (clínico geral, ginecologista, psiquiatra, etc.) emite uma guia simples indicando "necessidade de acompanhamento psicoterápico". Essa guia tem validade de até 1 ano.
+      </li>
+      <li>
+        <strong>Realize sua sessão:</strong> Os atendimentos podem ser presenciais no consultório da Avenida Paulista ou via atendimento online por videoconferência.
+      </li>
+      <li>
+        <strong>Receba o recibo oficial:</strong> Ao final do mês ou de cada sessão, emitimos o recibo contendo o nome completo, CPF/CNPJ, CRP 06/05750 e datas das sessões realizadas.
+      </li>
+      <li>
+        <strong>Envie pelo aplicativo do convênio:</strong> Pelo próprio celular, você fotografa o pedido médico e o recibo. Em um prazo médio de 10 a 30 dias úteis, o valor é creditado diretamente na sua conta corrente.
+      </li>
+    </ol>
+
+    <h2>Qual o Valor Reembolsado Pelo Meu Plano?</h2>
+    <p>
+      O valor reembolsado depende do tipo de contrato contratado com a sua operadora. Planos executivos e categorias intermediárias/avançadas costumam cobrir de 70% a até 100% dos honorários psicológicos.
+    </p>
+    <p>
+      <em>Dica:</em> Você pode ligar na central do seu plano ou consultar a aba "Simulador de Reembolso" no app do seu convênio para checar a tabela para a especialidade de Psicologia / Psicoterapia.
+    </p>
+
+    <div class="my-12 p-8 bg-slate-50 rounded-3xl border border-slate-200">
+      <h3 class="mt-0 text-slate-900">Precisa de ajuda para consultar seu reembolso?</h3>
+      <p class="text-slate-600 mb-6">
+        Nossa equipe de recepção pode orientar você sobre quais documentos providenciar para facilitar o envio junto ao seu convênio.
+      </p>
+      <a href="https://wa.me/5511998059125?text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20reembolso%20de%20conv%C3%AAnio%20para%20psican%C3%A1lise." class="inline-flex items-center gap-2 bg-brand-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-700 transition-colors">
+        <span class="i-mdi-whatsapp"></span>
+        Tirar Dúvidas Sobre Convênios no WhatsApp
+      </a>
+    </div>
+
+    <h2>Por Que Optar Pelo Reembolso em Vez de Esperar na Rede Credenciada?</h2>
+    <ul>
+      <li><strong>Sem filas de espera:</strong> Inicie seu processo analítico imediatamente, sem aguardar semanas por uma vaga;</li>
+      <li><strong>Continuidade e tempo adequado:</strong> Sessões com tempo clínico completo (50 minutos), com acolhimento profundo e sem a rotatividade acelerada de ambulatórios conveniados;</li>
+      <li><strong>Liberdade de escolha:</strong> Você escolhe uma profissional com mais de 35 anos de bagagem e formação sólida, sem depender da restrição de profissionais indicados pela operadora.</li>
+    </ul>
+
+    <div class="not-prose mt-16 text-center">
+      <a href="https://wa.me/5511998059125?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o%20e%20solicitar%20recibo%20para%20reembolso." class="inline-flex items-center gap-3 bg-brand-600 text-white px-8 py-4 rounded-full font-bold text-xl hover:bg-brand-700 transition-all shadow-xl hover:shadow-brand-600/20">
+        <span class="i-lucide-calendar-check"></span>
+        Agendar Consulta com Reembolso
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-24 -mx-4 sm:-mx-8 lg:-mx-16">
+    <FAQ faqs={localizedFaqs} />
+  </div>
+</TratamentoLayout>

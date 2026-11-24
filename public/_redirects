@@ -17,3 +17,29 @@
 /author/equipe/(11) 99805-9125 /contato/ 301
 /author/cleidesarkis/ / 301
 /author/equipe/page/2/ / 301
+
+# Migração dos 12 artigos legados da raiz para /blog/ (301 permanente)
+/como-esta-a-sua-cuca-voce-sabe/ /blog/como-esta-a-sua-cuca-voce-sabe/ 301
+/como-esta-a-sua-cuca-voce-sabe /blog/como-esta-a-sua-cuca-voce-sabe/ 301
+/como-identificar-os-sinais-da-fobia-social/ /blog/como-identificar-os-sinais-da-fobia-social/ 301
+/como-identificar-os-sinais-da-fobia-social /blog/como-identificar-os-sinais-da-fobia-social/ 301
+/lideranca-ou-nivelamento/ /blog/lideranca-ou-nivelamento/ 301
+/lideranca-ou-nivelamento /blog/lideranca-ou-nivelamento/ 301
+/medo-ou-fobia/ /blog/medo-ou-fobia/ 301
+/medo-ou-fobia /blog/medo-ou-fobia/ 301
+/o-que-e-terapia-de-regressao/ /blog/o-que-e-terapia-de-regressao/ 301
+/o-que-e-terapia-de-regressao /blog/o-que-e-terapia-de-regressao/ 301
+/psicanalise-alem-do-diva-descubra-mitos/ /blog/psicanalise-alem-do-diva-descubra-mitos/ 301
+/psicanalise-alem-do-diva-descubra-mitos /blog/psicanalise-alem-do-diva-descubra-mitos/ 301
+/psicanalista-no-tratamento-da-ansiedade/ /blog/psicanalista-no-tratamento-da-ansiedade/ 301
+/psicanalista-no-tratamento-da-ansiedade /blog/psicanalista-no-tratamento-da-ansiedade/ 301
+/sinais-que-voce-precisa-de-terapia/ /blog/sinais-que-voce-precisa-de-terapia/ 301
+/sinais-que-voce-precisa-de-terapia /blog/sinais-que-voce-precisa-de-terapia/ 301
+/sindrome-de-burnout-10-sinais/ /blog/sindrome-de-burnout-10-sinais/ 301
+/sindrome-de-burnout-10-sinais /blog/sindrome-de-burnout-10-sinais/ 301
+/sindrome-do-panico/ /blog/sindrome-do-panico/ 301
+/sindrome-do-panico /blog/sindrome-do-panico/ 301
+/traumas-emocionais-como-tratar/ /blog/traumas-emocionais-como-tratar/ 301
+/traumas-emocionais-como-tratar /blog/traumas-emocionais-como-tratar/ 301
+/um-grito-de-ajuda/ /blog/um-grito-de-ajuda/ 301
+/um-grito-de-ajuda /blog/um-grito-de-ajuda/ 301

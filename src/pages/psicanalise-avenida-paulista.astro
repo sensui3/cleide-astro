@@ -1,0 +1,207 @@
+---
+import TratamentoLayout from '../layouts/TratamentoLayout.astro';
+import FAQ from '../components/FAQ.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Psychologist",
+      "@id": "https://cleidesarkis.com.br/psicanalise-avenida-paulista/#psychologist",
+      "name": "Dra. Cleide Sarkis - Psicanalista na Avenida Paulista",
+      "image": "https://cleidesarkis.com.br/cleide-sarkis-atendimento.webp",
+      "description": "Consultório de psicanálise presencial na Avenida Paulista, 509, ao lado do Metrô Brigadeiro. Atendimento para ansiedade, depressão, burnout e psicoterapia para executivos.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Paulista, 509 - Conj. 1513",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01311-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.564612,
+        "longitude": -46.650892
+      },
+      "url": "https://cleidesarkis.com.br/psicanalise-avenida-paulista/",
+      "telephone": "+5511998059125",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Avenida Paulista" },
+        { "@type": "AdministrativeArea", "name": "Bela Vista" },
+        { "@type": "AdministrativeArea", "name": "Jardins" },
+        { "@type": "AdministrativeArea", "name": "Paraíso" },
+        { "@type": "AdministrativeArea", "name": "Cerqueira César" },
+        { "@type": "AdministrativeArea", "name": "Consolação" },
+        { "@type": "City", "name": "São Paulo" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Onde fica exatamente o consultório de psicanálise na Avenida Paulista?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O consultório está situado na Av. Paulista, 509, Conjunto 1513, a menos de 100 metros da Estação Brigadeiro do Metrô (Linha 2-Verde), em frente ao prédio da Gazeta e próximo ao Shopping Cidade São Paulo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como encontrar um psicanalista próximo a mim na região da Paulista?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se você reside ou trabalha na Avenida Paulista, Bela Vista, Jardins, Cerqueira César ou Paraíso, o consultório da Dra. Cleide Sarkis oferece localização central, acessibilidade e facilidade de agendamento presencial com horários estendidos (até 20h)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O consultório atende convênios ou emite recibo para reembolso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atendemos diretamente os convênios Cabesp, Vivest, OAB e SulAmérica. Para os demais planos (como Bradesco, Amil, Care Plus e Omint), emitimos recibo detalhado para que o paciente solicite o reembolso integral ou parcial junto à sua operadora."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Há opções de horários para quem trabalha em horário comercial na Paulista?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Disponibilizamos horários flexíveis logo cedo (a partir das 08h), no intervalo de almoço e após o expediente corporativo (até às 20h), além de manhãs de sábado."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const localizedFaqs = [
+  {
+    question: "Onde fica o consultório na Avenida Paulista?",
+    answer: "O consultório está situado na Av. Paulista, 509 - Conjunto 1513, colado à estação Brigadeiro do Metrô (Linha Verde). Fácil acesso para quem está nos Jardins, Bela Vista, Paraíso ou Centro."
+  },
+  {
+    question: "Como chegar pelo Metrô?",
+    answer: "Basta desembarcar na estação Brigadeiro (Linha 2-Verde) e caminhar menos de 2 minutos até o número 509. O prédio conta com portaria com controle de acesso e elevadores rápidos."
+  },
+  {
+    question: "Vocês atendem horários noturnos para profissionais da região?",
+    answer: "Sim. O consultório atende de segunda a sexta-feira das 08h às 20h, permitindo realizar sua sessão antes de entrar no escritório ou logo após o término do expediente."
+  },
+  {
+    question: "Como funciona a primeira sessão presencial?",
+    answer: "O primeiro encontro é uma entrevista de acolhimento mútuo. Você expõe o que motivou sua busca (angústia, conflitos profissionais, depressão, término de relação) e definimos o enquadre e a frequência do trabalho analítico."
+  },
+  {
+    question: "Aceita convênios médicos?",
+    answer: "Atendemos diretamente Cabesp, Vivest, OAB e SulAmérica. Para outros convênios, fornecemos recibo detalhado com CRP para reembolso via sistema de livre escolha."
+  }
+];
+---
+
+<TratamentoLayout 
+  title="Psicanalista na Avenida Paulista | Consultório ao Lado do Metrô Brigadeiro"
+  description="Consultório de psicanálise presencial na Av. Paulista, 509. Dra. Cleide Sarkis atende profissionais e moradores da Paulista, Jardins e Paraíso. Agende no WhatsApp."
+  heroTitle="Psicanalista na Avenida Paulista"
+  heroText="Atendimento psicanalítico presencial no coração de São Paulo, a poucos passos da estação Brigadeiro do Metrô."
+  {structuredData}
+>
+  <div class="readable-content prose prose-slate max-w-none">
+    <p>
+      Se você procura um <strong>psicanalista próximo de você na Avenida Paulista</strong>, o consultório da <strong>Dra. Cleide Sarkis</strong> oferece um espaço reservado de escuta clínica, sigilo ético e rigor técnico na <strong>Av. Paulista, 509 - Conjunto 1513</strong>.
+    </p>
+    
+    <p>
+      Estrategicamente posicionado ao lado da <strong>Estação Brigadeiro (Linha 2-Verde)</strong>, o consultório atende profissionais do polo financeiro e corporativo da Paulista, além de moradores de bairros vizinhos como <strong>Jardins, Paraíso, Bela Vista, Cerqueira César e Consolação</strong>.
+    </p>
+
+    <h2>Por Que Iniciar Sua Psicanálise na Avenida Paulista?</h2>
+    <p>
+      O ritmo acelerado de quem trabalha ou circula pela Paulista frequentemente cobra um preço alto: crises de ansiedade súbita, exaustão mental (burnout), dificuldade de desligar a mente à noite e conflitos afetivos não resolvidos.
+    </p>
+    <p>
+      Contar com um consultório próximo ao seu local de trabalho ou residência elimina o desgaste do trânsito e permite integrar o cuidado com a sua saúde mental na sua rotina semanal:
+    </p>
+    <ul>
+      <li><strong>Horários executivos:</strong> Sessões disponíveis a partir das 08h da manhã, no horário de almoço e após o expediente (até 20h);</li>
+      <li><strong>Localização privilegiada:</strong> A menos de 100 metros do Metrô Brigadeiro, próximo a centros empresariais, hospitais (Santa Catarina, Oswaldo Cruz, Sírio-Libanês) e shoppings;</li>
+      <li><strong>Acolhimento de alta demanda:</strong> Escuta especializada para executivos, médicos, advogados, acadêmicos e profissionais que lidam com forte pressão por resultados.</li>
+    </ul>
+
+    <div class="my-12 p-8 bg-brand-50 rounded-3xl border border-brand-100">
+      <h3 class="mt-0 text-brand-700">Sobre a Dra. Cleide Sarkis (CRP 06/05750)</h3>
+      <p>
+        Com mais de <strong>35 anos de experiência clínica</strong>, a Dra. Cleide Sarkis alia a profundidade da investigação psicanalítica às técnicas de hipnose clínica e psicoterapia integrativa para tratar a causa profunda do sofrimento.
+      </p>
+      <div class="flex gap-4 items-center">
+        <a href="/sobre/" class="font-bold text-brand-600 hover:text-brand-800 underline">Conheça a formação e trajetória →</a>
+      </div>
+    </div>
+
+    <h2>Demandas Frequentes Atendidas no Consultório</h2>
+    <ul>
+      <li><a href="/terapia-ansiedade/" class="text-brand-600 font-semibold hover:underline">Ansiedade e Angústia Persistente:</a> Aperto no peito, hipervigilância, preocupação excessiva e insônia;</li>
+      <li><a href="/terapia-burnout/" class="text-brand-600 font-semibold hover:underline">Burnout e Estresse Ocupacional:</a> Sensação crônica de esgotamento, perda de motivação e paralisia decisória;</li>
+      <li><a href="/terapia-panico/" class="text-brand-600 font-semibold hover:underline">Crises de Pânico e Fobias:</a> Descontrole emocional súbito e medo recorrente de novas crises;</li>
+      <li><a href="/terapia-depressao/" class="text-brand-600 font-semibold hover:underline">Depressão e Desânimo:</a> Dificuldade de encontrar sentido nas tarefas diárias e isolamento afetivo;</li>
+      <li><a href="/terapia-relacionamento/" class="text-brand-600 font-semibold hover:underline">Conflitos de Relacionamento:</a> Rompimentos amorosos, dependência emocional e repetição de padrões tóxicos.</li>
+    </ul>
+
+    <h2>Como Chegar ao Consultório</h2>
+    <p>
+      O endereço <strong>Av. Paulista, 509</strong> fica situado no trecho entre a Rua Maria Figueiredo e a Alameda Joaquim Eugênio de Lima:
+    </p>
+    <ul>
+      <li><strong>Metrô:</strong> Estação Brigadeiro (Linha 2-Verde) a apenas 1 minuto a pé;</li>
+      <li><strong>Ônibus:</strong> Diversas linhas municipais que percorrem as faixas exclusivas da Avenida Paulista e Avenida Brigadeiro Luís Antônio;</li>
+      <li><strong>Estacionamento:</strong> Edifício comercial com estacionamento privativo e opções de garagens rotativas conveniadas no entorno.</li>
+    </ul>
+    
+    <div class="not-prose my-12">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.106591782298!2d-46.65089202466986!3d-23.564611878795556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c629f63617%3A0xc3f1400d72023ede!2sAv.%20Paulista%2C%20509%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001311-000!5e0!3m2!1spt-BR!2sbr!4v1709560000000!5m2!1spt-BR!2sbr" 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        class="rounded-3xl shadow-lg"
+        title="Localização do Consultório de Psicanálise na Avenida Paulista, 509"
+      ></iframe>
+    </div>
+
+    <div class="not-prose mt-16 text-center">
+      <a href="https://wa.me/5511998059125?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20presencial%20na%20Avenida%20Paulista." class="inline-flex items-center gap-3 bg-brand-600 text-white px-8 py-4 rounded-full font-bold text-xl hover:bg-brand-700 transition-all shadow-xl hover:shadow-brand-600/20">
+        <span class="i-lucide-calendar-check"></span>
+        Agendar Consulta Presencial na Paulista
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-24 -mx-4 sm:-mx-8 lg:-mx-16">
+    <FAQ faqs={localizedFaqs} />
+  </div>
+  
+  <div class="mt-16 prose prose-slate max-w-none text-center italic text-slate-500">
+    <p>
+      Atendimento presencial para as regiões de <a href="/psicanalise-bela-vista/" class="text-brand-500 hover:underline">Bela Vista</a>, <a href="/psicanalise-paraiso/" class="text-brand-500 hover:underline">Paraíso</a>, <a href="/psicanalise-vila-mariana/" class="text-brand-500 hover:underline">Vila Mariana</a> e Jardins.
+    </p>
+  </div>
+</TratamentoLayout>

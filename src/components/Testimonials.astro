@@ -1,25 +1,19 @@
 ---
-const testimonials = [
+const pillars = [
   {
-    initials: 'M.S.',
-    age: '34 anos',
-    time: 'Paciente há 2 anos',
-    text: 'Adiei a terapia por anos achando que era "frescura". Com a análise entendi que buscar ajuda é uma decisão corajosa. Hoje sinto o corpo mais leve.',
-    stars: 5
+    title: 'Superação da Resistência',
+    quote: 'Muitas pessoas adiam a terapia por anos acreditando que devem dar conta de tudo sozinhas. Na análise, compreende-se que buscar ajuda especializada é um ato de coragem e autocuidado que alivia o peso físico e psíquico.',
+    badge: 'Autocuidado e Alívio'
   },
   {
-    initials: 'R.B.',
-    age: '42 anos',
-    time: 'Paciente há 1 ano',
-    text: 'Em algumas sessões já percebi padrões que repetia há décadas. A escuta técnica aliada à empatia fez toda a diferença.',
-    stars: 5
+    title: 'Quebra de Padrões Repetitivos',
+    quote: 'Ao longo do processo analítico, o paciente passa a reconhecer repetições inconscientes em suas escolhas e relacionamentos, ganhando autonomia para agir de maneira diferente frente às pressões da vida.',
+    badge: 'Clareza e Consciência'
   },
   {
-    initials: 'L.F.',
-    age: '29 anos',
-    time: 'Paciente há 6 meses',
-    text: 'Sentia um vazio sem nome. Na psicanálise fui colocando palavras nesse espaço, e com isso fui me reconectando.',
-    stars: 5
+    title: 'Ressignificação do Vazio',
+    quote: 'A escuta psicanalítica permite dar palavras ao sofrimento que antes não tinha nome. Ao elaborar os nós de sua história, cada indivíduo reconstrói o sentido de sua trajetória.',
+    badge: 'Elaboração e Sentido'
   }
 ];
 ---
@@ -31,40 +25,61 @@ const testimonials = [
   <div class="container relative z-10">
     <div class="text-center mb-16">
       <span class="text-label mb-4 block">
-        // RELATOS DE TRANSFORMAÇÃO
+        O IMPACTO DO PROCESSO ANALÍTICO
       </span>
       <h2 class="heading-2">
-        Depoimentos <span class="italic font-300 text-brand-500">de pacientes</span>
+        Transformações <span class="italic font-300 text-brand-500">na clínica</span>
       </h2>
       <p class="text-slate-500 mt-6 max-w-2xl mx-auto text-sm">
-        Depoimentos ilustrativos, com nomes e dados fictícios. Cada processo terapêutico é único; resultados variam de pessoa para pessoa.
+        A psicanálise oferece um espaço ético e reservado para investigar as origens do sofrimento psíquico, com respeito ao tempo e à subjetividade de cada pessoa.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      {testimonials.map((item) => (
-        <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-500 group">
-          <div class="flex gap-1 text-amber-400 mb-6">
-            {[...Array(item.stars)].map(() => (
-              <span class="i-lucide-star text-sm"></span>
-            ))}
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      {pillars.map((item) => (
+        <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-500 flex flex-col justify-between group">
+          <div>
+            <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-3.5 py-1 rounded-full mb-6">
+              {item.badge}
+            </span>
+            <h3 class="heading-3 mb-4 text-slate-800">{item.title}</h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              "{item.quote}"
+            </p>
           </div>
           
-          <p class="text-slate-600 italic mb-10 leading-relaxed text-main">
-            "{item.text}"
-          </p>
-          
-          <div class="flex items-center gap-4 border-t border-slate-50 pt-8">
-            <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 font-display font-bold text-sm">
-              {item.initials}
-            </div>
-            <div>
-              <p class="font-bold text-sm text-slate-700">{item.initials}, {item.age}</p>
-              <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">{item.time}</p>
-            </div>
+          <div class="pt-6 mt-8 border-t border-slate-50 flex items-center gap-2 text-xs text-slate-400 font-medium">
+            <span class="i-lucide-shield-check text-brand-500 text-base"></span>
+            Sigilo e acolhimento profissional
           </div>
         </div>
       ))}
+    </div>
+
+    <div class="text-center bg-white p-8 rounded-3xl border border-brand-100/60 max-w-2xl mx-auto shadow-sm">
+      <p class="text-sm text-slate-600 mb-4">
+        Em conformidade com o Código de Ética Profissional do Psicólogo (CFP), opiniões e avaliações espontâneas de pacientes são registradas diretamente em plataformas públicas independentes:
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a 
+          href="https://share.google/Cc5TiToMQvi6ONl21" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-brand-50 hover:bg-brand-100 text-brand-700 px-5 py-2.5 rounded-full text-xs font-bold transition-all border border-brand-200"
+        >
+          <span class="i-lucide-map-pin text-sm"></span>
+          Ver Perfil no Google Maps
+        </a>
+        <a 
+          href="https://www.doctoralia.com.br/cleide-salem-sarkis/psicologo-psicanalista/sao-paulo" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-slate-50 hover:bg-slate-100 text-slate-700 px-5 py-2.5 rounded-full text-xs font-bold transition-all border border-slate-200"
+        >
+          <span class="i-lucide-external-link text-sm"></span>
+          Perfil no Doctoralia
+        </a>
+      </div>
     </div>
   </div>
 </section>

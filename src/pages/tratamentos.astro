@@ -6,24 +6,39 @@ import { createItemListSchema } from '../utils/schemas';
 
 const structuredData = createItemListSchema([
   {
-    name: "Psicanálise",
-    url: "https://cleidesarkis.com.br/psicanálise/",
+    name: "Psicanálise Clínica",
+    url: "https://cleidesarkis.com.br/psicanalise/",
     description: "Investigação profunda do inconsciente para compreender padrões repetitivos e conflitos internos."
   },
   {
-    name: "Hipnose Clínica",
-    url: "https://cleidesarkis.com.br/hipnose/",
-    description: "Técnica validada cientificamente para tratamento de ansiedade, fobias e comportamentos indesejados."
+    name: "Terapia para Ansiedade",
+    url: "https://cleidesarkis.com.br/terapia-ansiedade/",
+    description: "Tratamento especializado integrando escuta psicanalítica e alívio do estresse crônico."
   },
   {
-    name: "Regressão Terapêutica",
-    url: "https://cleidesarkis.com.br/regressão/",
-    description: "Acesso a memórias reprimidas e traumáticas de forma segura e integrada."
+    name: "Terapia para Síndrome de Burnout",
+    url: "https://cleidesarkis.com.br/terapia-burnout/",
+    description: "Acolhimento psicanalítico para esgotamento profissional e sobrecarga no ambiente de trabalho."
   },
   {
-    name: "Psicoterapia Transpessoal",
-    url: "https://cleidesarkis.com.br/transpessoal/",
-    description: "Abordagem que integra aspectos existenciais e espirituais no processo terapêutico."
+    name: "Terapia para Síndrome do Pânico",
+    url: "https://cleidesarkis.com.br/terapia-panico/",
+    description: "Manejo de crises agudas e reestruturação da segurança emocional."
+  },
+  {
+    name: "Terapia para Depressão",
+    url: "https://cleidesarkis.com.br/terapia-depressao/",
+    description: "Escuta analítica para elaboração do desânimo persistente, angústia e reencontro de sentido."
+  },
+  {
+    name: "Terapia para Traumas e Medos",
+    url: "https://cleidesarkis.com.br/terapia-traumas/",
+    description: "Abordagem com regressão terapêutica e psicologia integrada para elaborar eventos difíceis do passado."
+  },
+  {
+    name: "Terapia de Relacionamento",
+    url: "https://cleidesarkis.com.br/terapia-relacionamento/",
+    description: "Compreensão de padrões de repetição e melhoria da comunicação e conexão interpessoal."
   }
 ]);
 
@@ -52,7 +67,7 @@ const faqs = [
   <section class="pt-40 pb-20 bg-brand-50">
     <div class="container text-center">
       <h1 class="text-3xl md:text-[34px] font-bold text-brand-700 mb-6 leading-tight">Nossos Tratamentos</h1>
-      <p class="text-main text-slate-600 max-w-3xl mx-auto">Técnicas integradas para cuidar da sua saúde mental de forma profunda e personalizada.</p>
+      <p class="text-main text-slate-600 max-w-3xl mx-auto">Abordagens terapêuticas integradas para o tratamento de ansiedade, depressão, traumas e conflitos relacionais.</p>
     </div>
   </section>
 
@@ -67,6 +82,16 @@ const faqs = [
             title: 'Ansiedade & Estresse',
             text: 'Hipnose e psicanálise para tratar a origem do nervosismo.',
             link: '/terapia-ansiedade/'
+          },
+          {
+            title: 'Burnout & Esgotamento',
+            text: 'Acolhimento psicanalítico para sobrecarga profissional e estresse corporativo.',
+            link: '/terapia-burnout/'
+          },
+          {
+            title: 'Síndrome do Pânico',
+            text: 'Técnicas integradas para controle imediato de crises e tratamento da angústia.',
+            link: '/terapia-panico/'
           },
           {
             title: 'Depressão & Desânimo',
@@ -101,7 +126,7 @@ const faqs = [
     <div class="max-w-4xl mx-auto bg-brand-600 rounded-[3rem] p-12 text-center text-white shadow-2xl">
       <h2 class="heading-2 text-white mb-6">Ficou com dúvidas sobre qual abordagem escolher?</h2>
       <p class="text-brand-100 mb-10 max-w-xl mx-auto">
-        Não se preocupe em decidir sozinho. Na primeira sessão, conversaremos para entender qual caminho melhor se adapta ao seu momento.
+        A definição da abordagem é feita na primeira conversa, considerando suas queixas principais e objetivos clínicos.
       </p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center">
         <a href="/primeira-sessao/" class="btn-ghost !border-white !text-white hover:!bg-white/10 no-underline">

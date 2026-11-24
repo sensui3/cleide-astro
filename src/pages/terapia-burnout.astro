@@ -1,0 +1,128 @@
+---
+import TratamentoLayout from '../layouts/TratamentoLayout.astro';
+import FAQ from '../components/FAQ.astro';
+import { createTherapySchema } from '../utils/schemas';
+
+const therapySchema = createTherapySchema(
+  'Tratamento para Burnout e Esgotamento Profissional',
+  'https://cleidesarkis.com.br/terapia-burnout/'
+);
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    therapySchema,
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como a psicanálise ajuda quem está com burnout?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A psicanálise não trata o burnout apenas como cansaço físico, mas investiga a relação psíquica do sujeito com o trabalho: a autoexigência desmedida, a incapacidade de dizer não, a busca incessante por validação externa e o medo de falhar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais os principais sinais do esgotamento profissional?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cansaço crônico mesmo após o sono, angústia no domingo à noite, perda de concentração, irritabilidade súbita com colegas ou familiares, cinismo no trabalho e sintomas psicossomáticos (gastrite, enxaqueca, palpitações)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É possível conciliar a terapia com a rotina pesada de trabalho?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O consultório na Avenida Paulista oferece horários executivos (logo cedo a partir das 08h, no horário de almoço ou após o expediente comercial até às 20h), além da modalidade de atendimento online."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const localizedFaqs = [
+  {
+    question: "Como saber se meu caso é estresse normal ou burnout?",
+    answer: "O estresse comum cede com alguns dias de repouso ou lazer. O burnout (síndrome do esgotamento profissional) persiste mesmo nas férias ou fins de semana, acompanhado de sensação de esvaziamento, apatia, angústia antes de abrir o e-mail ou computador e perda total da realização pessoal."
+  },
+  {
+    question: "Vou precisar me afastar do trabalho?",
+    answer: "Nem sempre. O objetivo da psicanálise é devolver a você a soberania sobre o seu tempo e seus limites psíquicos. Em muitos casos, reorganizar a relação interna com o trabalho e aprender a dizer não evita a necessidade de um afastamento abrupto."
+  },
+  {
+    question: "Vocês atendem online ou presencial?",
+    answer: "Ambas as modalidades estão disponíveis. O consultório presencial fica estrategicamente na Avenida Paulista, 509 (Metrô Brigadeiro), ideal para profissionais da região que desejam uma pausa no dia para o cuidado clínico."
+  },
+  {
+    question: "Como funciona a associação com hipnose clínica?",
+    answer: "A hipnose clínica pode ser associada para controle imediato da ansiedade fisiológica, regulação do sono e relaxamento da tensão muscular, enquanto a psicanálise elabora as raízes emocionais da sobrecarga."
+  }
+];
+---
+
+<TratamentoLayout 
+  title="Tratamento para Burnout e Estresse Profissional | Psicanálise em SP"
+  description="Tratamento especializado para Síndrome de Burnout e esgotamento ocupacional na Av. Paulista e online. Dra. Cleide Sarkis, mais de 35 anos de prática clínica."
+  heroTitle="Terapia para Burnout e Esgotamento Profissional"
+  heroText="Recupere o controle da sua saúde mental, estabeleça limites saudáveis e ressignifique sua relação com o trabalho."
+  {structuredData}
+>
+  <div class="readable-content prose prose-slate max-w-none">
+    <p>
+      A <strong>Síndrome de Burnout</strong> (esgotamento profissional crônico) não é uma fraqueza individual nem falta de força de vontade. É o resultado do colapso entre uma exigência externa contínua e uma cobrança psíquica interna que impede o indivíduo de parar.
+    </p>
+    
+    <p>
+      Especialmente em polos corporativos como a <strong>Avenida Paulista e o centro financeiro de São Paulo</strong>, executivos, gestores, advogados, médicos e profissionais de tecnologia frequentemente ultrapassam seus limites até que o corpo manifeste a sobrecarga na forma de sintomas agudos.
+    </p>
+
+    <h2>Sinais de Alerta: Quando o Trabalho Vira Adoecimento</h2>
+    <ul>
+      <li><strong>Exaustão física e mental persistente:</strong> Sensação de já acordar cansado, mesmo após horas de sono;</li>
+      <li><strong>Aversão e ansiedade antecipatória:</strong> O domingo à noite torna-se um momento de angústia, taquicardia e insônia;</li>
+      <li><strong>Despersonalização e apatia:</strong> Afastamento emocional de colegas e clientes, perda da empatia e cinismo;</li>
+      <li><strong>Dificuldade de concentração e memória:</strong> Queda no rendimento, indecisão crônica e esquecimentos constantes;</li>
+      <li><strong>Somatizações corporais:</strong> Enxaquecas, dores musculares no pescoço/costas, problemas gastrointestinais e crises de ansiedade súbita.</li>
+    </ul>
+
+    <h2>A Abordagem Psicanalítica do Burnout</h2>
+    <p>
+      Muitos métodos focam apenas em "ensinar gerenciamento de tempo". Na psicanálise com a <strong>Dra. Cleide Sarkis</strong>, vamos além do superficial para desatar os nós inconscientes que alimentam a exaustão:
+    </p>
+    <ul>
+      <li><strong>O Ideal de Eu tirânico:</strong> A necessidade inconsciente de ser infalível, de nunca desapontar chefias ou familiares e de carregar mais peso do que suporta;</li>
+      <li><strong>A culpa pelo descanso:</strong> Por que momentos de ócio geram angústia e sensação de improdutividade;</li>
+      <li><strong>A construção de limites reais:</strong> Resgatar a capacidade de dizer não sem sentir que sua identidade profissional está em risco.</li>
+    </ul>
+
+    <div class="my-12 p-8 bg-brand-50 rounded-3xl border border-brand-100">
+      <h3 class="mt-0 text-brand-700">Por que fazer terapia próximo ao seu trabalho?</h3>
+      <p>
+        O consultório está localizado na <strong>Av. Paulista, 509 (ao lado do Metrô Brigadeiro)</strong>. Isso possibilita realizar sua sessão antes do expediente corporativo, durante o almoço ou logo na saída do trabalho, sem enfrentar trânsito ou estresse extra.
+      </p>
+      <div class="flex gap-4 items-center">
+        <a href="/psicanalise-avenida-paulista/" class="font-bold text-brand-600 hover:text-brand-800 underline">Ver detalhes do consultório na Paulista →</a>
+      </div>
+    </div>
+
+    <h2>Associação com Hipnose Clínica para Alívio Fisiológico</h2>
+    <p>
+      Pacientes em estágio agudo de burnout costumam chegar ao consultório com o sistema nervoso simpático travado em modo de alerta. Através de técnicas seguras de <strong>hipnose clínica</strong>, auxiliamos na regulação fisiológica imediata: redução de cortisol, indução ao relaxamento profundo e restauração dos ciclos de sono.
+    </p>
+
+    <div class="not-prose mt-16 text-center">
+      <a href="https://wa.me/5511998059125?text=Ol%C3%A1%2C%20estou%20enfrentando%20esgotamento%20no%20trabalho%20e%20gostaria%20de%20agendar%20uma%20consulta." class="inline-flex items-center gap-3 bg-brand-600 text-white px-8 py-4 rounded-full font-bold text-xl hover:bg-brand-700 transition-all shadow-xl hover:shadow-brand-600/20">
+        <span class="i-lucide-calendar-check"></span>
+        Agendar Acolhimento para Burnout
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-24 -mx-4 sm:-mx-8 lg:-mx-16">
+    <FAQ faqs={localizedFaqs} />
+  </div>
+</TratamentoLayout>

@@ -1,5 +1,48 @@
+# robots.txt para https://cleidesarkis.com.br
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /backend/
 Disallow: /api/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /*.php$
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+Disallow: /readme.html
+Disallow: /license.txt
+Disallow: /config/
+Disallow: /.env
+Disallow: /.git
+Disallow: /.svn
 
+# Permissão explícita para motores de busca e agentes de IA (GEO / AEO)
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemaps
 Sitemap: https://cleidesarkis.com.br/sitemap-index.xml

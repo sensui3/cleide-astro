@@ -23,7 +23,7 @@ const structuredData = {
     <section class="container max-w-6xl">
       <div class="text-center mb-16">
         <span class="text-label mb-4 block">
-          // CANAIS DE ATENDIMENTO
+          CANAIS DE ATENDIMENTO
         </span>
         <h1 class="heading-1 mb-8">Vamos Conversar?</h1>
         <p class="text-main text-slate-500 max-w-2xl mx-auto">
@@ -56,8 +56,8 @@ const structuredData = {
             <p class="text-base-site text-slate-600 mb-6">
               Av. Paulista, 509 - Conj. 1513<br />Bela Vista, São Paulo - SP
             </p>
-            <a href="https://maps.app.goo.gl/3f8H2k2z1J3jL8z6A" target="_blank" rel="noopener noreferrer" class="font-bold text-brand-600 text-lg hover:text-brand-700 flex items-center gap-2 group">
-              Ver no Google Maps
+            <a href="https://share.google/Cc5TiToMQvi6ONl21" target="_blank" rel="noopener noreferrer" class="font-bold text-brand-600 text-lg hover:text-brand-700 flex items-center gap-2 group">
+              Ver no Google Maps / Perfil da Empresa
               <span class="i-lucide-arrow-right group-hover:translate-x-1 transition-transform"></span>
             </a>
           </div>
@@ -86,7 +86,7 @@ const structuredData = {
           
           <h2 class="heading-3 mb-8">Envie uma mensagem</h2>
           
-          <form class="space-y-6">
+          <form id="contact-form" class="space-y-6">
             <div>
               <label for="name" class="block text-label mb-2 opacity-70">Nome Completo</label>
               <input 
@@ -134,21 +134,61 @@ const structuredData = {
               ></textarea>
             </div>
 
+            <div id="form-feedback" class="hidden p-4 rounded-2xl text-sm font-medium"></div>
+
             <button 
               type="submit" 
-              class="w-full bg-brand-700 text-white py-5 rounded-full font-bold hover:bg-brand-800 transition-all uppercase tracking-widest text-sm shadow-xl shadow-brand-900/20 flex items-center justify-center gap-3 group"
+              id="submit-btn"
+              class="w-full bg-brand-700 text-white py-5 rounded-full font-bold hover:bg-brand-800 transition-all uppercase tracking-widest text-sm shadow-xl shadow-brand-900/20 flex items-center justify-center gap-3 group cursor-pointer"
             >
-              Enviar Mensagem
+              <span>Enviar via WhatsApp e Agendar</span>
               <span class="i-lucide-send text-lg transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"></span>
             </button>
           </form>
           
           <p class="mt-8 text-center text-sm text-slate-400">
-            Prometo responder o mais breve possível.
+            Atendimento humanizado com sigilo ético absoluto (CRP 06/05750).
           </p>
         </div>
       </div>
     </section>
+
+    <script>
+      const contactForm = document.getElementById('contact-form') as HTMLFormElement | null;
+      const feedbackDiv = document.getElementById('form-feedback');
+
+      if (contactForm && feedbackDiv) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const formData = new FormData(contactForm);
+          const name = String(formData.get('name') || '').trim();
+          const email = String(formData.get('email') || '').trim();
+          const phone = String(formData.get('phone') || '').trim();
+          const message = String(formData.get('message') || '').trim();
+
+          if (!name || !message) {
+            feedbackDiv.className = 'p-4 rounded-2xl text-sm font-medium bg-red-50 text-red-700 border border-red-200 block';
+            feedbackDiv.textContent = 'Por favor, preencha seu nome e a mensagem antes de enviar.';
+            return;
+          }
+
+          const whatsappText = `Olá Dra. Cleide,\n\nMeu nome é *${name}*.\nE-mail: ${email || 'Não informado'}\nTelefone: ${phone || 'Não informado'}\n\n*Mensagem:*\n${message}`;
+          const encodedUrl = `https://wa.me/5511998059125?text=${encodeURIComponent(whatsappText)}`;
+
+          feedbackDiv.className = 'p-4 rounded-2xl text-sm font-medium bg-green-50 text-green-800 border border-green-200 block';
+          feedbackDiv.innerHTML = `
+            <p class="font-bold mb-1">✓ Mensagem pronta para envio!</p>
+            <p class="text-xs mb-3">Redirecionando para o WhatsApp oficial para iniciar seu atendimento...</p>
+            <a href="${encodedUrl}" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#25D366] text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-[#128C7E] transition-all">
+              Abrir WhatsApp Agora
+            </a>
+          `;
+
+          // Abre o WhatsApp com a mensagem estruturada
+          window.open(encodedUrl, '_blank');
+        });
+      }
+    </script>
 
     <!-- Map Section Placeholder - Premium look -->
     <section class="mt-32 container">

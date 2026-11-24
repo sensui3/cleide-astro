@@ -2,81 +2,10 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = ({ site }) => {
     const siteUrl = site?.href ?? 'https://cleidesarkis.com.br';
-    
-    // Bots Permitidos (principais mecanismos de busca e ferramentas úteis)
-    const allowedBots = [
-        // Google
-        'Googlebot',
-        'Googlebot-Image',
-        'Googlebot-News',
-        'Googlebot-Video',
-        'Mediapartners-Google',
-        'AdsBot-Google',
-        'Google-InspectionTool',
-        'GoogleOther',
-        // Bing/Microsoft
-        'bingbot',
-        'msnbot',
-        'adidxbot',
-        'bingpreview',
-        // Yahoo
-        'Slurp',
-        // Yandex
-        'YandexBot',
-        'YandexImages',
-        // DuckDuckGo
-        'DuckDuckBot',
-        'DuckDuckGo-Favicons-Bot',
-        // Baidu
-        'Baiduspider',
-        // Facebook/Social Media
-        'facebookexternalhit',
-        'Facebot',
-        'Twitterbot',
-        'LinkedInBot',
-        // Pinterest
-        'Pinterestbot',
-        // Reddit
-        'Redditbot',
-        // Apple
-        'Applebot',
-        // Alexa/Amazon
-        'ia_archiver',
-        // Ahrefs (SEO tool)
-        'AhrefsBot',
-        'AhrefsSiteAudit',
-        // SEMrush
-        'SemrushBot',
-        'SemrushBot',
-        //obot (Jeto SEO)
-        'jetbot',
-        // Majestic
-        'MJ12bot',
-        // Screaming Frog
-        'Screaming Frog SEO Spider',
-        // Sitebulb
-        'Sitebulb',
-        // SEO PowerSuite
-        'NetcraftSurveyAgent',
-        // Wget/curl (para debug)
-        'Wget',
-        'curl',
-        // Validação Google
-        'google-sitemap-generator',
-        // Outros bots legítimos
-        'BingWebAuth',
-        'Google-Structured-Data-Testing-Tool',
-    ].join('|');
 
-    const body = `User-agent: *
-Allow: /
-
-# Regras específicas por bot
-User-agent: ${allowedBots}
-Allow: /
-
-# Bloquear bots maliciosos/comuns
+    const body = `# robots.txt para https://cleidesarkis.com.br
 User-agent: *
+Allow: /
 Disallow: /admin/
 Disallow: /backend/
 Disallow: /api/
@@ -104,7 +33,41 @@ Disallow: /my-account
 Disallow: /wp-content/plugins/
 Disallow: /wp-includes/
 
-# Bloquear bots de scrapers e agressivos (adicione mais conforme necessário)
+# Permissão explícita para motores de busca e agentes de IA (GEO / AEO)
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# Rate-limit para ferramentas de auditoria e scrapers conhecidos
 User-agent: AhrefsBot
 Crawl-delay: 10
 
@@ -114,6 +77,7 @@ Crawl-delay: 10
 User-agent: MJ12bot
 Crawl-delay: 10
 
+# Bloqueio de scrapers agressivos e scanners de vulnerabilidade
 User-agent: dotbot
 Disallow: /
 
@@ -132,26 +96,11 @@ Disallow: /
 User-agent: go-http-client
 Disallow: /
 
-# Bloquear bots de IA e treinamento
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-# Sitemap
+# Sitemaps
 Sitemap: ${new URL('sitemap-index.xml', siteUrl).href}
+`;
 
-# Diretivas adicionais
-Clean-param: ?utm_*&utm_source=*&utm_medium=*&utm_campaign=* /`;
-
-    return new Response(body, {
+    return new Response(body.trimStart(), {
         headers: { 'Content-Type': 'text/plain; charset=utf-8' },
     });
 };

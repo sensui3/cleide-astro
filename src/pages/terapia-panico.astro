@@ -1,0 +1,130 @@
+---
+import TratamentoLayout from '../layouts/TratamentoLayout.astro';
+import FAQ from '../components/FAQ.astro';
+import { createTherapySchema } from '../utils/schemas';
+
+const therapySchema = createTherapySchema(
+  'Tratamento para Síndrome do Pânico e Crises de Ansiedade Aguda',
+  'https://cleidesarkis.com.br/terapia-panico/'
+);
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    therapySchema,
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como a psicanálise trata a síndrome do pânico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A psicanálise compreende a crise de pânico como o transbordamento de uma angústia profunda que não encontrou palavras para ser dita. Na clínica, construímos o sentido desse sintoma, desarmando o gatilho inconsciente que dispara o alarme falso do corpo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A hipnose clínica pode ajudar a interromper as crises de pânico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A hipnose clínica é altamente eficaz para quebrar o ciclo do 'medo de ter medo', ensinando o paciente a retomar o controle da respiração, reduzir o batimento cardíaco acelerado e dessensibilizar os estímulos que provocam o ataque."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que fazer se eu tiver medo de ter uma crise no caminho até o consultório?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você pode iniciar as primeiras sessões na modalidade online, no conforto e segurança da sua casa. Conforme o alívio dos sintomas for conquistado, podemos transitar para o acompanhamento presencial na Avenida Paulista se for do seu desejo."
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const localizedFaqs = [
+  {
+    question: "Qual a diferença entre uma crise de ansiedade e o ataque de pânico?",
+    answer: "A crise de ansiedade costuma ter um motivo identificável (uma apresentação, uma dívida, um conflito). O ataque de pânico, por outro lado, irrompe subitamente, como um raio em céu azul, com sensação avassaladora de morte iminente, sufocamento e perda total de controle."
+  },
+  {
+    question: "A psicanálise substitui o tratamento psiquiátrico com remédios?",
+    answer: "Eles atuam em conjunto. Em quadros agudos e incapacitantes de pânico, a medicação receitada pelo psiquiatra alivia o sofrimento extremo para que a psicanálise e a psicoterapia possam trabalhar as causas reais, prevenindo recaídas a longo prazo."
+  },
+  {
+    question: "Quanto tempo leva para sentir os primeiros resultados?",
+    answer: "Com a integração entre acolhimento analítico e técnicas corporais da hipnose clínica, muitos pacientes relatam diminuição na frequência e intensidade das crises já nas primeiras semanas de acompanhamento."
+  },
+  {
+    question: "O consultório na Paulista é acessível para quem evita transporte público?",
+    answer: "Sim. O prédio da Av. Paulista, 509 conta com estacionamento privativo e acesso direto por carros de aplicativo na porta, além de estar colado à estação Brigadeiro do Metrô para quem prefere transporte sobre trilhos."
+  }
+];
+---
+
+<TratamentoLayout 
+  title="Tratamento para Síndrome do Pânico | Psicanálise e Hipnose em SP"
+  description="Acolhimento clínico para crises de pânico, taquicardia e medo súbito. Atendimento com Dra. Cleide Sarkis na Avenida Paulista e online. Agende sua sessão."
+  heroTitle="Tratamento para Síndrome do Pânico"
+  heroText="Acolhimento clínico seguro para desarmar o ciclo do medo, tratar a angústia na raiz e restabelecer sua tranquilidade."
+  {structuredData}
+>
+  <div class="readable-content prose prose-slate max-w-none">
+    <p>
+      O ataque de pânico é uma das experiências humanas mais aterrorizantes. Em questão de segundos, o corpo dispara uma resposta desmedida de alerta: o coração acelera violentamente, o ar parece faltar, as mãos tremem e surge a certeza aterradora de morte súbita ou enlouquecimento.
+    </p>
+    
+    <p>
+      Após a primeira crise, instala-se o chamado <strong>"medo de ter medo"</strong>: o paciente passa a evitar metrôs, elevadores, multidões, reuniões de trabalho e até mesmo sair de casa desacompanhado, com receio de não receber socorro a tempo.
+    </p>
+
+    <h2>Sintomas Característicos do Ataque de Pânico</h2>
+    <ul>
+      <li><strong>Manifestações físicas imediatas:</strong> Taquicardia intensa (coração disparado), falta de ar, aperto no peito, tontura e suor frio;</li>
+      <li><strong>Sensação de desrealização:</strong> O ambiente ao redor parece irreal, distante ou estranho;</li>
+      <li><strong>Medo de enlouquecer ou perder o controle:</strong> Sensação de incapacidade de governar o próprio corpo;</li>
+      <li><strong>Comportamento de esquiva:</strong> Isolamento gradual e desistência de compromissos profissionais e sociais.</li>
+    </ul>
+
+    <h2>Como a Psicanálise Trata o Pânico</h2>
+    <p>
+      Para a psicanálise, o pânico não é um defeito biológico isolado, mas uma <strong>angústia maciça que transborda no corpo</strong> porque não encontrou vias de representação pela palavra.
+    </p>
+    <p>
+      Com a escuta experiente da <strong>Dra. Cleide Sarkis</strong>, o tratamento atua em duas frentes complementares:
+    </p>
+    <ol>
+      <li><strong>Compreensão do que não pôde ser dito:</strong> Investigamos quais perdas, separações, cobranças extremas ou traumas reprimidos estão na gênese desse alarme desregulado;</li>
+      <li><strong>Nominação do afeto:</strong> Ao dar nome à angústia na sessão, o corpo não precisa mais gritar por meio do sintoma fisiológico do pânico.</li>
+    </ol>
+
+    <div class="my-12 p-8 bg-brand-50 rounded-3xl border border-brand-100">
+      <h3 class="mt-0 text-brand-700">O Papel da Hipnose Clínica no Pânico</h3>
+      <p>
+        A hipnose clínica oferece um recurso fisiológico direto e imediato: ensina o cérebro a desligar a resposta de "luta ou fuga". Através de sugestões guiadas e regulação respiratória, o paciente aprende a retomar o comando do próprio corpo nos momentos em que o alarme ameaça disparar.
+      </p>
+    </div>
+
+    <h2>Modalidades de Atendimento: Presencial ou Online</h2>
+    <p>
+      Entendemos que, durante as fases mais agudas do pânico, deslocar-se pela cidade pode gerar sofrimento excessivo. Por isso, oferecemos flexibilidade total:
+    </p>
+    <ul>
+      <li><strong>Consultório Presencial na Avenida Paulista:</strong> Na Av. Paulista, 509 - Conj. 1513 (Metrô Brigadeiro), em um ambiente silencioso, seguro e acolhedor;</li>
+      <li><strong>Atendimento Online:</strong> Sessões por videoconferência com o mesmo rigor ético e eficácia clínica, permitindo que você inicie o tratamento no conforto de sua casa.</li>
+    </ul>
+
+    <div class="not-prose mt-16 text-center">
+      <a href="https://wa.me/5511998059125?text=Ol%C3%A1%2C%20estou%20passando%20por%20crises%20de%20p%C3%A2nico%20e%20ansiedade%20e%20gostaria%20de%20ajuda%20para%20iniciar%20a%20terapia." class="inline-flex items-center gap-3 bg-brand-600 text-white px-8 py-4 rounded-full font-bold text-xl hover:bg-brand-700 transition-all shadow-xl hover:shadow-brand-600/20">
+        <span class="i-lucide-calendar-check"></span>
+        Agendar Acolhimento para Crises de Pânico
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-24 -mx-4 sm:-mx-8 lg:-mx-16">
+    <FAQ faqs={localizedFaqs} />
+  </div>
+</TratamentoLayout>
